@@ -1,7 +1,3 @@
 {
-	"presets": [
-		["@babel/preset-env", { "targets": "defaults" }],
-		"@babel/preset-react",
-		"minify"
-	]
+  "presets": [["@babel/preset-env", { "targets": "defaults" }], "@babel/preset-react", "minify"]
 }
