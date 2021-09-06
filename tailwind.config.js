@@ -1,6 +1,5 @@
 const colors = require("tailwindcss/colors");
 console.log("Tailwind config successfully detected");
-console.log(process.env.NODE_ENV);
 module.exports = {
   purge: { enabled: process.env.NODE_ENV !== "development", content: ["./dist/**/*.js"] },
   darkMode: false, // or 'media' or 'class'
