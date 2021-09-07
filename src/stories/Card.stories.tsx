@@ -16,7 +16,7 @@ export const ThreeCols = Template.bind({});
 export const TwoCols = Template.bind({});
 
 Default.args = {
-  image: "https://placekitten.com/400/300",
+  image: "https://picsum.photos/400/300",
   bgcolor: "",
   type: "",
   excerpt: "This is a default 4 column holding text for a card excerpt",
@@ -28,7 +28,7 @@ Default.args = {
 };
 
 ThreeCols.args = {
-  image: "https://placekitten.com/600/400",
+  image: "https://picsum.photos/600/400",
   bgcolor: "",
   type: "",
   excerpt: "This is a 3 column holding text for a card excerpt",
@@ -40,7 +40,7 @@ ThreeCols.args = {
 };
 
 TwoCols.args = {
-  image: "https://placekitten.com/600/600",
+  image: "https://picsum.photos/600/600",
   bgcolor: "",
   type: "",
   excerpt: "This is a two column holding text for a card excerpt",

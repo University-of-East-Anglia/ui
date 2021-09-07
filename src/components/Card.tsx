@@ -34,9 +34,9 @@ export const Card = ({ ...props }: Props) => {
   }
 
   const cards: any = document.querySelectorAll(".card");
-  Array.prototype.forEach.call(cards, (card) => {
-    let down,
-      up,
+  Array.prototype.forEach.call(cards, (card: any) => {
+    let down: number,
+      up: number,
       link = card.querySelector("a");
     card.onmousedown = () => (down = +new Date());
     card.onmouseup = () => {
