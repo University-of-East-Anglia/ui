@@ -1,5 +1,7 @@
 # UEA Web Team's UI Library
 
+This package contains a number of UI components which are used by the UEA's web development team.
+
 ## Installation
 
 Run `npm i @ueaweb/ui`
