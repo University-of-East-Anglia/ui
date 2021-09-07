@@ -4,7 +4,7 @@
 
 Run `npm i @ueaweb/ui`
 
-Run `npm i -g tailwindcss postcss` (more on this below)
+Run `npm i -g tailwindcss@2.2.9 postcss` (more on this below)
 
 Import the component you need with `import { Button } from '@ueaweb/ui';`
 
@@ -22,3 +22,7 @@ Have at it!
 ### Why do I have to install tailwindcss and postcss globally?
 
 Tailwind v2 requires Postcss v8. Postcss v8 requires Webpack v5. Webpack v5 is not supported by react-scripts v4.0.3. So if we install Postcss v8, so we can run a production build, Storybook's local development mode breaks. We can get around this by installing Tailwind and Postcss globally, and using those versions to run the production build.
+
+### Why tailwindcss@2.2.9?
+
+Because simply running `npm i -g tailwindcss` will install the latest version of the package, and 2.2.10 seems to have a bug wherein it is missing a dependency.
