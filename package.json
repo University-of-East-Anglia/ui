@@ -24,7 +24,8 @@
     "start": "npm run storybook",
     "build": "rm -rf dist && mkdir dist && tsc && babel dist/**/*.js --out-dir dist && cp src/components/styles.css dist/styles.css && $(npm bin -g)/tailwindcss -i dist/styles.css -o dist/styles.css -m",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -s public && $(npm bin -g)/tailwindcss -i storybook-static/static/css/main.*.chunk.css -o storybook-static/static/css/main.*.chunk.css -m",
+    "storybook-build": "npm run build-storybook",
     "component": "node ./src/scripts/new-component.js"
   },
   "eslintConfig": {
