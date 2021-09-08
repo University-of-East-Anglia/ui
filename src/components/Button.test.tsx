@@ -1,5 +1,4 @@
-import React from "react";
-import { render, screen, cleanup, queryByTestId } from "@testing-library/react";
+import { render, screen, cleanup } from "@testing-library/react";
 import { Button } from "./Button";
 
 describe("Button", () => {

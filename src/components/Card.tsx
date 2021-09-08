@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "./Link";
 import "./styles.css";
 export interface Props {

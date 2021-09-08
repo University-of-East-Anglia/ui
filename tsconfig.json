@@ -15,16 +15,8 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/components/**/*"],
-  "exclude": ["node_modules", "src/stories/**/*"]
+  "include": ["src/components/**/*.tsx", "src/components/**/*.ts"],
+  "exclude": ["node_modules", "src/stories/**/*", "src/components/**/*.test.*"]
 }

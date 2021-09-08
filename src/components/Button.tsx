@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import "./styles.css";
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {

@@ -1,4 +1,3 @@
-import React from "react";
 import FacebookSVG from "./Facebook";
 import TwitterSVG from "./Twitter";
 import InstagramSVG from "./Instagram";
