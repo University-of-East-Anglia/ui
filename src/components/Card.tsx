@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "./Link";
-import "../App.css";
-
+import "./styles.css";
 export interface Props {
   image: string;
   bgcolor?: string;
