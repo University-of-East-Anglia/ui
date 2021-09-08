@@ -30,6 +30,32 @@ export class ${componentName} extends Component<ComponentProps, ComponentState> 
     }
   );
 
+  // Create test file for the new component
+  fs.writeFile(
+    `./src/components/${componentName}.test.tsx`,
+    `
+import React from "react";
+import { render, screen, cleanup } from "@testing-library/react";
+import { ${componentName} } from "./${componentName}";
+
+describe("${componentName}", () => {
+  afterEach(cleanup);
+
+  it("renders successfully", () => {
+    render(<${componentName} />);
+    expect(screen.getByText(/Text from this component/i)).toBeInTheDocument();
+  });
+
+  it("has more than one test", () => {
+    expect(false);
+  });
+});
+`,
+    () => {
+      return true;
+    }
+  );
+
   // Add the new component file to the default exports
   fs.appendFileSync(
     "./src/components/index.ts",
