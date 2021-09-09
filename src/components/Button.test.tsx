@@ -24,4 +24,10 @@ describe("Button", () => {
       backgroundColor: "rgba(0, 174, 240, var(--tw-bg-opacity))",
     });
   });
+
+  it("renders the given child text", () => {
+    render(<Button data-testid="myCoolButton">My Cool Button</Button>);
+
+    expect(screen.getByTestId("myCoolButton")).toHaveTextContent("My Cool Button");
+  });
 });
