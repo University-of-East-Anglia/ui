@@ -3,8 +3,8 @@ import { Meta, Story } from "@storybook/react";
 import { Hero, Props } from "../components/Hero";
 
 const meta: Meta = {
-    title: "Hero",
-    component: Hero,
+  title: "--Hero",
+  component: Hero,
 };
 
 export default meta;
@@ -15,10 +15,10 @@ export const Default = Template.bind({});
 export const Shallow = Template.bind({});
 
 Default.args = {
-    variant: "deep",
-    children: "Hero Banner",
+  variant: "deep",
+  children: "Hero Banner",
 };
 
 Shallow.args = {
-    variant: "shallow",
+  variant: "shallow",
 };

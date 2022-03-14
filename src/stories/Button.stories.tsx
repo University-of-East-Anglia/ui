@@ -3,8 +3,8 @@ import { Meta, Story } from "@storybook/react";
 import { Button, Props } from "../components/Button";
 
 const meta: Meta = {
-    title: "Button",
-    component: Button,
+  title: "--Button",
+  component: Button,
 };
 
 export default meta;
@@ -17,19 +17,19 @@ export const Small = Template.bind({});
 export const Large = Template.bind({});
 
 Default.args = {
-    variant: "primary",
-    children: "Primary Button",
+  variant: "primary",
+  children: "Primary Button",
 };
 
 Secondary.args = {
-    variant: "secondary",
-    children: "Secondary Button",
+  variant: "secondary",
+  children: "Secondary Button",
 };
 Small.args = {
-    size: "small",
-    children: "Small Button",
+  size: "small",
+  children: "Small Button",
 };
 Large.args = {
-    size: "large",
-    children: "Large Button",
+  size: "large",
+  children: "Large Button",
 };

@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { Card, Props } from "../components/Card";
 
 const meta: Meta = {
-  title: "Card",
+  title: "--Card",
   component: Card,
 };
 

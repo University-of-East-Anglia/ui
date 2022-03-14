@@ -3,8 +3,8 @@ import { Meta, Story } from "@storybook/react";
 import { Header, Props } from "../components/Header";
 
 const meta: Meta = {
-    title: "Header",
-    component: Header,
+  title: "--Header",
+  component: Header,
 };
 
 export default meta;
@@ -18,26 +18,26 @@ export const XLarge = Template.bind({});
 export const XXLarge = Template.bind({});
 
 Default.args = {
-    size: "large",
-    children: "Default Header",
+  size: "large",
+  children: "Default Header",
 };
 
 Medium.args = {
-    size: "medium",
-    children: "X-Large Header",
+  size: "medium",
+  children: "X-Large Header",
 };
 
 Large.args = {
-    size: "large",
-    children: "2X-Large Header",
+  size: "large",
+  children: "2X-Large Header",
 };
 
 XLarge.args = {
-    size: "x-large",
-    children: "4X-Large Header",
+  size: "x-large",
+  children: "4X-Large Header",
 };
 
 XXLarge.args = {
-    size: "xx-large",
-    children: "7X-Large Header",
+  size: "xx-large",
+  children: "7X-Large Header",
 };

@@ -1,4 +1,5 @@
-import "./styles.css";
+import React from "react";
+import "../App.css";
 
 export interface Props {
   variant?: "primary" | "secondary";
