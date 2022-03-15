@@ -1,5 +1,6 @@
 .sidebar {
   nav {
+    background: $gray;
     ul {
       li {
         overflow: hidden;
@@ -20,6 +21,10 @@
           &:after {
             top: 0;
           }
+        }
+        a {
+          font-family: "BrandonText-Black";
+          color: white;
         }
       }
     }
