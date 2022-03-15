@@ -30,6 +30,9 @@
       position: relative;
       line-height: 1.2em;
       font-family: "BrandonText-Bold";
+      a {
+        color: $black;
+      }
       &:after {
         content: "";
         height: 7px;

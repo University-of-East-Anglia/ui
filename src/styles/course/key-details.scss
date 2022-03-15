@@ -13,5 +13,8 @@
     display: grid;
     grid-template-columns: 2fr 2fr;
     column-gap: 17px;
+    dd {
+      margin-left: 0;
+    }
   }
 }
