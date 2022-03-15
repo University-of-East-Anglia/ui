@@ -49,3 +49,11 @@ export { CTAWithImage };
 import { CTA } from "./CTA";
 
 export { CTA };
+
+import { SidebarNav } from "./SidebarNav";
+
+export { SidebarNav };
+
+import { KeyDetails } from "./course/KeyDetails";
+
+export { KeyDetails };

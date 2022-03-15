@@ -5,10 +5,10 @@ const movieQuote = require("popular-movie-quotes");
 const componentName = process.argv[2];
 
 try {
-	// Create a new component file for it
-	fs.writeFile(
-		`./src/components/${componentName}.tsx`,
-		`
+  // Create a new component file for it
+  fs.writeFile(
+    `./src/components/${componentName}.tsx`,
+    `
 import React, { Component } from 'react';
 
 interface ComponentProps {}
@@ -25,24 +25,24 @@ export class ${componentName} extends Component<ComponentProps, ComponentState> 
 	}
 }
 `,
-		() => {
-			return true;
-		}
-	);
+    () => {
+      return true;
+    }
+  );
 
-	// Add the new component file to the default exports
-	fs.appendFileSync(
-		"./src/components/index.ts",
-		`
+  // Add the new component file to the default exports
+  fs.appendFileSync(
+    "./src/components/index.ts",
+    `
 import { ${componentName} } from "./${componentName}";
 
 export { ${componentName} };
 `
-	);
+  );
 } catch (error) {
-	console.error("Making new component failed.");
-	console.error(error);
-	return false;
+  console.error("Making new component failed.");
+  console.error(error);
+  return false;
 }
 
 console.log("Completed generating new component: " + componentName + ".tsx");

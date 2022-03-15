@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../App.scss";
 
 export interface Props {
   title: string;
@@ -14,11 +15,23 @@ export class CTACard extends Component<Props, ComponentState> {
 
   render() {
     return (
-      <div className="flex flex-col min-h-full p-4 text-black rounded-lg bg-pink">
-        <h2 className="mb-4 text-2xl font-bold">{this.props.title}</h2>
-        <p className="flex-1 mb-4">{this.props.content}</p>
-        <a className="block underline" href={this.props.link}>
-          {this.props.anchor} {">"}
+      <div className="cta cta-card">
+        <div>
+          <h2 className="cta-title">{this.props.title}</h2>
+          <p className="cta-content">{this.props.content}</p>
+        </div>
+        <a className="cta-link" href={this.props.link}>
+          {this.props.anchor}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="cta-chevron--right"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
         </a>
       </div>
     );

@@ -23,19 +23,21 @@ export class Select extends Component<Props, ComponentState> {
   render() {
     console.log(this.state.value);
     return (
-      <label className="grid items-center h-12 max-w-lg grid-cols-2 bg-white divide-x-2 rounded-lg divide-blue">
-        <span className="px-4">{this.props.title}</span>
-        <select
-          className="items-center h-full px-4 rounded-r-lg focus:ring-blue"
-          onChange={(e) => this.setState({ value: e.target.value })}
-        >
-          {this.props.options.map((option, index: number) => (
-            <option key={index} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      </label>
+      <div className="select">
+        <label className="select--label">
+          <span className="select--label-title">{this.props.title}</span>
+          <select
+            className="select--list"
+            onChange={(e) => this.setState({ value: e.target.value })}
+          >
+            {this.props.options.map((option, index: number) => (
+              <option key={index} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
     );
   }
 }

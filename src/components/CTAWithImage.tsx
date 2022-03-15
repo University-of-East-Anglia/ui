@@ -1,36 +1,43 @@
 import React, { Component } from "react";
+import "../App.scss";
 
 export interface Props {
-  title: string;
+  title?: string;
   content?: string;
   anchor: string;
   link: string;
   image: string;
-  bgcolour?: string;
+  bgcolour?: "pink" | "blue";
 }
 
-interface ComponentState {}
-
-export class CTAWithImage extends Component<Props, ComponentState> {
-  state: ComponentState = {};
-
+export class CTAWithImage extends Component<Props> {
   render() {
-    const bg = this.props.bgcolour != null ? this.props.bgcolour : "bg-blue";
-    console.log(bg);
     return (
       <div
-        className="flex flex-col items-center justify-center p-4 bg-center bg-cover rounded-lg"
+        className="cta cta-card cta-card-image"
         style={{ backgroundImage: "url(" + this.props.image + ")" }}
       >
-        <h2 className={"inline-block p-2 mb-4 text-2xl font-bold rounded-lg " + bg}>
-          {this.props.title}
-        </h2>
-        {this.props.content ? (
-          <p className={"flex-1 inline-block p-2 mb-4 rounded-lg " + bg}>{this.props.content}</p>
+        {this.props.title ? (
+          <p className={"cta-title " + this.props.bgcolour}>{this.props.title}</p>
         ) : null}
-        <a className={"inline-block p-2 underline rounded-lg " + bg} href={this.props.link}>
-          {this.props.anchor}
-        </a>
+        {this.props.content ? (
+          <p className={"cta-content " + this.props.bgcolour}>{this.props.content}</p>
+        ) : null}
+        <div>
+          <a className={"cta-link " + this.props.bgcolour} href={this.props.link}>
+            {this.props.anchor}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="cta-chevron--right"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     );
   }

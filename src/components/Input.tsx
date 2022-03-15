@@ -9,8 +9,8 @@ export class Input extends Component<ComponentProps, ComponentState> {
 
   render() {
     return (
-      <div></div>
       // How truly magnificent! I think this battle is about to come to a rousing finale!
+      <div></div>
     );
   }
 }

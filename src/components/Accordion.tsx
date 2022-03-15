@@ -19,14 +19,17 @@ export class Accordion extends Component<Props, ComponentState> {
   };
 
   render() {
-    const panelClass = "px-4 pt-2 pb-4";
     return (
-      <div>
+      <div className="accordion">
         {this.props.accordion.map((pane: any, index) => (
           <div key={index}>
             <div
               id={"accordion-title" + index}
-              className="p-4 font-bold border-b-2 border-blue"
+              className={
+                this.state.active === index
+                  ? "accordion--header accordion--header-open"
+                  : "accordion--header"
+              }
               role="button"
               onClick={() => this.setState({ active: index })}
             >
@@ -37,7 +40,7 @@ export class Accordion extends Component<Props, ComponentState> {
               id={"accordion-content" + index}
               role="region"
               aria-labelledby={"accordion-title" + index}
-              className={this.state.active === index ? panelClass + " block" : "hidden"}
+              className={this.state.active === index ? "accordion--panel-open" : "accordion--panel"}
             >
               {pane.content}
             </div>

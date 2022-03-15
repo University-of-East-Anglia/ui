@@ -20,6 +20,7 @@ Default.args = {
   anchor: "Link Here",
   link: "https://www.uea.ac.uk",
   image: "https://picsum.photos/900/300",
+  bgcolour: "blue",
 };
 WithContent.args = {
   title: "Title",
@@ -27,11 +28,12 @@ WithContent.args = {
   anchor: "Link Here",
   link: "https://www.uea.ac.uk",
   image: "https://picsum.photos/900/300",
+  bgcolour: "blue",
 };
 PinkBg.args = {
   title: "Title",
   anchor: "Link Here",
   link: "https://www.uea.ac.uk",
   image: "https://picsum.photos/900/300",
-  bgcolour: "bg-pink",
+  bgcolour: "pink",
 };

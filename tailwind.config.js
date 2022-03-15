@@ -1,5 +1,5 @@
 const colors = require("tailwindcss/colors");
-
+console.log("Tailwind config successfully detected");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -9,17 +9,19 @@ module.exports = {
         "gray-dark": "#363738",
       },
     },
+    fontFamily: {
+      sans: ['"BrandonText"'],
+      brandon: ['"BrandonText"'],
+      "brandon-medium": ['"BrandonText-Medium"'],
+      "brandon-bold": ['"BrandonText-Bold"'],
+      "brandon-black": ['"BrandonText-Black"'],
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
       red: colors.red,
       black: colors.black,
       white: colors.white,
-      orange: "#FAA61A",
-      blue: "#00aef0",
-      green: "#8DC63F",
-      lilac: "#B781CA",
-      pink: "#ED61BA",
       gray: colors.gray,
     },
   },
