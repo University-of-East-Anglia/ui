@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { KeyDetails, ComponentProps } from "../../components/course/KeyDetails";
 
 const meta: Meta = {
-  title: "Key Details",
+  title: "Course Components/Key Details",
   component: KeyDetails,
 };
 

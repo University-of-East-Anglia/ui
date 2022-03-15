@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { CTAWithImage, Props } from "../../components/CTAWithImage";
 
 const meta: Meta = {
-  title: "CTA With Background Image",
+  title: "CTA/CTA With Background Image",
   component: CTAWithImage,
 };
 

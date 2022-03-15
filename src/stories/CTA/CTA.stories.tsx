@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { CTA, Props } from "../../components/CTA";
 
 const meta: Meta = {
-  title: "CTA",
+  title: "CTA/CTA Button",
   component: CTA,
 };
 
