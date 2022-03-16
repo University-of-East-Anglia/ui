@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { DescriptionList } from "../DescriptionList";
-import "../../App.scss";
 
 export interface ComponentProps {
   school: string;
