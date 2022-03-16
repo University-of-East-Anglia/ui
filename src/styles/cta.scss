@@ -1,6 +1,9 @@
 .cta {
   border-radius: 8px;
   display: flex;
+  .cta-link {
+    color: $black;
+  }
   &-default {
     align-items: center;
     max-width: 277px;

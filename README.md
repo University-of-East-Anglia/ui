@@ -1,5 +1,7 @@
 # UEA Web Team's UI Library
 
+This package contains a number of UI components which are used by the UEA's web development team.
+
 ## Installation
 
 Run `npm i @ueaweb/ui`
@@ -26,3 +28,11 @@ Tailwind v2 requires Postcss v8. Postcss v8 requires Webpack v5. Webpack v5 is n
 ### Why tailwindcss@2.2.9?
 
 Because simply running `npm i -g tailwindcss` will install the latest version of the package, and 2.2.10 seems to have a bug wherein it is missing a dependency.
+
+## Publishing
+
+After making your changes but before publishing, run one of these commands to change the vesion number and commit the change. The command varies based on the scope of your change. See this [semver cheatsheet](https://devhints.io/semver) for more info.
+
+- `npm version major` - If you removed functionality or made incompatible API changes
+- `npm version minor` - If you added functionality without removing or changing old functionality.
+- `npm version patch` - If you fixed bugs and didn't add or change any functionality.
