@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { UnorderedList, Props } from "../components/UnorderedList";
 
 const meta: Meta = {
-  title: "Unordered List",
+  title: "List/Unordered List",
   component: UnorderedList,
 };
 

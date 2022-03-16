@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { DescriptionList, Props } from "../components/DescriptionList";
 
 const meta: Meta = {
-  title: "Description List",
+  title: "List/Description List",
   component: DescriptionList,
 };
 

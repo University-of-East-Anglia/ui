@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { OrderedList, Props } from "../components/OrderedList";
 
 const meta: Meta = {
-  title: "Ordered List",
+  title: "List/Ordered List",
   component: OrderedList,
 };
 
