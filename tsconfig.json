@@ -17,6 +17,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/components/**/*", "src/fonts/**/*", "src/styles/**/*", "src/App.scss"],
+  "include": ["src/components/**/*"],
   "exclude": ["node_modules", "src/stories/**/*"]
 }
