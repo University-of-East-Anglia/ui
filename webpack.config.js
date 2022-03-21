@@ -2,27 +2,25 @@ const glob = require("glob");
 const path = require("path");
 
 module.exports = {
-  entry: glob.sync("./src/**/*.tsx").reduce((acc, path) => {
-    const entry = path.replace("/index.js", "");
-    acc[entry] = path;
-    return acc;
-  }, {}),
-
-  output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
-  },
-  resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: [".js", ".ts", ".tsx", ".scss"],
-  },
+  entry: "./src/components/index.ts",
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
       {
         test: /\.scss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
   },
 };
