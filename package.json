@@ -1,6 +1,6 @@
 {
   "name": "@ueaweb/ui",
-  "version": "0.5.0",
+  "version": "0.4.0",
   "private": false,
   "files": [
     "dist/"
@@ -66,6 +66,7 @@
     "@storybook/react": "^6.3.7",
     "@typescript-eslint/parser": "^4.30.0",
     "autoprefixer": "^9.8.6",
+    "babel-plugin-transform-scss": "^1.1.0",
     "babel-preset-minify": "^0.5.1",
     "cli": "^1.0.1",
     "popular-movie-quotes": "^1.2.4",

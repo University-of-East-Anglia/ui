@@ -1,14 +1,20 @@
-const glob = require("glob");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/components/index.ts",
+  entry: {
+    index: ["./src/components/index.ts"],
+  },
+  output: {
+    path: path.join(__dirname, "dist"),
+    chunkFilename: "chunks/[id].js",
+    publicPath: "",
+  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: "ts-loader",
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
+        loader: "babel-loader",
       },
       {
         test: /\.scss$/i,
@@ -18,9 +24,5 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
-  },
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
   },
 };
