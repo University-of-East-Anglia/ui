@@ -41,3 +41,5 @@ export { SidebarNav } from "./SidebarNav";
 export { Textarea } from "./Textarea";
 
 export { default as TwitterSVG } from "./Twitter";
+
+export { KeyDetails } from "../components/_CourseComponents/KeyDetails";
