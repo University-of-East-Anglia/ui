@@ -1,0 +1,1 @@
+export { CTAWithImage } from "./CTAWithImage";

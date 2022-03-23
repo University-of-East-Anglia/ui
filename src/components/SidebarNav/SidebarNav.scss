@@ -1,0 +1,34 @@
+@import "../App.scss";
+
+.sidebar {
+    nav {
+        background: $gray;
+        ul {
+            li {
+                overflow: hidden;
+                padding: 16px;
+                position: relative;
+                margin: 2px 0;
+                &:after {
+                    content: "";
+                    width: 2px;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: -100%;
+                    background: $pink;
+                    transition: 0.5s;
+                }
+                &:hover {
+                    &:after {
+                        top: 0;
+                    }
+                }
+                a {
+                    font-family: "BrandonText-Black";
+                    color: white;
+                }
+            }
+        }
+    }
+}

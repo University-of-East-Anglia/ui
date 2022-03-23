@@ -1,59 +1,43 @@
-import { Button } from "./Button";
+export { Accordion } from "./Accordion";
 
-export { Button };
+export { Button } from "./Button";
 
-import { Accordion } from "./Accordion";
+export { Card } from "./Card";
 
-export { Accordion };
+export { DescriptionList } from "./Lists/DescriptionList";
 
-import { Logo } from "./Logo";
+export { OrderedList } from "./Lists/OrderedList";
 
-export { Logo };
+export { UnorderedList } from "./Lists/UnorderedList";
 
-import { OrderedList } from "./OrderedList";
+export { CTA } from "./CTAs/CTA";
 
-export { OrderedList };
+export { CTAWithImage } from "./CTAs/CTAWithImage";
 
-import { UnorderedList } from "./UnorderedList";
+export { CTACard } from "./CTAs/CTACard";
 
-export { UnorderedList };
+export { BlockQuote } from "./BlockQuote";
 
-import { DescriptionList } from "./DescriptionList";
+export { Carousel } from "./Carousel";
 
-export { DescriptionList };
+export { default as FacebookSVG } from "./Facebook";
 
-import { Input } from "./Input";
+export { Header } from "./Header";
 
-export { Input };
+export { Hero } from "./Hero";
 
-import { Textarea } from "./Textarea";
+export { Input } from "./Input";
 
-export { Textarea };
+export { Instagram } from "./Instagram";
 
-import { Carousel } from "./Carousel";
+export { Link } from "./Link";
 
-export { Carousel };
+export { UEALogo } from "./UEALogo";
 
-import { Select } from "./Select";
+export { Select } from "./Select";
 
-export { Select };
+export { SidebarNav } from "./SidebarNav";
 
-import { CTACard } from "./CTACard";
+export { Textarea } from "./Textarea";
 
-export { CTACard };
-
-import { CTAWithImage } from "./CTAWithImage";
-
-export { CTAWithImage };
-
-import { CTA } from "./CTA";
-
-export { CTA };
-
-import { SidebarNav } from "./SidebarNav";
-
-export { SidebarNav };
-
-import { KeyDetails } from "./course/KeyDetails";
-
-export { KeyDetails };
+export { default as TwitterSVG } from "./Twitter";

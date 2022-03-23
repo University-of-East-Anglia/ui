@@ -1,0 +1,1 @@
+export { UEALogo } from "./UEALogo";

@@ -1,0 +1,23 @@
+@import "../App.scss";
+
+.select {
+    .select--label {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: white;
+        max-width: 400px;
+        .select--label-title {
+            padding: 10px;
+            border-right: 2px solid $blue;
+        }
+    }
+    .select--list {
+        align-items: center;
+        height: 100%;
+        padding: 10px;
+        border-radius: 0 7px 7px 0;
+        &:focus {
+            outline: solid 2px $blue;
+        }
+    }
+}

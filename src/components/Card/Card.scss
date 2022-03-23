@@ -1,0 +1,51 @@
+@import "../App.scss";
+
+.card {
+    width: 100%;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    .card--image {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 163px;
+            border-radius: 7px;
+        }
+    }
+    .card--content {
+        background: white;
+        padding: 7px 12px 16px 12px;
+        .card--title {
+            font-family: "BrandonText-Black";
+            font-size: 24px;
+            color: $black;
+            line-height: 32px;
+        }
+        .card--excerpt {
+            font-size: 16px;
+            margin-bottom: 16px;
+            line-height: 24px;
+        }
+        .card--link {
+            position: relative;
+            line-height: 1.2em;
+            font-family: "BrandonText-Bold";
+            a {
+                color: $black;
+            }
+            &:after {
+                content: "";
+                height: 7px;
+                width: 7px;
+                border-top: 2px solid $black;
+                border-right: 2px solid $black;
+                transform: rotate(45deg);
+                position: absolute;
+                right: -20px;
+                top: 4px;
+            }
+        }
+    }
+}

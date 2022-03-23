@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "BrandonText";
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_2_0.eot");
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_2_0.eot?#iefix")
+            format("embedded-opentype"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_2_0.woff2") format("woff2"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_2_0.woff") format("woff"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_2_0.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "BrandonText-Medium";
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_3_0.eot");
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_3_0.eot?#iefix")
+            format("embedded-opentype"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_3_0.woff2") format("woff2"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_3_0.woff") format("woff"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_3_0.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "BrandonText-Bold";
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_1_0.eot");
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_1_0.eot?#iefix")
+            format("embedded-opentype"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_1_0.woff2") format("woff2"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_1_0.woff") format("woff"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_1_0.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "BrandonText-Black";
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_0_0.eot");
+    src: url("/src/components/shared_styles/fonts/webfonts/369916_0_0.eot?#iefix")
+            format("embedded-opentype"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_0_0.woff2") format("woff2"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_0_0.woff") format("woff"),
+        url("/src/components/shared_styles/fonts/webfonts/369916_0_0.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
