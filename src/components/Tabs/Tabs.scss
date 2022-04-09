@@ -1,0 +1,36 @@
+@import "../App.scss";
+
+.tabs {
+  .tablist {
+    margin-bottom: 35px;
+    position: relative;
+    .tablist-base {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 2px;
+      background-color: $blue;
+    }
+    .tab {
+      font-size: 16px;
+      border-radius: 8px 8px 0 0;
+      border-bottom: solid $blue 2px;
+      padding: 18px 24px;
+      background: white;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      &:hover {
+        border-color: $blue;
+      }
+      &.tab--active {
+        background: $blue;
+      }
+    }
+  }
+  .tab-panel {
+    display: none;
+    &.tab-panel--active {
+      display: block;
+    }
+  }
+}

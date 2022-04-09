@@ -3,8 +3,8 @@ import { Meta, Story } from "@storybook/react";
 import { UEALogo, Props } from "./UEALogo";
 
 const meta: Meta = {
-    title: "Header/--UEA Logo",
-    component: UEALogo,
+  title: "Atomic Components/UEA Logo",
+  component: UEALogo,
 };
 
 export default meta;
@@ -19,20 +19,20 @@ export const Lilac = Template.bind({});
 export const Green = Template.bind({});
 
 Default.args = {
-    glint: undefined,
+  glint: undefined,
 };
 Blue.args = {
-    glint: "blue",
+  glint: "blue",
 };
 Black.args = {
-    glint: "black",
+  glint: "black",
 };
 Orange.args = {
-    glint: "orange",
+  glint: "orange",
 };
 Lilac.args = {
-    glint: "lilac",
+  glint: "lilac",
 };
 Green.args = {
-    glint: "green",
+  glint: "green",
 };

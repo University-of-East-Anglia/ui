@@ -7,6 +7,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
     "@storybook/addon-a11y",
+    "storybook-addon-sass-postcss",
   ],
   webpackFinal: async (config) => {
     config.resolve.extensions.push(".tsx");
@@ -18,6 +19,7 @@ module.exports = {
           loader: "postcss-loader",
           options: {
             ident: "postcss",
+            plugins: [require("tailwindcss"), require("autoprefixer")],
           },
         },
       ],

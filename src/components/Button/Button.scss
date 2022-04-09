@@ -1,0 +1,20 @@
+@import "../App.scss";
+
+button {
+  padding: 15px;
+  font-family: "BrandonText-Bold";
+  border: 2px solid transparent;
+  border-radius: 7px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  &:hover {
+    border-color: $black;
+    cursor: pointer;
+  }
+  &.button-primary {
+    background: $pink;
+  }
+  &.button-secondary {
+    background: $blue;
+  }
+}

@@ -43,3 +43,5 @@ export { Textarea } from "./Textarea";
 export { default as TwitterSVG } from "./Twitter";
 
 export { KeyDetails } from "../components/_CourseComponents/KeyDetails";
+
+export { default as Tabs } from "./Tabs";
