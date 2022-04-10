@@ -26,6 +26,8 @@ export { Header } from "./Header";
 
 export { Hero } from "./Hero";
 
+export { Image } from "./Image";
+
 export { Input } from "./Input";
 
 export { Instagram } from "./Instagram";
@@ -44,4 +46,6 @@ export { default as TwitterSVG } from "./Twitter";
 
 export { KeyDetails } from "../components/_CourseComponents/KeyDetails";
 
-export { default as Tabs } from "./Tabs";
+export { Tabs } from "./Tabs";
+
+export { Video } from "./Video";

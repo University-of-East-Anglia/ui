@@ -1,6 +1,6 @@
 import React from "react";
 // import Link from "./Link";
-import "./Card.scss";
+import "../Card.scss";
 
 export interface Props {
   image: string;
