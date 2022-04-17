@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { DescriptionList } from "../../Lists/DescriptionList";
-import "../../App.scss";
+import "./KeyDetails.scss";
 
 export interface ComponentProps {
   school: string;
