@@ -1,9 +1,7 @@
 @import "../App.scss";
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 1400px;
+.header-container {
+  width: 1600px;
+  max-width: 100%;
   &--dark {
     background: $black;
     svg {
@@ -24,4 +22,11 @@
   &--transparent {
     background: transparent;
   }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
 }

@@ -14,10 +14,12 @@ export class Header extends Component<Props, ComponentState> {
 
   render() {
     return (
-      <header className={"header header--" + this.props.background}>
-        <UEALogo />
-        <Menu />
-      </header>
+      <div className={"header-container header-container--" + this.props.background}>
+        <header className="header">
+          <UEALogo />
+          <Menu />
+        </header>
+      </div>
     );
   }
 }

@@ -50,4 +50,4 @@ export { Tabs } from "./Tabs";
 
 export { Video } from "./Video";
 
-export { default as Menu } from "./Menu";
+export { Menu } from "./Menu";
