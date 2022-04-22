@@ -1,0 +1,27 @@
+@import "../App.scss";
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1400px;
+  &--dark {
+    background: $black;
+    svg {
+      path {
+        fill: white;
+      }
+      polygon {
+        fill: white;
+      }
+    }
+    button {
+      color: white;
+    }
+  }
+  &--light {
+    background: white;
+  }
+  &--transparent {
+    background: transparent;
+  }
+}

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./logo.scss";
 
 export interface Props {
-  glint: "pink" | "blue" | "black" | "orange" | "lilac" | "green";
+  glint?: "pink" | "blue" | "black" | "orange" | "lilac" | "green";
 }
 
 interface ComponentState {}

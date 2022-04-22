@@ -4,6 +4,7 @@ dl {
   div {
     dt {
       font-family: "BrandonText";
+      font-weight: 400;
       padding-top: 16px;
       margin-bottom: 4px;
     }
@@ -12,6 +13,7 @@ dl {
       padding-bottom: 16px;
       border-bottom: $lightGrey 1px solid;
       margin-left: 0;
+      margin-bottom: 0;
     }
   }
 }

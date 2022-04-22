@@ -1,0 +1,54 @@
+@import "../App.scss";
+
+.menu-primary {
+  position: relative;
+  button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    margin-left: 15px;
+    height: 25px;
+    width: 25px;
+  }
+  ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    list-style: none;
+    width: 300px;
+    &.active {
+      display: block;
+    }
+    li {
+      margin-bottom: 10px;
+      a {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.header {
+  &--dark {
+    .menu-primary {
+      ul {
+        background: $black;
+        padding: 20px;
+
+        li {
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

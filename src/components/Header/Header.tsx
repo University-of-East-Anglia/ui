@@ -1,13 +1,23 @@
 import React, { Component } from "react";
+import { UEALogo } from "../UEALogo";
+import { Menu } from "../Menu";
+import "./Header.scss";
 
-export interface Props {}
+export interface Props {
+  background: "light" | "dark" | "transparent";
+}
 
 interface ComponentState {}
 
 export class Header extends Component<Props, ComponentState> {
-    state: ComponentState = {};
+  state: ComponentState = {};
 
-    render() {
-        return <div>Header</div>;
-    }
+  render() {
+    return (
+      <header className={"header header--" + this.props.background}>
+        <UEALogo />
+        <Menu />
+      </header>
+    );
+  }
 }
