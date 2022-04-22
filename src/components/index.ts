@@ -18,8 +18,6 @@ export { CTACard } from "./CTAs/CTACard";
 
 export { BlockQuote } from "./BlockQuote";
 
-export { Carousel } from "./Carousel";
-
 export { default as FacebookSVG } from "./Facebook";
 
 export { Header } from "./Header";
