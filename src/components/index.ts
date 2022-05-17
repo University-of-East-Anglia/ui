@@ -20,6 +20,8 @@ export { BlockQuote } from "./BlockQuote";
 
 export { default as FacebookSVG } from "./Facebook";
 
+export { Footer } from "./Footer";
+
 export { Header } from "./Header";
 
 export { Hero } from "./Hero";
@@ -46,6 +48,6 @@ export { KeyDetails } from "../components/_CourseComponents/KeyDetails";
 
 export { Tabs } from "./Tabs";
 
-export { Video } from "./Video";
-
 export { Menu } from "./Menu";
+
+export { default as YouTube } from "./YouTube";
