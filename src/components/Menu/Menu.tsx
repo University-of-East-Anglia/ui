@@ -4,16 +4,19 @@ import "./Menu.scss";
 export interface ComponentProps {}
 
 interface navObj {
+  component: string;
   full_slug: string;
   group_id: string;
   id: string;
   is_startpage: boolean;
-  name: string;
+  title: string;
   parent_id: number;
-  path: string;
+  url: string;
   position: number;
   slug: string;
   uuid: string;
+  navBlok: navObj[];
+  navItem: string;
 }
 
 export interface ComponentState {
@@ -28,19 +31,21 @@ export class Menu extends Component<ComponentProps, ComponentState> {
   };
 
   getMenuItems = () => {
-    fetch(
-      "https://api.storyblok.com/v1/cdn/stories?version=published&resolve_relations=global_reference.reference&token=t5eDfqfC1nBLNDnSXKc4bgtt",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow",
-      }
-    )
+    const token = process.env.STORYBOOK_API_TOKEN;
+    const apiUrl =
+      "https://api.storyblok.com/v2/cdn/stories/molecules/navigation/www/off-canvas-main?version=draft&token=" +
+      token +
+      "&cv=1651695832";
+    fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+    })
       .then((res) => res.json())
       .then((data) => {
-        this.setState({ navItems: data.stories });
+        this.setState({ navItems: data.story.content.navItem });
       });
   };
 
@@ -48,7 +53,6 @@ export class Menu extends Component<ComponentProps, ComponentState> {
     this.getMenuItems();
   }
   render() {
-    console.log(this.state.navItems);
     const menuState = () => {
       this.state.menuActive
         ? this.setState({ menuActive: false })
@@ -60,18 +64,63 @@ export class Menu extends Component<ComponentProps, ComponentState> {
           Menu
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black">
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             />
           </svg>
         </button>
         <ul className={this.state.menuActive ? "active" : ""}>
-          {this.state.navItems.map((item) => (
-            <li>
-              <a href={item.path}>{item.name}</a>
-            </li>
-          ))}
+          {this.state.navItems.map((item, i) => {
+            console.log(item);
+            if (item.component === "navItem") {
+              return (
+                <li key={i}>
+                  <a href={item.url}>{item.navItem}</a>
+                </li>
+              );
+            } else {
+              return (
+                <li>
+                  <ul>
+                    {item.navBlok.map((item, i) => {
+                      if (item.component === "navItem") {
+                        return (
+                          <li key={i}>
+                            <a href={item.url}>{item.navItem}</a>
+                          </li>
+                        );
+                      } else {
+                        return (
+                          <li>
+                            <ul>
+                              {item.navBlok.map((item, i) =>
+                                item.component === "navItem" ? (
+                                  <li key={i}>
+                                    <a href={item.url}>{item.navItem}</a>
+                                  </li>
+                                ) : (
+                                  <li>
+                                    <ul>
+                                      {item.navBlok.map((item, i) => (
+                                        <li key={i}>
+                                          <a href={item.url}>{item.navItem}</a>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          </li>
+                        );
+                      }
+                    })}
+                  </ul>
+                </li>
+              );
+            }
+          })}
         </ul>
       </nav>
     );

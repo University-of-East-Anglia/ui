@@ -1,0 +1,82 @@
+@import "../App.scss";
+.footer-container {
+  width: 100%;
+  &--dark {
+    background: $black;
+    color: white;
+    p {
+      color: white;
+    }
+    a {
+      color: white;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+  &--light {
+    background: white;
+    color: $black;
+    p {
+      color: $black;
+    }
+    a {
+      color: $black;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+  .footer {
+    text-align: center;
+    padding: 30px 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+      .social-icon {
+        background: $black;
+        padding: 5px;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        svg {
+          height: 25px;
+          width: 25px;
+          path {
+            fill: white;
+          }
+          polygon {
+            fill: white;
+          }
+        }
+      }
+      &--dark {
+        .social-icon {
+          background: white;
+          svg {
+            path {
+              fill: $black;
+            }
+            polygon {
+              fill: $black;
+            }
+          }
+        }
+      }
+    }
+    .policy-links {
+      .policy-link {
+        margin: 0 3px;
+      }
+    }
+  }
+}

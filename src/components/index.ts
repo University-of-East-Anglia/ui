@@ -28,7 +28,7 @@ export { Image } from "./Image";
 
 export { Input } from "./Input";
 
-export { Instagram } from "./Instagram";
+export { default as InstagramSVG } from "./Instagram";
 
 export { Link } from "./Link";
 
