@@ -78,7 +78,7 @@ export class Menu extends Component<Props, ComponentState> {
     const menuActive = this.state.menuActive === false ? "" : " open";
     return (
       <nav className="oc-main">
-        <button onClick={menuState} className="">
+        <button onClick={menuState} className="" title="Open Menu">
           Menu
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black">
             <path
@@ -89,7 +89,7 @@ export class Menu extends Component<Props, ComponentState> {
           </svg>
         </button>
         <div className={"oc-menu-container" + menuActive}>
-          <button onClick={menuState} className="close-menu">
+          <button onClick={menuState} className="close-menu" title="Close Menu">
             Close
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path
@@ -108,7 +108,7 @@ export class Menu extends Component<Props, ComponentState> {
                 title="Search"
                 type="text"
               />
-              <button className="oc-search-button" type="submit">
+              <button title="Search" className="oc-search-button" type="submit">
                 <span id="jbfs__null__null">
                   <svg
                     className="oc-search-icon"

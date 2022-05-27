@@ -1,6 +1,8 @@
-@import "../App.scss";
+@import "../shared_styles/variables.scss";
 .header-container {
-  max-width: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 98;
   &--dark {
     background: $black;
     svg {
@@ -21,11 +23,19 @@
   &--transparent {
     background: transparent;
   }
-}
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1400px;
-  margin: 0 auto;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    .uea-logo {
+      svg {
+        max-width: 200px;
+        @media screen and (min-width: 768px) {
+          max-width: 270px;
+        }
+      }
+    }
+  }
 }
