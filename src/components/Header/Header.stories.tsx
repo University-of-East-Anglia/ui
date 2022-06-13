@@ -8678,4 +8678,30 @@ Transparent.args = {
       },
     },
   ],
+  utilityItemArray: [
+    {
+      "uuid": "fffa2ab6-25a9-4a35-84ff-1fc1c5f991c7",
+      "name": "New Students",
+      "content": {
+        "title": "New Students",
+        "url": "/welcome"
+      }
+    },
+    {
+      "uuid": "eac2ce55-f301-4dca-a566-80a0d0050af2",
+      "name": "Login",
+      "content": {
+        "title": "Login",
+        "url": "https://my.uea.ac.uk/my-dashboard"
+      }
+    },
+    {
+      "uuid": "1f7009ba-3670-4700-a040-b1712c003a72",
+      "name": "Vacancies",
+      "content": {
+        "title": "Vacancies",
+        "url": "https://myview.uea.ac.uk/webrecruitment/"
+      }
+    }
+  ],
 };

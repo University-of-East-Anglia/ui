@@ -7,6 +7,7 @@ export interface Props {
   background: "light" | "dark" | "transparent";
   navItemArray: navObj[];
   navLinkArray: linkObj[];
+  utilityItemArray: linkObj[];
 }
 
 interface navObj {
@@ -48,7 +49,7 @@ export class Header extends Component<Props, ComponentState> {
       <div className={"header-container header-container--" + this.props.background}>
         <header className="header">
           <UEALogo />
-          <Menu navItemArray={this.props.navItemArray} navLinkArray={this.props.navLinkArray} />
+          <Menu navItemArray={this.props.navItemArray} navLinkArray={this.props.navLinkArray} utilityItemArray={this.props.utilityItemArray}/>
         </header>
       </div>
     );

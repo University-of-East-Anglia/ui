@@ -1,6 +1,6 @@
 {
   "name": "@ueaweb/ui",
-  "version": "2.2.11",
+  "version": "2.2.12",
   "private": false,
   "description": "UEA UI Component Library",
   "dependencies": {
@@ -57,14 +57,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamieplatten/my-component-library.git"
+    "url": "git+https://github.com/University-of-East-Anglia/ui.git"
   },
   "author": "JP",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jamieplatten/my-component-library/issues"
+    "url": "https://github.com/University-of-East-Anglia/ui/issues"
   },
-  "homepage": "https://github.com/jamieplatten/my-component-library#readme",
+  "homepage": "https://github.com/University-of-East-Anglia/ui#readme",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [

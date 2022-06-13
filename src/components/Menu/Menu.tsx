@@ -4,6 +4,7 @@ import "./Menu.scss";
 export interface Props {
   navItemArray: navObj[];
   navLinkArray: linkObj[];
+  utilityItemArray: linkObj[];
 }
 
 interface navObj {
@@ -51,31 +52,40 @@ export class Menu extends Component<Props, ComponentState> {
         : this.setState({ menuActive: true });
     };
     const toggleSubmenu = (e: any) => {
-      console.log(e.target);
+      console.log(e.target.childNodes);
       e.preventDefault();
       if (e.target.classList.contains("oc-submenu-trigger")) {
         console.log(e.target.nextSibling);
         if (!e.target.nextSibling.classList.contains("open")) {
           e.target.nextSibling.classList.add("open");
+          e.target.lastChild.classList.add("open-icon");
         } else {
           e.target.nextSibling.classList.remove("open");
+          e.target.lastChild.classList.remove("open-icon");
         }
       } else if (e.target.classList.contains("menu-chevron")) {
         if (!e.target.parentElement.parentElement.nextSibling.classList.contains("open")) {
           e.target.parentElement.parentElement.nextSibling.classList.add("open");
+          e.target.parentElement.parentElement.lastChild.classList.add("open-icon");
         } else {
           e.target.parentElement.parentElement.nextSibling.classList.remove("open");
+          e.target.parentElement.parentElement.lastChild.classList.remove("open-icon");
         }
       } else {
         if (!e.target.parentElement.nextSibling.classList.contains("open")) {
           e.target.parentElement.nextSibling.classList.add("open");
+          e.target.parentElement.lastChild.classList.add("open-icon");
         } else {
           e.target.parentElement.nextSibling.classList.remove("open");
+          e.target.parentElement.lastChild.classList.remove("open-icon");
         }
       }
     };
 
     const menuActive = this.state.menuActive === false ? "" : " open";
+    
+    console.log(this.props.utilityItemArray);
+    
     return (
       <nav className="oc-main">
         <button onClick={menuState} className="" title="Open Menu">
@@ -89,8 +99,25 @@ export class Menu extends Component<Props, ComponentState> {
           </svg>
         </button>
         <div className={"oc-menu-container" + menuActive}>
+
+          <ul className="oc-utility-menu" role="menu">
+            {this.props.utilityItemArray.map((item) => (
+              <li key={item.uuid} className="oc-utility-item" role="none">
+                <a
+                    className=""
+                    href={item.content.url}
+                    role="menuitem"
+                  >
+                    <span className="utility-item-title">
+                      {item.content.title}
+                    </span>
+                  </a>
+              </li>
+            ))}
+          </ul>
+
           <button onClick={menuState} className="close-menu" title="Close Menu">
-            Close
+            <span className="sr-only">Close</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
@@ -146,6 +173,7 @@ export class Menu extends Component<Props, ComponentState> {
                   >
                     <span className="menu-item-title">{item.title}</span>
                     <svg
+                      id="arrow-icon"
                       className="svg-inline--fa fa-angle-down fa-w-10 canvas_menu_group_item__icon fa-fw"
                       aria-hidden="true"
                       data-prefix="fas"
@@ -198,6 +226,7 @@ export class Menu extends Component<Props, ComponentState> {
                           >
                             <span className="menu-item-title">{item.title}</span>
                             <svg
+                              id="arrow-icon"
                               className="svg-inline--fa fa-angle-down fa-w-10 canvas_menu_group_item__icon fa-fw"
                               aria-hidden="true"
                               data-prefix="fas"
@@ -249,6 +278,7 @@ export class Menu extends Component<Props, ComponentState> {
                                   >
                                     <span className="menu-item-title">{item.title}</span>
                                     <svg
+                                      id="arrow-icon"
                                       className="svg-inline--fa fa-angle-down fa-w-10 canvas_menu_group_item__icon fa-fw"
                                       aria-hidden="true"
                                       data-prefix="fas"
