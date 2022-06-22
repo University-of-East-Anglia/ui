@@ -34,11 +34,14 @@ export class UEALogo extends Component<Props, ComponentState> {
 
     return (
       <div className="uea-logo">
+        <a href="https://uea.ac.uk/" title="Go to University of East Anglia">
         <svg
           id="Layer_1"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="35 70 175 38"
+          role="img"
+          aria-label="logo"
         >
           <defs></defs>
           <path d="M116.51,84.61c-3.07,0-4.9-2.21-4.9-5.91V71.38h1.89V78.6c0,2.78,1.26,4,3,4s3-1.22,3-3.93V71.38h1.89v7.2c0,3.78-1.84,6-4.93,6" />
@@ -71,6 +74,7 @@ export class UEALogo extends Component<Props, ComponentState> {
           <path d="M55.42,102.26c4.26,0,6.14-2.89,6.14-7h0V77.47c0-4.18-2.1-5.57-4.64-5.57v-.52H81.15V78h-.43c-.72-3.86-2.23-5.37-7.15-5.37H72.44c-4.62,0-5.53,1.47-5.53,5.61V82c0,5,2,5.22,5.91,5.22v.47c-3.86,0-5.91.42-5.91,5.49v1.65c0,6.2.79,6.62,6,6.62,3.08,0,6.84-.79,7.81-5h.44v6.35H55.42Z" />
           <path d="M89.78,102.26c4.26,0,5.34-2.75,3.41-7.07L86.66,78.87l1.88-8.07h.36s9,21.31,11.2,25.62c2.35,4.55,4.33,5.84,6.28,5.84v.53H89.78v-.53Z" />
         </svg>
+        </a>
       </div>
     );
   }

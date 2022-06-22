@@ -18,7 +18,7 @@ export class Footer extends Component<Props, ComponentState> {
   render() {
     return (
       <div className={"footer-container footer-container--" + this.props.background}>
-        <footer className="footer">
+        <footer data-swiftype-index="false" className="footer">
           <p>
             &copy; UEA. All rights reserved. University of East Anglia, Norwich Research Park,
             Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161

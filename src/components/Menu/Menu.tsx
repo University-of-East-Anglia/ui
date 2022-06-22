@@ -87,7 +87,7 @@ export class Menu extends Component<Props, ComponentState> {
     console.log(this.props.utilityItemArray);
     
     return (
-      <nav className="oc-main">
+      <nav data-swiftype-index="false" className="oc-main">
         <button onClick={menuState} className="" title="Open Menu">
           Menu
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black">
