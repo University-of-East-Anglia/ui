@@ -34,7 +34,7 @@ export class UEALogo extends Component<Props, ComponentState> {
 
     return (
       <div className="uea-logo">
-        <a href="https://uea.ac.uk/" title="Go to University of East Anglia">
+        <a href="https://www.uea.ac.uk/" title="Go to University of East Anglia">
         <svg
           id="Layer_1"
           data-name="Layer 1"
