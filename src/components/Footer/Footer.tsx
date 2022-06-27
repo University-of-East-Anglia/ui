@@ -18,7 +18,7 @@ export class Footer extends Component<Props, ComponentState> {
   render() {
     return (
       <div className={"footer-container footer-container--" + this.props.background}>
-        <footer className="footer">
+        <footer data-swiftype-index="false" className="footer">
           <p>
             &copy; UEA. All rights reserved. University of East Anglia, Norwich Research Park,
             Norwich, Norfolk, NR4 7TJ, UK | +44 (0) 1603 456161
@@ -34,7 +34,7 @@ export class Footer extends Component<Props, ComponentState> {
             </a>
             <a
               className="social-icon"
-              href="https://facebook.com/ueaofficial"
+              href="https://twitter.com/uniofeastanglia"
               target="_blank"
               rel="nofollow noreferrer"
             >
@@ -42,7 +42,7 @@ export class Footer extends Component<Props, ComponentState> {
             </a>
             <a
               className="social-icon"
-              href="https://facebook.com/ueaofficial"
+              href="https://instagram.com/uniofeastanglia"
               target="_blank"
               rel="nofollow noreferrer"
             >
@@ -50,7 +50,7 @@ export class Footer extends Component<Props, ComponentState> {
             </a>
             <a
               className="social-icon"
-              href="https://facebook.com/ueaofficial"
+              href="https://linkedin.com/school/university-of-east-anglia/"
               target="_blank"
               rel="nofollow noreferrer"
             >
@@ -58,7 +58,7 @@ export class Footer extends Component<Props, ComponentState> {
             </a>
             <a
               className="social-icon"
-              href="https://facebook.com/ueaofficial"
+              href="https://youtube.com/user/ueaofficial"
               target="_blank"
               rel="nofollow noreferrer"
             >
