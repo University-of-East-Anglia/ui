@@ -1,3 +1,6 @@
+## Run application
+`npm run storybook`
+
 ## Commit your changes to the repo
 
 Generate the build files with `npm run rollup`

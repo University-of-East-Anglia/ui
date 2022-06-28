@@ -40,13 +40,15 @@
         right: 15px;
       }
     }
-    .sr-only{
-      position: absolute;
-      left: -10000px;
-      top: auto;
-      width: 1px;
-      height: 1px;
+    .sr-only {
+      position: absolute !important;
+      clip: rect(1px, 1px, 1px, 1px);
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      border: 0 !important;
       overflow: hidden;
+      white-space: nowrap;
     }
     .oc-utility-menu {
       position: absolute;

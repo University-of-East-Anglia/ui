@@ -30,6 +30,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
+               <span className="sr-only">Go to our Facebook page</span>
               <FacebookSVG />
             </a>
             <a
@@ -38,6 +39,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
+              <span className="sr-only">Go to our Twitter page</span>
               <TwitterSVG />
             </a>
             <a
@@ -46,6 +48,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
+              <span className="sr-only">Go to our Instagram page</span>
               <InstagramSVG />
             </a>
             <a
@@ -54,6 +57,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
+              <span className="sr-only">Go to our Linkedin page</span>
               <LinkedInSVG />
             </a>
             <a
@@ -62,6 +66,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
+              <span className="sr-only">Go to our Youtube page</span>
               <YouTubeSVG />
             </a>
           </div>
