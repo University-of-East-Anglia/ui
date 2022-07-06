@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Link from "./Link";
 import "../Card.scss";
 
@@ -10,18 +10,20 @@ export interface Props {
 }
 
 export const ProfileCard = ({ ...props }: Props) => {
-  const cards: any = document.querySelectorAll(".card");
-  Array.prototype.forEach.call(cards, (card: any) => {
-    let down: number,
-      up: number,
-      link = card.querySelector("a");
-    card.onmousedown = () => (down = +new Date());
-    card.onmouseup = () => {
-      up = +new Date();
-      if (up - down < 200) {
-        link.click();
-      }
-    };
+  useEffect(() => {
+    const cards: any = document.querySelectorAll(".card");
+    Array.prototype.forEach.call(cards, (card: any) => {
+      let down: number,
+        up: number,
+        link = card.querySelector("a");
+      card.onmousedown = () => (down = +new Date());
+      card.onmouseup = () => {
+        up = +new Date();
+        if (up - down < 200) {
+          link.click();
+        }
+      };
+    });
   });
 
   return (
