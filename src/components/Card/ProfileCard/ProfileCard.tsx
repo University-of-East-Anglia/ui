@@ -33,8 +33,22 @@ export const ProfileCard = ({ ...props }: Props) => {
       </div>
       <a href={props.link}>
         <div className="card--content">
-          <h3 className="card--title">{props.title}</h3>
-          {props.subTitle ? <p className="card--excerpt">{props.subTitle}</p> : null}
+          <div>
+            <h3 className="card--title">{props.title}</h3>
+            {props.subTitle ? <p className="card--excerpt">{props.subTitle}</p> : null}
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="chevron--right"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
         </div>
       </a>
     </div>

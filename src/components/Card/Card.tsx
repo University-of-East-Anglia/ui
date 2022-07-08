@@ -37,8 +37,8 @@ export const Card = ({ ...props }: Props) => {
         {props.type ? <span className="card--type">{props.type}</span> : null}
         <h3 className="card--title">{props.title}</h3>
         {props.excerpt ? <p className="card--excerpt">{props.excerpt}</p> : null}
-        <a className="card--link" href="https://www.uea.ac.uk">
-          Find out more
+        <a className="card--link" href={props.link}>
+          {props.anchor}
         </a>
       </div>
     </div>

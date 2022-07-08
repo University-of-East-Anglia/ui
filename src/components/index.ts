@@ -4,6 +4,8 @@ export { Button } from "./Button";
 
 export { Card } from "./Card";
 
+export { ProfileCard } from "./Card/ProfileCard";
+
 export { DescriptionList } from "./Lists/DescriptionList";
 
 export { OrderedList } from "./Lists/OrderedList";
