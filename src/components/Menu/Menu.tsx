@@ -84,8 +84,6 @@ export class Menu extends Component<Props, ComponentState> {
 
     const menuActive = this.state.menuActive === false ? "" : " open";
     
-    console.log(this.props.utilityItemArray);
-    
     return (
       <nav data-swiftype-index="false" className="oc-main">
         <button onClick={menuState} className="" title="Open Menu">
