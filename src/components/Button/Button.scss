@@ -11,6 +11,9 @@ button {
     border-color: $black;
     cursor: pointer;
   }
+  &:focus {
+    outline: $black solid 2px;
+  }
   &.button-primary {
     background: $pink;
   }

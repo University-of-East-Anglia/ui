@@ -30,6 +30,30 @@
           text-decoration: none;
         }
       }
+      @media screen and(max-width:$md) {
+        display: none;
+        &.open {
+          display: block;
+        }
+      }
+    }
+    button {
+      &.toggle-menu {
+        background: none;
+        outline: none;
+        display: none;
+        color: white;
+        @media screen and(max-width:$md) {
+          display: block;
+        }
+        &:hover {
+          background: $pink;
+          color: $black;
+        }
+        &:focus {
+          outline: $pink 2px solid;
+        }
+      }
     }
   }
 }
