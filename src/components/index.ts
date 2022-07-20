@@ -53,3 +53,5 @@ export { Tabs } from "./Tabs";
 export { Menu } from "./Menu";
 
 export { default as YouTube } from "./YouTube";
+
+export { Pagination } from "./Pagination";
