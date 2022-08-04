@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { HTMLAttributes, useEffect } from "react";
 // import Link from "./Link";
 import "./Card.scss";
 
 export interface Props {
+  class?: string;
   image: string;
   type: string;
   excerpt: string;
@@ -27,9 +28,11 @@ export const Card = ({ ...props }: Props) => {
       };
     });
   });
+  const constructClass = props.class ? " " + props.class : null;
+  const cardClass = "card" + constructClass;
 
   return (
-    <div className="card">
+    <div className={cardClass}>
       <div className="card--image">
         <img src={props.image} alt={props.title} />
       </div>
