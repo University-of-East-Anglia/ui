@@ -276,7 +276,6 @@ const Panel = (props: any) => {
           checkbox: "ui-refinement-checkbox",
           count: "ui-refinement-count",
           item: "ui-refinement-item",
-          text: "ui-refinement-text",
         }}
       />
     </div>
