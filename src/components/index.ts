@@ -26,6 +26,8 @@ export { Footer } from "./Footer";
 
 export { Header } from "./Header";
 
+export { Heading } from "./Heading";
+
 export { Hero } from "./Hero";
 
 export { Image } from "./Image";
@@ -55,3 +57,5 @@ export { Menu } from "./Menu";
 export { default as YouTube } from "./YouTube";
 
 export { Pagination } from "./Pagination";
+
+export { Search } from "./Search";

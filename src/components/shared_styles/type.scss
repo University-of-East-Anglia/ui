@@ -6,3 +6,35 @@
     font-family: "BrandonText-Black";
   }
 }
+.ui-heading {
+  display: block;
+  line-height: 1.2em;
+  margin-bottom: 0.6em;
+  &.ui-heading--xs {
+    font-family: "BrandonText-Medium";
+  }
+  &.ui-heading--sm {
+    font-size: 1.2rem;
+    font-family: "BrandonText-Bold";
+  }
+  &.ui-heading--md {
+    font-size: 1.6rem;
+    font-family: "BrandonText-Bold";
+  }
+  &.ui-heading--lg {
+    font-size: 2rem;
+    font-family: "BrandonText-Bold";
+  }
+  &.ui-heading--xl {
+    font-size: 2.4rem;
+    font-family: "BrandonText-Bold";
+  }
+  &.ui-heading--2xl {
+    font-size: 3rem;
+    font-family: "BrandonText-Black";
+  }
+  &.ui-heading--3xl {
+    font-size: 4rem;
+    font-family: "BrandonText-Black";
+  }
+}
