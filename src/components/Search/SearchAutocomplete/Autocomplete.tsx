@@ -97,7 +97,7 @@ export function Autocomplete({
       onSubmit({ state }) {
         setInstantSearchUiState({ query: state.query });
       },
-      renderer: { createElement, Fragment, render },
+      renderer: { createElement, Fragment },
       //plugins,
       onStateChange({ prevState, state }) {
         if (prevState.query !== state.query) {

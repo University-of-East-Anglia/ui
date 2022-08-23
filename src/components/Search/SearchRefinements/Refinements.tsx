@@ -12,6 +12,7 @@ export const Refinements = (props: any) => {
 };
 
 const Panel = (props: any) => {
+  console.log(props);
   return (
     <div className="ui-refinement-panel">
       <span className="ui-heading ui-heading--xs">{props.heading}</span>
