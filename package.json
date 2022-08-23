@@ -12,6 +12,7 @@
     "@algolia/autocomplete-theme-classic": "^1.7.1",
     "@storybook/addon-a11y": "^6.4.22",
     "@types/react-dom": "^18.0.6",
+    "algoliasearch": "^4.14.2",
     "autoprefixer": "^10.4.4",
     "csstype": "^3.0.11",
     "js-tokens": "^4.0.0",
