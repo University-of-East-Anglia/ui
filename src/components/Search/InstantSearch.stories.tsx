@@ -18,4 +18,8 @@ Default.args = {
   page_title: "UI Algolia Search",
   index_name: "crawler_www.uea.ac.uk",
   placeholder: "Search...",
+  refinement_filters: [
+    { heading: "Clearing Vacancies", attribute: "clearing" },
+    { heading: "Department", attribute: "department" },
+  ],
 };

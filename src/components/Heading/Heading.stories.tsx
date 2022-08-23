@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import { Heading, Props } from "./Heading";
+import "../App.scss";
 
 const meta: Meta = {
   title: "Atomic Components/Heading",

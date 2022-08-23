@@ -18,6 +18,7 @@ import { simple } from "instantsearch.js/es/lib/stateMappings";
 import connectStats from "instantsearch.js/es/connectors/stats/connectStats";
 import algoliasearch from "algoliasearch/lite";
 import { Autocomplete } from "./SearchAutocomplete/Autocomplete";
+import { Refinements } from "./SearchRefinements/Refinements";
 
 const searchClient = algoliasearch(
   process.env.ALGOLIA_ACCOUNT_ID!,
@@ -241,11 +242,7 @@ export const Search = (props: any) => {
               />
             )}
             <CustomClearRefinements />
-            <Panel heading="Clearing Vacancies" attribute="clearing" />
-            <Panel heading="Year" attribute="academicYear" />
-            <Panel heading="Course Type" attribute="primaryCategory" />
-            <Panel heading="Other Filters" attribute="secondaryCategory" />
-            <Panel heading="Department" attribute="department" />
+            {<Refinements filters={props.refinement_filters} />}
           </div>
           <div className="ui-search-hits-container">
             <CustomHits {...props} />
@@ -260,24 +257,6 @@ export const Search = (props: any) => {
           </div>
         </div>
       </InstantSearch>
-    </div>
-  );
-};
-
-const Panel = (props: any) => {
-  return (
-    <div className="ui-refinement-panel">
-      <span className="ui-heading ui-heading--xs">{props.heading}</span>
-      <RefinementList
-        attribute={props.attribute}
-        classNames={{
-          list: "ui-refinement-list",
-          label: "ui-refinement-label",
-          checkbox: "ui-refinement-checkbox",
-          count: "ui-refinement-count",
-          item: "ui-refinement-item",
-        }}
-      />
     </div>
   );
 };

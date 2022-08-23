@@ -9,7 +9,7 @@ export const Heading = ({ children, ...props }: Props) => {
   let headingClass = props.headingSize;
 
   return (
-    <span className={"ui-heading--" + headingClass} {...props}>
+    <span className={"ui-heading ui-heading--" + headingClass} {...props}>
       {props.title}
     </span>
   );
