@@ -9,36 +9,36 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 const packageJson = require("./package.json");
 
 export default [
-    {
-        input: "src/index.ts",
-        output: [
-            {
-                file: packageJson.main,
-                format: "cjs",
-                sourcemap: true,
-            },
-            {
-                file: packageJson.module,
-                format: "esm",
-                sourcemap: true,
-            },
-        ],
-        plugins: [
-            peerDepsExternal(),
-            resolve(),
-            commonjs(),
-            typescript({ tsconfig: "./tsconfig.json" }),
-            postcss(),
-            terser(),
-        ],
-    },
-    {
-        input: "dist/esm/types/index.d.ts",
-        output: [
-            { file: "dist/index.d.ts", format: "esm" },
-            { file: "dist/index.js", format: "cjs" },
-        ],
-        plugins: [dts()],
-        external: [/\.scss$/],
-    },
+  {
+    input: "src/index.ts",
+    output: [
+      {
+        file: packageJson.main,
+        format: "cjs",
+        sourcemap: true,
+      },
+      {
+        file: packageJson.module,
+        format: "esm",
+        sourcemap: true,
+      },
+    ],
+    plugins: [
+      peerDepsExternal(),
+      resolve({ preferBuiltins: true }),
+      commonjs(),
+      typescript({ tsconfig: "./tsconfig.json" }),
+      postcss(),
+      terser(),
+    ],
+  },
+  {
+    input: "dist/esm/types/index.d.ts",
+    output: [
+      { file: "dist/index.d.ts", format: "esm" },
+      { file: "dist/index.js", format: "cjs" },
+    ],
+    plugins: [dts()],
+    external: [/\.scss$/],
+  },
 ];
