@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../Search.scss";
 import {
   Configure,
@@ -9,7 +9,6 @@ import {
   Snippet,
   useInstantSearch,
 } from "react-instantsearch-hooks-web";
-import type { InstantSearchProps } from "react-instantsearch-hooks-web";
 
 import algoliasearch from "algoliasearch/lite";
 
@@ -31,7 +30,7 @@ export const UISearchBox = (props: any) => {
   return (
     <div className="ui-search">
       <InstantSearch searchClient={searchClient} indexName={props.index_name}>
-        <Configure facetingAfterDistinct={true} hitsPerPage={10} />
+        <Configure facetingAfterDistinct={true} hitsPerPage={props.hits_returned} />
 
         <SearchBox
           placeholder={props.placeholder}

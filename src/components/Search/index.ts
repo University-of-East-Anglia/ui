@@ -1,2 +1,1 @@
 export { Search } from "./InstantSearch";
-export { UISearchBox } from "./SearchBox";

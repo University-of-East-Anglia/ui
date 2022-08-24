@@ -59,3 +59,5 @@ export { default as YouTube } from "./YouTube";
 export { Pagination } from "./Pagination";
 
 export { Search } from "./Search";
+
+export { UISearchBox } from "./Search/SearchBox";
