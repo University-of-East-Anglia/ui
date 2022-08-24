@@ -8,5 +8,15 @@ body {
   line-height: 1.5em;
 }
 a {
-  text-decoration: underline;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+  text-underline-offset: 0.25em;
+  text-decoration: underline #000;
+  text-decoration-thickness: 1px;
+  &:hover {
+    color: #363738;
+    text-decoration: underline #363738;
+    text-decoration-thickness: 2px;
+  }
 }

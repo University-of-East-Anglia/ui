@@ -1,0 +1,7 @@
+.ui-image {
+  &--thumb {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+  }
+}
