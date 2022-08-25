@@ -3,6 +3,13 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
+
+//POSTCSS Plugins
+import simplevars from "postcss-simple-vars";
+import nested from "postcss-nested";
+import cssnext from "postcss-cssnext";
+import cssnano from "cssnano";
+
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
@@ -28,7 +35,10 @@ export default [
       resolve({ browser: true }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
+      postcss({
+        extensions: [".css", ".scss"],
+        plugins: [simplevars(), nested(), cssnext({ warnForDuplicates: true }), cssnano()],
+      }),
       terser(),
     ],
   },

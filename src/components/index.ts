@@ -61,3 +61,5 @@ export { Pagination } from "./Pagination";
 export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
+
+import "./App.scss";
