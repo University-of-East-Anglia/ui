@@ -20,10 +20,7 @@ import algoliasearch from "algoliasearch/lite";
 import { Autocomplete } from "./SearchAutocomplete/Autocomplete";
 import { Refinements } from "./SearchRefinements/Refinements";
 
-const searchClient = algoliasearch(
-  process.env.ALGOLIA_ACCOUNT_ID!,
-  process.env.ALGOLIA_PUBLIC_SEARCH_KEY!
-);
+const searchClient = algoliasearch("CEB2JYCR23", "5a7f8c37938396f582c8eb005bdc963a");
 
 const routing = {
   router: history(),

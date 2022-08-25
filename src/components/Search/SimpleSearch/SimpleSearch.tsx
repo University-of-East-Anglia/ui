@@ -11,10 +11,7 @@ import {
 import algoliasearch from "algoliasearch/lite";
 import { Autocomplete } from "../SearchAutocomplete/Autocomplete";
 
-const searchClient = algoliasearch(
-  process.env.ALGOLIA_ACCOUNT_ID!,
-  process.env.ALGOLIA_PUBLIC_SEARCH_KEY!
-);
+const searchClient = algoliasearch("CEB2JYCR23", "5a7f8c37938396f582c8eb005bdc963a");
 
 export const SimpleSearch = (props: any) => {
   return (
