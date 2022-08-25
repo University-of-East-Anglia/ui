@@ -60,4 +60,4 @@ export { Pagination } from "./Pagination";
 
 export { Search } from "./Search";
 
-export { UISearchBox } from "./Search/SearchBox";
+export { SimpleSearch } from "./Search/SimpleSearch";
