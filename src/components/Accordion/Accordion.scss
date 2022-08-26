@@ -3,7 +3,7 @@
 .accordion {
   .accordion--header {
     padding: 16px;
-    font-family: "BrandonText-Bold";
+    font-weight: $weight-bold;
     border-bottom: 2px solid $blue;
     position: relative;
     display: flex;

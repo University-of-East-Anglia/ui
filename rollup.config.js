@@ -38,6 +38,7 @@ export default [
       postcss({
         extensions: [".css", ".scss"],
         plugins: [simplevars(), nested(), cssnext({ warnForDuplicates: true }), cssnano()],
+        exlude: ["**/**/fonts.scss"],
       }),
       terser(),
     ],

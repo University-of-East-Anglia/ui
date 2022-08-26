@@ -18,7 +18,7 @@
     background: white;
     padding: 7px 12px 16px 12px;
     .card--title {
-      font-family: "BrandonText-Black";
+      font-weight: $weight-black;
       font-size: 24px;
       color: $black;
       line-height: 32px;
@@ -31,7 +31,7 @@
     .card--link {
       position: relative;
       line-height: 1.2em;
-      font-family: "BrandonText-Bold";
+      font-weight: $weight-bold;
       a {
         color: $black;
       }
