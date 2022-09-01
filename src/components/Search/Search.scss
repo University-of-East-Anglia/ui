@@ -227,4 +227,21 @@
       }
     }
   }
+  .datefilter {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    background: $pink;
+    padding: 1rem;
+    border-radius: 7px;
+    gap: 25px;
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input {
+      font-family: "BrandonText";
+      width: 200px;
+    }
+  }
 }

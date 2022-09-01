@@ -5,7 +5,6 @@ import {
   Highlight,
   useHits,
   InstantSearch,
-  RefinementList,
   Snippet,
   CurrentRefinements,
   useConnector,
@@ -19,6 +18,7 @@ import connectStats from "instantsearch.js/es/connectors/stats/connectStats";
 import algoliasearch from "algoliasearch/lite";
 import { Autocomplete } from "./SearchAutocomplete/Autocomplete";
 import { Refinements } from "./SearchRefinements/Refinements";
+import { SearchConfig } from "./SearchConfig/SearchConfig";
 
 const searchClient = algoliasearch("CEB2JYCR23", "5a7f8c37938396f582c8eb005bdc963a");
 
@@ -31,6 +31,7 @@ import type {
   StatsConnectorParams,
   StatsWidgetDescription,
 } from "instantsearch.js/es/connectors/stats/connectStats";
+import index from "instantsearch.js/es/widgets/index/index";
 
 type UseStatsProps = StatsConnectorParams;
 
@@ -59,7 +60,6 @@ function Stats(props: UseStatsProps) {
 
 function CustomClearRefinements(props: any) {
   const { refine, canRefine, createURL } = useClearRefinements(props);
-  console.log(canRefine);
   return (
     <>
       {canRefine ? (
@@ -76,6 +76,7 @@ function CustomHits(props: any) {
   let uiResults: any = results;
   let returnedHits: number = uiResults.nbHits;
   let processTime: number = uiResults.processingTimeMS;
+
   return (
     <>
       <div className="ui-search-hits">
@@ -208,10 +209,10 @@ export const Search = (props: any) => {
     isFilterOpen ? setFilterOpen(false) : setFilterOpen(true);
   };
   console.log(isFilterOpen);
+  console.log(props.date_attribute);
   return (
     <div className="ui-search">
       <InstantSearch searchClient={searchClient} indexName={props.index_name} routing={routing}>
-        <Configure facetingAfterDistinct={true} hitsPerPage={12} />
         <div className="ui-search-header">
           <div>
             <h1 className="ui-heading ui-heading--2xl">{props.page_title}</h1>
@@ -239,9 +240,20 @@ export const Search = (props: any) => {
               />
             )}
             <CustomClearRefinements />
-            {<Refinements filters={props.refinement_filters} />}
+            {
+              <Refinements
+                filters={props.refinement_filters}
+                range_slider={props.range_attribute}
+                range_input={props.range_input}
+              />
+            }
           </div>
           <div className="ui-search-hits-container">
+            <SearchConfig
+              per_page={props.per_page}
+              has_date_filter={props.has_date_filter}
+              date_attribute={props.date_attribute}
+            />
             <CustomHits {...props} />
             <CustomPagination
               classNames={{
