@@ -32,83 +32,91 @@
       }
     }
   }
-  .ui-searchbox {
+  .ui-searchbox-cont {
+    position: relative;
+    width: 100%;
     max-width: 720px;
     margin: 0 auto;
-    background: white;
-    border: $pink 2px solid;
-    color: $gray;
-    border-radius: 7px;
-    display: flex;
-    .aa-Autocomplete {
-      height: 45px;
+    .ui-searchbox {
       width: 100%;
-      border: none;
-      background: transparent;
-      .aa-Form {
+      margin: 0 auto;
+      background: white;
+      border: $pink 2px solid;
+      color: $gray;
+      border-radius: 7px;
+      display: flex;
+      .aa-Autocomplete {
+        height: 45px;
+        width: 100%;
         border: none;
-        display: flex;
-        .aa-InputWrapper {
-          order: 1;
-          padding-left: 5px;
-        }
-        .aa-InputWrapperPrefix {
-          order: 2;
-          .aa-SubmitButton {
-            height: 45px;
-            width: 45px;
-            background: $pink;
-            border-radius: 0;
-            margin: 0;
-            padding: 0;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            svg {
-              color: $black;
+        background: transparent;
+        .aa-Form {
+          border: none;
+          display: flex;
+          .aa-InputWrapper {
+            order: 1;
+            padding-left: 5px;
+          }
+          .aa-InputWrapperPrefix {
+            order: 2;
+            .aa-SubmitButton {
+              height: 45px;
+              width: 45px;
+              background: $pink;
+              border-radius: 0;
+              margin: 0;
+              padding: 0;
+              border: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                color: $black;
+              }
             }
           }
-        }
-        .aa-InputWrapperSuffix {
-          order: 2;
-          .aa-ClearButton {
-            height: 45px;
-            width: 45px;
-            border-radius: 0 4px 4px 0;
-            margin: 0;
-            border: none;
-            background: $lightGrey;
-            svg {
-              color: $black;
+          .aa-InputWrapperSuffix {
+            order: 2;
+            .aa-ClearButton {
+              height: 45px;
+              width: 45px;
+              border-radius: 0 4px 4px 0;
+              margin: 0;
+              border: none;
+              background: $lightGrey;
+              svg {
+                color: $black;
+              }
             }
           }
         }
       }
     }
-  }
-  .ui-searchbox-hits {
-    max-width: 720px;
-    margin: 0 auto;
-    list-style: none;
-    border: 1px $gray solid;
-    border-top: none;
-    .ui-searchbox-hit {
-      display: flex;
-      padding: 10px 5px;
-      margin: 0 10px;
-      border-bottom: 1px solid $lightGrey;
-      gap: 15px;
-      mark {
-        background-color: $pink;
-      }
-      p {
-        line-height: 1.1em;
-        font-size: 14px;
-        margin-bottom: 15px;
-      }
-      a {
-        display: block;
+    .ui-searchbox-hits {
+      position: absolute;
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      list-style: none;
+      border: 1px $gray solid;
+      border-top: none;
+      .ui-searchbox-hit {
+        display: flex;
+        padding: 10px 5px;
+        margin: 0 10px;
+        border-bottom: 1px solid $lightGrey;
+        gap: 15px;
+        mark {
+          background-color: $pink;
+        }
+        p {
+          line-height: 1.1em;
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+        a {
+          display: block;
+        }
       }
     }
   }
@@ -235,6 +243,10 @@
     padding: 1rem;
     border-radius: 7px;
     gap: 25px;
+    @media screen and (max-width: $sm) {
+      flex-direction: column;
+      gap: 10px;
+    }
     label {
       display: block;
       font-weight: bold;
@@ -242,6 +254,15 @@
     input {
       font-family: "BrandonText";
       width: 200px;
+    }
+    button {
+      background: $lightGrey;
+      color: $black;
+      border: transparent 2px solid;
+      border-radius: 7px;
+      &:hover {
+        border-color: $black;
+      }
     }
   }
 }

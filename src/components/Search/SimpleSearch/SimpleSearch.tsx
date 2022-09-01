@@ -19,14 +19,16 @@ export const SimpleSearch = (props: any) => {
       <InstantSearch searchClient={searchClient} indexName={props.index_name}>
         <Configure facetingAfterDistinct={true} hitsPerPage={props.hits_returned} />
 
-        <Autocomplete
-          searchClient={searchClient}
-          placeholder="Search"
-          detachedMediaQuery="none"
-          openOnFocus
-          className="ui-searchbox"
-        />
-        <SearchBoxHits {...props} />
+        <div className="ui-searchbox-cont">
+          <Autocomplete
+            searchClient={searchClient}
+            placeholder="Search"
+            detachedMediaQuery="none"
+            openOnFocus
+            className="ui-searchbox"
+          />
+          <SearchBoxHits {...props} />
+        </div>
       </InstantSearch>
     </div>
   );
@@ -54,7 +56,7 @@ function SearchBoxHits(props: any) {
               <p>
                 <Snippet hit={hit} attribute="content" />
               </p>
-              <a href={hit.url} title={hit.title}>
+              <a className="ui-heading--xs" href={hit.url} title={hit.title}>
                 Read more
               </a>
             </div>
