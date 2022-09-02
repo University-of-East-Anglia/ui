@@ -21,26 +21,22 @@ export const SearchConfig = (props: any) => {
       setToDate(newToDate);
     };
 
-    const clearDates = () => {
-      setFromDate(488890800);
-      setToDate(Date.now());
-      (document.getElementById("datefrom") as HTMLInputElement).value = "";
-      (document.getElementById("dateto") as HTMLInputElement).value = "";
-    };
-
     console.log(fromDate, toDate);
     return (
       <>
         <div className="datefilter">
           <div>
-            <label htmlFor="datefrom">From:</label>
+            <label className="ui-heading ui-heading--xs" htmlFor="datefrom">
+              Date from:
+            </label>
             <input type="date" name="datefrom" id="datefrom" onChange={convertFromDate} />
           </div>
           <div>
-            <label htmlFor="dateto">To:</label>
+            <label className="ui-heading ui-heading--xs" htmlFor="dateto">
+              Date to:
+            </label>
             <input type="date" name="dateto" id="dateto" onChange={convertToDate} />
           </div>
-          <button onClick={clearDates}>Clear</button>
         </div>
 
         <Configure

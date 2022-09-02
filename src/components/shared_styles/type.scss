@@ -18,25 +18,43 @@
   &.ui-heading--sm {
     font-size: 1.2rem;
     font-weight: $weight-bold;
+    @media screen and (max-width: $sm) {
+      font-size: 1.1rem;
+    }
   }
   &.ui-heading--md {
     font-size: 1.6rem;
     font-weight: $weight-bold;
+    @media screen and (max-width: $sm) {
+      font-size: 1.2rem;
+    }
   }
   &.ui-heading--lg {
     font-size: 2rem;
     font-weight: $weight-bold;
+    @media screen and (max-width: $sm) {
+      font-size: 1.3rem;
+    }
   }
   &.ui-heading--xl {
     font-size: 2.4rem;
     font-weight: $weight-bold;
+    @media screen and (max-width: $sm) {
+      font-size: 1.8rem;
+    }
   }
   &.ui-heading--2xl {
     font-size: 3rem;
     font-weight: $weight-black;
+    @media screen and (max-width: $sm) {
+      font-size: 2rem;
+    }
   }
   &.ui-heading--3xl {
     font-size: 4rem;
     font-weight: $weight-black;
+    @media screen and (max-width: $sm) {
+      font-size: 3rem;
+    }
   }
 }

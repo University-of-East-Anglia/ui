@@ -208,8 +208,7 @@ export const Search = (props: any) => {
   const toggleFilter = () => {
     isFilterOpen ? setFilterOpen(false) : setFilterOpen(true);
   };
-  console.log(isFilterOpen);
-  console.log(props.date_attribute);
+
   return (
     <div className="ui-search">
       <InstantSearch searchClient={searchClient} indexName={props.index_name} routing={routing}>
@@ -227,33 +226,49 @@ export const Search = (props: any) => {
         </div>
 
         <div className="ui-search-results">
-          <div className="ui-search-refinements">
+          <button onClick={toggleFilter} className="ui-search-toggle-filter" title="Filter">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+                clipRule="evenodd"
+              />
+            </svg>{" "}
+            <span>{isFilterOpen ? "Close" : "Open"} Filters</span>
+          </button>
+          <div
+            className={isFilterOpen ? "ui-search-refinements open" : "ui-search-refinements close"}
+          >
             <h3 className="ui-heading ui-heading--sm">Filter Options</h3>
-            {isFilterOpen ? null : (
-              <CurrentRefinements
-                classNames={{
-                  delete: "ui-refinement-delete",
-                  label: "ui-refinement-label",
-                  item: "ui-refinement-item",
-                  category: "ui-refinement-category",
-                }}
-              />
-            )}
+
+            <CurrentRefinements
+              classNames={{
+                delete: "ui-refinement-delete",
+                label: "ui-refinement-label",
+                item: "ui-refinement-item",
+                category: "ui-refinement-category",
+              }}
+            />
+
             <CustomClearRefinements />
-            {
-              <Refinements
-                filters={props.refinement_filters}
-                range_slider={props.range_attribute}
-                range_input={props.range_input}
-              />
-            }
-          </div>
-          <div className="ui-search-hits-container">
+
             <SearchConfig
               per_page={props.per_page}
               has_date_filter={props.has_date_filter}
               date_attribute={props.date_attribute}
             />
+            <Refinements
+              filters={props.refinement_filters}
+              range_slider={props.range_attribute}
+              range_input={props.range_input}
+            />
+          </div>
+          <div className="ui-search-hits-container">
             <CustomHits {...props} />
             <CustomPagination
               classNames={{
