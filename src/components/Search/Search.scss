@@ -101,6 +101,8 @@
       list-style: none;
       border: 1px $gray solid;
       border-top: none;
+      background: white;
+      z-index: 99;
       .ui-searchbox-hit {
         display: flex;
         padding: 10px 5px;
