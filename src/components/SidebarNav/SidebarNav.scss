@@ -43,15 +43,20 @@
         outline: none;
         display: none;
         color: white;
+        padding: 0;
         @media screen and(max-width:$md) {
           display: block;
         }
         &:hover {
-          background: $pink;
-          color: $black;
+          border: $pink solid 2px;
         }
         &:focus {
-          outline: $pink 2px solid;
+          border: $pink 2px solid;
+        }
+        svg {
+          width: 30px;
+          height: 30px;
+          padding: 5px;
         }
       }
     }
