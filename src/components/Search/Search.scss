@@ -33,6 +33,20 @@
       }
     }
   }
+  .ui-dropdownsearch {
+    .aa-Autocomplete {
+      form {
+        position:absolute;
+        height: 69px;
+        width: 557px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 1);
+        border: 2px solid rgba(242, 242, 242, 1);
+        color: $gray;
+        border-radius: 6px;
+      }
+    }
+  }
   .ui-searchbox-cont {
     position: relative;
     width: 100%;
