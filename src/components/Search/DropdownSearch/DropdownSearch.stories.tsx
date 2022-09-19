@@ -15,6 +15,7 @@ const Template: Story = (args) => <DropdownSearch {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
+  page_title: "Discover which scholarships you could be eligible for:",
   index_name: "crawler_www.uea.ac.uk",
   placeholder: "Degree level...",
 };

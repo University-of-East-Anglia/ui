@@ -11,7 +11,8 @@ export const DropdownSearch = (props: any) => {
   return (
     <div className="ui-search">
       <InstantSearch searchClient={searchClient} indexName={props.index_name}>
-        <div className="ui-autocomplete">
+        <div className="ui-searchbox-cont">
+          <h1 className="ui-heading ui-heading--sm">{props.page_title}</h1>
           <Autocomplete
             searchClient={searchClient}
             placeholder="Degree level..."
