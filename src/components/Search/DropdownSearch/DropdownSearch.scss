@@ -1,0 +1,57 @@
+@import "../../shared_styles/variables.scss";
+
+.dropdown-container {
+  text-align: left;
+  position: absolute;
+}
+.scholarships-title {
+  height: 32px;
+  width: 594px;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 32px;
+}
+
+.dropdown-input {
+  height: 69px;
+  width: 100%;
+  width: 557px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(242, 242, 242, 1);
+  border-radius: 6px;
+  user-select: none;
+}
+
+.dropdown-selected-value {
+  height: 24px;
+  width: 205px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 24px;
+}
+.dropdown-menu {
+  position: absolute;
+  transform: translateY(4px);
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: auto;
+  max-height: 150px;
+}
+.dropdown-item {
+  padding: 5px;
+  cursor: pointer;
+}
+dropdown-tool {
+  padding-right: 27px;
+}
+
+.dropdown-item:hover {
+  background-color: #9fc3f870;
+}
