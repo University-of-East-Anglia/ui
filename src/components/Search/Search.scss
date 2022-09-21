@@ -33,39 +33,6 @@
       }
     }
   }
-  .ui-dropdownsearch {
-    .aa-Autocomplete {
-      form {
-        position:absolute;
-        height: 69px;
-        width: 100%;
-        max-width: 557px;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 1);
-        border: 2px solid rgba(242, 242, 242, 1);
-        border-radius: 6px;
-        padding-left: 28px;
-      }
-    }
-    .aa-InputWrapperPrefix {
-      order: 6;
-      .aa-SubmitButton {
-        height: 45px;
-        width: 45px;
-        background: rgba(255, 255, 255, 1);
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        svg {
-          color: $black;    
-        }
-      }
-    }
-  }
   .ui-searchbox-cont {
     position: relative;
     width: 100%;
