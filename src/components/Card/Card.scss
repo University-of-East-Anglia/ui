@@ -131,13 +131,20 @@
       .vertical {
         border-left: 1px solid rgba(224, 224, 224, 1);
       }
-      .card-cta {
-        display: block;
-        margin: auto;
-      }
     }
     .chevron--plus {
       height: 24px;
     }
+    .card-button {
+      background-color: rgba(228, 0, 135, 1);
+      color: $white;
+      height: 48px;
+      width: 100%;
+      text-align: left;
+      border-radius: 7px;
+    }
+  }
+  .cta-chevron--right {
+    float: right;
   }
 }
