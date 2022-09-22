@@ -21,7 +21,7 @@ export const DropdownSearch = (props: any) => {
       window.removeEventListener("click", handler);
     };
   });
-  const handleInputClick = (e) => {
+  const handleInputClick = (e: { stopPropagation: () => void }) => {
     e.stopPropagation();
     setShowOptions(!showOptions);
   };
@@ -33,11 +33,14 @@ export const DropdownSearch = (props: any) => {
     return props.placeholder;
   };
 
-  const onItemClick = (option) => {
+  const onItemClick = (option: React.SetStateAction<null>) => {
     setSelectedOption(option);
   };
 
-  const isSelected = (option) => {
+  const isSelected = (option: {
+    value: any;
+    label?: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined;
+  }) => {
     if (!selectedOption) {
       return false;
     }
@@ -78,7 +81,9 @@ export const DropdownSearch = (props: any) => {
             </div>
           )}
 
-          <div className="dropdown-selected-value">{getDisplay()}</div>
+          <div className="dropdown-selected-value" contentEditable={true}>
+            {getDisplay()}
+          </div>
           <div className="dropdown-tools">
             <div className="dropdown-tool">
               <svg height="20" width="20" viewBox="0 0 20 20">

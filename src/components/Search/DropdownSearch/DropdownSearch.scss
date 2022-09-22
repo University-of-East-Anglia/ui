@@ -4,10 +4,13 @@
   text-align: left;
   position: absolute;
   width: 100%;
+  height: auto;
+  display: flex;
 }
 .scholarships-title {
-  height: 32px;
-  width: 594px;
+  height: auto;
+  max-width: 594px;
+  width: 100%;
   font-size: 24px;
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
@@ -18,7 +21,7 @@
   position: absolute;
   height: 69px;
   width: 100%;
-  width: 557px;
+  max-width: 557px;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -39,11 +42,13 @@
   }
   .dropdown-selected-value {
     height: 24px;
-    width: 205px;
+    max-width: 205px;
+    width: 100%;
     font-size: 16px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 1);
     line-height: 24px;
+    padding-left: 5px;
   }
 }
 .dropdown-item {
