@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./DropdownSearch.scss";
 
 export interface Props {
@@ -11,14 +11,74 @@ export interface Options {
 }
 
 export const DropdownSearch = (props: any) => {
+  const [showOptions, setShowOptions] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  useEffect(() => {
+    const handler = () => setShowOptions(false);
+    window.addEventListener("click", handler);
+    return () => {
+      window.removeEventListener("click", handler);
+    };
+  });
+  const handleInputClick = (e) => {
+    e.stopPropagation();
+    setShowOptions(!showOptions);
+  };
+
+  const getDisplay = () => {
+    if (selectedOption) {
+      return selectedOption.label;
+    }
+    return props.placeholder;
+  };
+
+  const onItemClick = (option) => {
+    setSelectedOption(option);
+  };
+
+  const isSelected = (option) => {
+    if (!selectedOption) {
+      return false;
+    }
+    return selectedOption.value === option.value;
+  };
+
   return (
     <div>
       <div>
         <p className="scholarships-title">{props.page_title}</p>
       </div>
       <div className="dropdown-container">
-        <div className="dropdown-input">
-          <div className="dropdown-selected-value">{props.placeholder}</div>
+        <div onClick={handleInputClick} className="dropdown-input">
+          {showOptions && (
+            <div className="dropdown-menu">
+              {props.options.map(
+                (option: {
+                  value: React.Key | null | undefined;
+                  label:
+                    | boolean
+                    | React.ReactChild
+                    | React.ReactFragment
+                    | React.ReactPortal
+                    | null
+                    | undefined;
+                }) => (
+                  <div className="dropdown-item">
+                    <div
+                      onClick={() => onItemClick(option)}
+                      key={option.value}
+                      className={`dropdown-item${isSelected(option) && "selected"}`}
+                    >
+                      {option.label}
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          )}
+
+          <div className="dropdown-selected-value">{getDisplay()}</div>
           <div className="dropdown-tools">
             <div className="dropdown-tool">
               <svg height="20" width="20" viewBox="0 0 20 20">
@@ -26,24 +86,6 @@ export const DropdownSearch = (props: any) => {
               </svg>
             </div>
           </div>
-          {/* <div className="dropdown-menu">
-            {props.options.map(
-              (option: {
-                value: React.Key | null | undefined;
-                label:
-                  | boolean
-                  | React.ReactChild
-                  | React.ReactFragment
-                  | React.ReactPortal
-                  | null
-                  | undefined;
-              }) => (
-                <div key={option.value} className="dropdown-item">
-                  {option.label}
-                </div>
-              )
-            )}
-          </div> */}
         </div>
       </div>
     </div>
