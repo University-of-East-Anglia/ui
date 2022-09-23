@@ -1,66 +1,24 @@
 @import "../../shared_styles/variables.scss";
 
-.dropdown-container {
-  text-align: left;
-  position: absolute;
-  width: 100%;
-  height: auto;
-  display: flex;
-}
-.scholarships-title {
-  height: auto;
-  max-width: 594px;
-  width: 100%;
-  font-size: 24px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 1);
-  line-height: 32px;
-}
-
-.dropdown-input {
-  position: absolute;
-  height: 69px;
-  width: 100%;
-  max-width: 557px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(242, 242, 242, 1);
-  border-radius: 6px;
-  user-select: none;
-  .dropdown-menu {
-    position: absolute;
-    transform: translateY(140px);
-    width: 100%;
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 5px;
-    overflow: auto;
-    max-height: 200px;
-    vertical-align: middle;
+.ui-dropdown-search {
+  &.dropdown-container {
+    padding: 5px;
+    cursor: pointer;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.4);
+    text-align: left;
+    width: 557px;
+    height: 69px;
+    border: 0 solid rgba(242, 242, 242, 1);
+    border-radius: 6px;
   }
-  .dropdown-selected-value {
-    height: 24px;
-    max-width: 205px;
+  &.scholarships-title {
+    height: auto;
+    max-width: 594px;
     width: 100%;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
-    line-height: 24px;
-    padding-left: 5px;
+    line-height: 32px;
   }
-}
-.dropdown-item {
-  padding: 5px;
-  cursor: pointer;
-  line-height: 32px;
-  color: rgba(0, 0, 0, 0.4);
-}
-dropdown-tool {
-  padding-right: 27px;
-}
-
-.dropdown-item:hover {
-  background-color: #9fc3f870;
 }
