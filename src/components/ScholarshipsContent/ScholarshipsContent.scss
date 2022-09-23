@@ -1,0 +1,17 @@
+@import "../shared_styles/variables.scss";
+
+.content-container {
+  background-color: rgba(255, 255, 255, 1);
+}
+.scholarship-header {
+  height: 192px;
+  width: 789px;
+  font-family: "Brandon Text";
+  font-size: 64px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 96px;
+  text-transform: uppercase;
+}
