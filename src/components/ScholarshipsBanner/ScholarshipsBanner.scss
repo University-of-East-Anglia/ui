@@ -1,0 +1,51 @@
+@import "../shared_styles/variables.scss";
+
+.banner-container {
+  display: grid;
+  grid-template-columns: 630px auto auto auto;
+}
+
+.text-container {
+  height: 254px;
+  width: 810px;
+}
+.text-container {
+  height: 254px;
+  width: 810px;
+  background-color: $white;
+  border-radius: 7px;
+  margin-top: 115px;
+}
+.scholarship-image {
+  height: 507px;
+  width: 810px;
+  border-radius: 0.7px;
+}
+.scholarship-title {
+  height: 34px;
+  width: 634px;
+  max-width: 100%;
+  font-size: 24px;
+  font-weight: 900;
+  color: $black;
+  margin: 27px auto auto 57px;
+}
+.scholarship-excerpt {
+  height: 96px;
+  width: 585px;
+  font-size: 16px;
+  font-weight: 400;
+  color: $black;
+  line-height: 24px;
+  margin: auto auto auto 57px;
+}
+.apply-button {
+  height: 39px;
+  width: 317px;
+  margin: 12px auto auto 57px;
+  background-color: $pink;
+  color: $white;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 0px;
+}
