@@ -1,80 +1,87 @@
 @import "../shared_styles/variables.scss";
 
 .banner-container {
+  width: 100%;
   display: grid;
   grid-template-columns: 630px auto auto auto;
   @media screen and (max-width: $sm) {
     display: table;
+    width: 100%;
   }
-}
-
-.text-container {
-  @media screen and (min-width: $md) {
-    height: 254px;
-    width: 810px;
+  .text-container {
     background-color: $white;
     border-radius: 7px;
     margin-top: 115px;
-    float: left;
+    height: 254px;
+    width: 810px;
+    @media screen and (max-width: $sm) {
+      margin-top: 0px;
+      height: 192px;
+      width: 330px;
+      display: table-header-group;
+    }
+    .image-container {
+      height: 507px;
+      width: 810px;
+      display: table-footer-group;
+    }
   }
-}
-
-.scholarship-image {
-  height: 507px;
-  width: 810px;
-  border-radius: 0.7px;
-  @media screen and (max-width: $sm) {
-    height: 253px;
-    width: 375px;
+  .scholarship-image {
+    height: 507px;
+    width: 810px;
+    border-radius: 0.7px;
+    @media screen and (max-width: $sm) {
+      height: 253px;
+      width: 375px;
+      margin-top: 23px;
+    }
   }
-}
-.scholarship-title {
-  height: 34px;
-  width: 634px;
-  max-width: 100%;
-  font-size: 24px;
-  font-weight: $weight-black;
-  color: $black;
-  padding: 27px 0px 8px 57px;
-  float: left;
-  @media screen and (max-width: $sm) {
-    height: 44px;
-    width: 330px;
-    font-size: 16px;
+  .scholarship-title {
+    height: 34px;
+    width: 634px;
+    font-size: 24px;
     font-weight: $weight-black;
-    margin-bottom: 8px;
-    padding: 0px;
+    color: $black;
+    padding: 27px 0px 8px 57px;
+    float: left;
+    @media screen and (max-width: $sm) {
+      height: 44px;
+      width: 330px;
+      font-size: 16px;
+      font-weight: $weight-black;
+      margin-bottom: 8px;
+      padding: 23px 0px 0px 23px;
+    }
   }
-}
-.scholarship-excerpt {
-  height: 96px;
-  width: 585px;
-  font-size: 16px;
-  font-weight: $weight-medium;
-  color: $black;
-  line-height: 24px;
-  padding: 0px 0px 0px 57px;
-  float: left;
-  @media screen and (max-width: $sm) {
-    height: 192px;
-    width: 330px;
+  .scholarship-excerpt {
+    height: 96px;
+    width: 585px;
     font-size: 16px;
     font-weight: $weight-medium;
-    padding: 0px;
+    color: $black;
+    line-height: 24px;
+    padding: 0px 0px 0px 57px;
+    float: left;
+    @media screen and (max-width: $sm) {
+      height: 192px;
+      width: 330px;
+      font-size: 16px;
+      font-weight: $weight-medium;
+      padding: 23px 0px 0px 23px;
+    }
   }
-}
-.apply-button {
-  height: 39px;
-  width: 317px;
-  margin: 12px auto auto 57px;
-  background-color: #a0126e;
-  color: $white;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  padding: 0px;
-
-  @media screen and (max-width: $sm) {
-    width: 330px;
-    margin: 12px auto auto 0px;
+  .apply-button {
+    height: 39px;
+    width: 317px;
+    margin: 12px auto auto 57px;
+    background-color: #a0126e;
+    color: $white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 0px;
+    @media screen and (max-width: $sm) {
+      width: 330px;
+      margin: 23px 0px 0px 23px;
+    }
   }
 }
