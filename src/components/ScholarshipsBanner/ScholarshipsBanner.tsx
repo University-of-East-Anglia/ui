@@ -17,7 +17,9 @@ export const ScholarshipsBanner = ({ ...props }: Props) => {
       <div className="text-container">
         <h1 className="scholarship-title">{props.title}</h1>
         <p className="scholarship-excerpt">{props.excerpt}</p>
-        <button className="apply-button">Apply for a scholarship</button>
+        <div>
+          <button className="apply-button">Apply for a scholarship</button>
+        </div>
       </div>
     </div>
   );

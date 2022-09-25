@@ -3,49 +3,78 @@
 .banner-container {
   display: grid;
   grid-template-columns: 630px auto auto auto;
+  @media screen and (max-width: $sm) {
+    display: table;
+  }
 }
 
 .text-container {
-  height: 254px;
-  width: 810px;
+  @media screen and (min-width: $md) {
+    height: 254px;
+    width: 810px;
+    background-color: $white;
+    border-radius: 7px;
+    margin-top: 115px;
+    float: left;
+  }
 }
-.text-container {
-  height: 254px;
-  width: 810px;
-  background-color: $white;
-  border-radius: 7px;
-  margin-top: 115px;
-}
+
 .scholarship-image {
   height: 507px;
   width: 810px;
   border-radius: 0.7px;
+  @media screen and (max-width: $sm) {
+    height: 253px;
+    width: 375px;
+  }
 }
 .scholarship-title {
   height: 34px;
   width: 634px;
   max-width: 100%;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: $weight-black;
   color: $black;
-  margin: 27px auto auto 57px;
+  padding: 27px 0px 8px 57px;
+  float: left;
+  @media screen and (max-width: $sm) {
+    height: 44px;
+    width: 330px;
+    font-size: 16px;
+    font-weight: $weight-black;
+    margin-bottom: 8px;
+    padding: 0px;
+  }
 }
 .scholarship-excerpt {
   height: 96px;
   width: 585px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: $weight-medium;
   color: $black;
   line-height: 24px;
-  margin: auto auto auto 57px;
+  padding: 0px 0px 0px 57px;
+  float: left;
+  @media screen and (max-width: $sm) {
+    height: 192px;
+    width: 330px;
+    font-size: 16px;
+    font-weight: $weight-medium;
+    padding: 0px;
+  }
 }
 .apply-button {
   height: 39px;
   width: 317px;
   margin: 12px auto auto 57px;
-  background-color: $pink;
+  background-color: #a0126e;
   color: $white;
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 0px;
+
+  @media screen and (max-width: $sm) {
+    width: 330px;
+    margin: 12px auto auto 0px;
+  }
 }
