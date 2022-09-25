@@ -7,18 +7,23 @@
     line-height: 32px;
     color: rgba(0, 0, 0, 0.4);
     text-align: left;
-    width: 557px;
-    height: 69px;
     border: 0 solid rgba(242, 242, 242, 1);
     border-radius: 6px;
   }
   &.scholarships-title {
-    height: auto;
+    height: 32px;
     max-width: 594px;
     width: 100%;
     font-size: 24px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 1);
+    font-weight: $weight-medium;
+    color: $black;
     line-height: 32px;
+    @media screen and (max-width: $sm) {
+      font-size: 16px;
+      max-width: 300px;
+      width: 100%;
+      line-height: 24px;
+      height: 48px;
+    }
   }
 }
