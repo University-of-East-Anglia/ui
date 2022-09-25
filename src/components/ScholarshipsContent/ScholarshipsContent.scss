@@ -2,16 +2,39 @@
 
 .content-container {
   background-color: rgba(255, 255, 255, 1);
-}
-.scholarship-header {
-  height: 192px;
-  width: 789px;
-  font-family: "Brandon Text";
-  font-size: 64px;
-  font-weight: 900;
-  color: rgba(0, 0, 0, 1);
-  text-align: center;
-  letter-spacing: 3px;
-  line-height: 96px;
-  text-transform: uppercase;
+  max-width: 789px;
+  width: 100%;
+  .header-container {
+    height: 192px;
+    height: 100%;
+    .scholarship-header {
+      font-size: 64px;
+      font-weight: 900;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      letter-spacing: 3px;
+      line-height: 96px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 32px;
+        line-height: 48px;
+      }
+    }
+  }
+  .excerpt-container {
+    height: 136px;
+    height: 100%;
+
+    .scholarship-excerpt {
+      font-size: 24px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      line-height: 48px;
+      @media screen and (max-width: $sm) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
 }

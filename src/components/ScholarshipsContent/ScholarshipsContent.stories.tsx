@@ -16,5 +16,5 @@ export const Default = Template.bind({});
 Default.args = {
   header: "Scholarships and Loans",
   content:
-    "We want the brighest and best students to come to UEA and we don't believe that the cost of university should ever be a barrier to a fantastic education. For this reason we offer almostone hundred different scholarships and bursaries. ",
+    "We want the brighest and best students to come to UEA and we don't believe that the cost of university should ever be a barrier to a fantastic education. For this reason we offer almost one hundred different scholarships and bursaries. ",
 };
