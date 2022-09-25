@@ -9,21 +9,23 @@
     text-align: left;
     border: 0 solid rgba(242, 242, 242, 1);
     border-radius: 6px;
+    max-width: 557px;
+  }
+  .select-bar {
+    height: 69px;
+    width: 557px;
   }
   &.scholarships-title {
-    height: 32px;
+    height: auto;
     max-width: 594px;
     width: 100%;
     font-size: 24px;
-    font-weight: $weight-medium;
-    color: $black;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
     line-height: 32px;
     @media screen and (max-width: $sm) {
-      font-size: 16px;
-      max-width: 300px;
-      width: 100%;
       line-height: 24px;
-      height: 48px;
+      font-size: 16px;
     }
   }
 }

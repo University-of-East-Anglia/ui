@@ -12,7 +12,6 @@ const customStyles = {
     backgroundColor: "rgba(255, 255, 255, 1)",
     border: "2px solid rgba(242, 242, 242, 1)",
     borderRadius: 6,
-    flex: 1,
   }),
 };
 
