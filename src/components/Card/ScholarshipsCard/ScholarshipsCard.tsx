@@ -15,7 +15,7 @@ export interface KeyValues {
 export const ScholarshipsCard = ({ ...props }: Props) => {
   return (
     <div className="card scholarships-card">
-      <div>
+      <div className="card-header-container">
         {" "}
         <svg
           type="button"
@@ -34,7 +34,9 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
       </div>
       <div className="card-content">
         <div className="card-text">
-          <h3 className="card-title">{props.title}</h3>
+          <div className="card-title-container">
+            <h3 className="card-title">{props.title}</h3>
+          </div>
           <div className="key-values">
             {props.keyvalues.map((value, i) => (
               <div className="row">

@@ -85,6 +85,11 @@
     padding: 14px 12px 12px 14px;
     border-radius: 0;
     text-align: left;
+    @media screen and (max-width: $sm) {
+      width: 100%;
+      max-width: 330px;
+    }
+
     .card-heading {
       font-size: 16px;
       text-align: right;
@@ -100,11 +105,18 @@
       .card-text {
         display: block;
       }
-
+      .card-title-container {
+        width: 100%;
+        max-width: 264px;
+        margin: 15px 0;
+        @media screen and (max-width: $sm) {
+          width: 100%;
+          max-width: 312px;
+        }
+      }
       .card-title {
         font-size: 24px;
         line-height: 32px;
-        margin: 15px 0;
       }
       .key-values {
         display: block;
@@ -139,12 +151,17 @@
       height: 24px;
     }
     .card-button {
-      background-color: rgba(173, 0, 84, 1);
+      background-color: #a0126e;
       color: $white;
       height: 48px;
       width: 100%;
+      max-width: 270px;
       text-align: left;
       border-radius: 7px;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 317px;
+      }
     }
   }
   .cta-chevron--right {
