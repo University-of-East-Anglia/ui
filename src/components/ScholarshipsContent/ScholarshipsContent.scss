@@ -1,7 +1,7 @@
 @import "../shared_styles/variables.scss";
 
 .content-container {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: $white;
   max-width: 789px;
   width: 100%;
   .header-container {
@@ -10,7 +10,7 @@
     .scholarship-header {
       font-size: 64px;
       font-weight: 900;
-      color: rgba(0, 0, 0, 1);
+      color: $black;
       text-align: center;
       letter-spacing: 3px;
       line-height: 96px;
@@ -28,7 +28,7 @@
     .scholarship-excerpt {
       font-size: 24px;
       font-weight: 400;
-      color: rgba(0, 0, 0, 1);
+      color: $black;
       text-align: center;
       line-height: 48px;
       @media screen and (max-width: $sm) {
