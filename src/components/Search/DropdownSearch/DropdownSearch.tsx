@@ -19,18 +19,16 @@ export const DropdownSearch = (props: any) => {
   const onChange = () => {};
   return (
     <div>
+      <h1 className="ui-dropdown-search scholarships-title">{props.page_title}</h1>
       <div>
-        <h1 className="ui-dropdown-search scholarships-title">{props.page_title}</h1>
         <label>
-          <div className="select-bar">
-            <Select
-              className="ui-dropdown-search dropdown-container"
-              options={props.options}
-              onChange={onChange}
-              placeholder={props.placeholder}
-              styles={customStyles}
-            />
-          </div>
+          <Select
+            className="ui-dropdown-search dropdown-container"
+            options={props.options}
+            onChange={onChange}
+            placeholder={props.placeholder}
+            styles={customStyles}
+          />
         </label>
       </div>
     </div>
