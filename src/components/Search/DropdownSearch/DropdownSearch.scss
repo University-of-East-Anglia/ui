@@ -11,6 +11,7 @@
     border-radius: 6px;
     max-width: 557px;
   }
+
   &.scholarships-title {
     height: auto;
     max-width: 594px;
@@ -24,4 +25,29 @@
       font-size: 16px;
     }
   }
+}
+.dropdown-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1196px;
+  width: 100%;
+  @media screen and (max-width: $sm) {
+    flex-direction: column;
+  }
+}
+.dropdown-item {
+  max-width: 1196px;
+  width: 100%;
+}
+.button-container {
+  text-align: center;
+  margin-top: 24px;
+}
+.update-button {
+  color: $white;
+  background-color: #961796;
+  text-transform: uppercase;
+  height: 39px;
+  width: 214px;
+  padding: 0px;
 }
