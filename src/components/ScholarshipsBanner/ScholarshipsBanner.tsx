@@ -1,5 +1,6 @@
 import React from "react";
 import "./ScholarshipsBanner.scss";
+import { Button } from "../Button";
 
 export interface Props {
   image: string;
@@ -18,9 +19,11 @@ export const ScholarshipsBanner = ({ ...props }: Props) => {
         <h1 className="scholarship-title">{props.title}</h1>
         <p className="scholarship-excerpt">{props.excerpt}</p>
         <div>
-          <button className="apply-button" aria-label="apply for a scholarship">
-            Apply for a scholarship
-          </button>
+          <Button
+            className="apply-button"
+            variant="primary"
+            children="Apply for a scholarship"
+          ></Button>
         </div>
       </div>
     </div>
