@@ -22,7 +22,7 @@ export const DropdownSearch = (props: any) => {
   return (
     <div>
       <h1 className="ui-dropdown-search scholarships-title">{props.page_title}</h1>
-      <div className="dropdown-container">
+      <div className="dropdown-items-container">
         <div className="dropdown-item">
           <label>
             <Select
@@ -47,7 +47,7 @@ export const DropdownSearch = (props: any) => {
           </label>
         </div>
       </div>
-      <div className="dropdown-container">
+      <div className="dropdown-items-container">
         <div className="dropdown-item">
           <label>
             <Select
@@ -71,7 +71,7 @@ export const DropdownSearch = (props: any) => {
           </label>
         </div>
       </div>
-      <div className="dropdown-container">
+      <div className="dropdown-items-container">
         <div className="dropdown-item">
           <label>
             <Select
