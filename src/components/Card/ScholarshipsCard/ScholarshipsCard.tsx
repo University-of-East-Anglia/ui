@@ -52,7 +52,7 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
         </div>
       </div>
       <div>
-        <button className="card-button">
+        <button className="card-button" aria-label="find out more">
           Find out more
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +61,7 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
             viewBox="0 0 24 24"
             stroke="currentColor"
             stroke-width="2"
+            aria-hidden="true"
           >
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
