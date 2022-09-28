@@ -32,6 +32,7 @@ export const DropdownSearch = (props: any) => {
               onChange={onChange}
               placeholder={props.degrees_placeholder}
               styles={customStyles}
+              aria-label="dropdown"
             />
           </label>
         </div>
@@ -44,6 +45,7 @@ export const DropdownSearch = (props: any) => {
               placeholder={props.placeholder}
               styles={customStyles}
               isDisabled={isDisabled}
+              aria-label="dropdown"
             />
           </label>
         </div>
@@ -57,6 +59,7 @@ export const DropdownSearch = (props: any) => {
               onChange={onChange}
               placeholder={props.placeholder}
               styles={customStyles}
+              aria-label="dropdown"
             />
           </label>
         </div>
@@ -68,6 +71,7 @@ export const DropdownSearch = (props: any) => {
               onChange={onChange}
               placeholder={props.nationality_placeholder}
               styles={customStyles}
+              aria-label="dropdown"
             />
           </label>
         </div>
@@ -82,6 +86,7 @@ export const DropdownSearch = (props: any) => {
               placeholder={props.placeholder}
               styles={customStyles}
               isDisabled={isDisabled}
+              aria-label="dropdown"
             />
           </label>
         </div>
@@ -93,6 +98,7 @@ export const DropdownSearch = (props: any) => {
               onChange={onChange}
               placeholder={props.year_placeholder}
               styles={customStyles}
+              aria-label="dropdown"
             />
           </label>
         </div>
