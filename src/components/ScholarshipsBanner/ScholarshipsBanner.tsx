@@ -18,7 +18,9 @@ export const ScholarshipsBanner = ({ ...props }: Props) => {
         <h1 className="scholarship-title">{props.title}</h1>
         <p className="scholarship-excerpt">{props.excerpt}</p>
         <div>
-          <button className="apply-button">Apply for a scholarship</button>
+          <button className="apply-button" aria-label="apply for a scholarship">
+            Apply for a scholarship
+          </button>
         </div>
       </div>
     </div>
