@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import "./DropdownSearch.scss";
+import { Button } from "../../Button";
 
 const customStyles = {
   control: (base: any) => ({
@@ -97,7 +98,7 @@ export const DropdownSearch = (props: any) => {
         </div>
       </div>
       <div className="button-container">
-        <button className="update-button">Update</button>
+        <Button className="update-button" variant="primary" children="Update"></Button>
       </div>
       <div className="warning-text-container">
         <p className="warning-text">No results to show, search again?</p>
