@@ -99,6 +99,9 @@ export const DropdownSearch = (props: any) => {
       <div className="button-container">
         <button className="update-button">Update</button>
       </div>
+      <div className="warning-text-container">
+        <p className="warning-text">No results to show, search again?</p>
+      </div>
     </div>
   );
 };
