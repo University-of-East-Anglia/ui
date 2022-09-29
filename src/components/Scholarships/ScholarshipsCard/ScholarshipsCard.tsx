@@ -1,5 +1,5 @@
 import React from "react";
-import "../Card.scss";
+import "../../Card/Card.scss";
 
 export interface Props {
   keyvalues: KeyValues[];

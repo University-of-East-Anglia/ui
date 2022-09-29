@@ -62,6 +62,6 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
-export { ScholarshipsCard } from "./Card/ScholarshipsCard";
+export { ScholarshipsCard } from "./Scholarships/ScholarshipsCard";
 
 import "./App.scss";
