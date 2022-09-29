@@ -62,6 +62,6 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
-export { DropdownSearch } from "./Search/DropdownSearch";
+export { DropdownSearch } from "./Scholarships/DropdownSearch";
 
 import "./App.scss";

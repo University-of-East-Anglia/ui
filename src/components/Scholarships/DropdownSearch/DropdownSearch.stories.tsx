@@ -4,7 +4,7 @@ import { DropdownSearch } from "./DropdownSearch";
 import "../../App.scss";
 
 const meta: Meta = {
-  title: "Dropdown Search",
+  title: "Scholarships/Dropdown Search",
   component: DropdownSearch,
 };
 
