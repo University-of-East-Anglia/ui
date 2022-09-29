@@ -16,8 +16,8 @@ export const Default = Template.bind({});
 Default.args = {
   items: [
     { id: 1, roomAmount: "514 rooms" },
-    { id: 2, perFlat: "Mostly 12 rooms per flat" },
     { id: 3, roomType: "All en suite" },
+    { id: 2, perFlat: "Mostly 12 rooms per flat" },
     { id: 4, roomPrice: "£156.38 a week" },
   ],
   title: "En Suite Hickling & Barton",
