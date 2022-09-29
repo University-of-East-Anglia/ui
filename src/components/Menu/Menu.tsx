@@ -121,7 +121,7 @@ export class Menu extends Component<Props, ComponentState> {
               />
             </svg>
           </button>
-          <form className="oc-search" action="https://www.uea.ac.uk/search" method="get">
+          <form className="oc-search" action="/search" method="get">
             <div className="oc-search-input-cont">
               <input
                 className="oc-search-input"
