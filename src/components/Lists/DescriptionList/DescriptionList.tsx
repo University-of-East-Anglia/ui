@@ -2,6 +2,7 @@ import React from "react";
 
 export interface Props {
   listItems: ListItem[];
+  reverse: boolean;
 }
 
 export interface ListItem {
@@ -14,8 +15,8 @@ export const DescriptionList = (props: Props) => {
     <dl>
       {props.listItems.map((item, i) => (
         <div key={i}>
-          <dt>{item.term}</dt>
-          <dd>{item.description}</dd>
+          <dt className={props.reverse === true ? "bold" : ""}>{item.term}</dt>
+          <dd className={props.reverse === true ? "" : "bold"}>{item.description}</dd>
         </div>
       ))}
     </dl>
