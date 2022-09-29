@@ -16,7 +16,10 @@ export const DescriptionList = (props: Props) => {
       {props.listItems.map((item, i) => (
         <div key={i}>
           <dt className={props.reverse === true ? "bold" : ""}>{item.term}</dt>
-          <dd className={props.reverse === true ? "" : "bold"}>{item.description}</dd>
+          <dd
+            className={props.reverse === true ? "" : "bold"}
+            dangerouslySetInnerHTML={{ __html: item.description }}
+          />
         </div>
       ))}
     </dl>
