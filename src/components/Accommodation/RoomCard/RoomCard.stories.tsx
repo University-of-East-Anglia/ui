@@ -15,12 +15,13 @@ export const Default = Template.bind({});
 
 Default.args = {
   items: [
-    { id: 1, item: "514 rooms" },
-    { id: 2, item: "Mostly 12 rooms per flat" },
-    { id: 3, item: "All en suite" },
-    { id: 4, item: "£156.38 a week" },
+    { id: 1, roomAmount: "514 rooms" },
+    { id: 2, perFlat: "Mostly 12 rooms per flat" },
+    { id: 3, roomType: "All en suite" },
+    { id: 4, roomPrice: "£156.38 a week" },
   ],
   title: "En Suite Hickling & Barton",
   excerpt: "Hickling House and Barton House are two of our newest residences, built in 2016.",
   header: "Accommodation",
+  image: "https://picsum.photos/400/300",
 };

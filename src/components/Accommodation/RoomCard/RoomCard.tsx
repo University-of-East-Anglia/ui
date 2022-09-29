@@ -5,32 +5,61 @@ export interface Props {
   items: Items[];
   title: string;
   header: string;
+  excerpt: string;
+  image: string;
 }
 
 export interface Items {
   id: number;
-  item: string;
+  roomAmount: string;
+  perFlat: string;
+  roomType: string;
+  roomPrice: string;
 }
 
 export const RoomCard = ({ ...props }: Props) => {
   return (
-    <div className="card scholarships-card">
-      <div className="card-header-container">
-        <span className="card-heading">{props.header}</span>
+    <div>
+      <div>
+        <img src={props.image} alt={props.title} className="room-image" />
+
+        {/* <svg
+          type="button"
+          xmlns="http://www.w3.org/2000/svg"
+          className="chevron--plus"
+          viewBox="0 0 17 16"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            clipRule="evenodd"
+          />
+        </svg> */}
+        <span>{props.header}</span>
       </div>
-      <div className="card-content">
-        <div className="card-text">
-          <div className="card-title-container">
-            <h3 className="card-title">{props.title}</h3>
+      <div>
+        <div>
+          <div>
+            <h3>{props.title}</h3>
           </div>
-          <div className="key-values">
-            {props.items.map((item, i) => (
-              <div className="row">
-                <div className="column">
-                  <span>{item.item}</span>
+          <div>
+            <p>{props.excerpt}</p>
+          </div>
+          <div>
+            {props.items.map((item, index) => (
+              <div key={index}>
+                <div>
+                  <span>{item.roomAmount}</span>
                 </div>
-                <div className="column vertical">
-                  <span>{item.item}</span>
+                <div>
+                  <span>{item.perFlat}</span>
+                </div>
+                <div>
+                  <span>{item.roomType}</span>
+                </div>
+                <div>
+                  <span>{item.roomPrice}</span>
                 </div>
               </div>
             ))}
@@ -38,7 +67,7 @@ export const RoomCard = ({ ...props }: Props) => {
         </div>
       </div>
       <div>
-        <button className="card-button" aria-label="find out more">
+        <button aria-label="find out more">
           Find out more
           <svg
             xmlns="http://www.w3.org/2000/svg"
