@@ -23,6 +23,7 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
           className="chevron--plus"
           viewBox="0 0 17 16"
           fill="currentColor"
+          aria-hidden="true"
         >
           <path
             fillRule="evenodd"
