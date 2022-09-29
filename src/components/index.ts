@@ -62,7 +62,7 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
-export { ScholarshipsBanner } from "./ScholarshipsBanner";
+export { ScholarshipsBanner } from "./Scholarships/ScholarshipsBanner";
 
 import "./App.scss";
 

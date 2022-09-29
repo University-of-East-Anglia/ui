@@ -1,6 +1,6 @@
 import React from "react";
 import "./ScholarshipsBanner.scss";
-import { Button } from "../Button";
+import { Button } from "../../Button";
 
 export interface Props {
   image: string;

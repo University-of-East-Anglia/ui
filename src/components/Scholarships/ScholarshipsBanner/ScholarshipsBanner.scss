@@ -1,4 +1,4 @@
-@import "../shared_styles/variables.scss";
+@import "../../shared_styles/variables.scss";
 
 .banner-container {
   width: 100%;
@@ -29,7 +29,7 @@
   .scholarship-image {
     height: 507px;
     width: 810px;
-    border-radius: 0.7px;
+    border-radius: 7px;
     @media screen and (max-width: $sm) {
       height: 253px;
       width: 375px;
@@ -74,7 +74,7 @@
     height: 39px;
     width: 317px;
     margin: 12px auto auto 57px;
-    background-color: #a0126e;
+    background-color: $pink;
     color: $white;
     letter-spacing: 3px;
     text-transform: uppercase;
