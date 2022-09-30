@@ -24,13 +24,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 338px;
+    max-height: 338px;
     max-width: 992px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 7px;
     text-align: center;
-    @media screen and (max-width: $sm) {
+    @media screen and (max-width: $md) {
       max-height: 578px;
       height: 100%;
       max-width: 330px;
@@ -38,16 +38,16 @@
     }
     .text-row {
       padding: 53px;
-      @media screen and (max-width: $sm) {
+      @media screen and (max-width: $md) {
         padding: 17px;
       }
       .accommodation-header-container {
-        height: 48px;
+        max-height: 48px;
         max-width: 776px;
         width: 100%;
         margin: auto;
-        @media screen and (max-width: $sm) {
-          height: 96px;
+        @media screen and (max-width: $md) {
+          max-height: 96px;
           max-width: 300px;
           width: 100%;
         }
@@ -59,7 +59,7 @@
           letter-spacing: 3px;
           line-height: 48px;
           text-transform: uppercase;
-          @media screen and (max-width: $sm) {
+          @media screen and (max-width: $md) {
             font-size: 24px;
             letter-spacing: 4px;
             line-height: 32px;
@@ -72,7 +72,7 @@
         max-width: 785px;
         width: 100%;
         margin: auto;
-        @media screen and (max-width: $sm) {
+        @media screen and (max-width: $md) {
           height: 432px;
           max-width: 300px;
           width: 100%;
@@ -86,7 +86,7 @@
           text-align: center;
           line-height: 24px;
           margin: auto;
-          @media screen and (max-width: $sm) {
+          @media screen and (max-width: $md) {
             font-size: 16px;
             line-height: 24px;
           }
