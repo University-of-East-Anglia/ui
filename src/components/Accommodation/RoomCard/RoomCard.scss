@@ -72,6 +72,8 @@
       max-width: 539px;
       width: 100%;
       margin: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
   button {
