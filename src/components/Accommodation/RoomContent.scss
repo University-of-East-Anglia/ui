@@ -6,7 +6,7 @@
   max-height: 655px;
   max-width: 1440px;
   width: 100%;
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     max-width: 375px;
     width: 100%;
   }
@@ -14,7 +14,7 @@
     height: 655px;
     max-width: 1440px;
     width: 100%;
-    @media screen and (max-width: $sm) {
+    @media screen and (max-width: $md) {
       max-width: 375px;
       width: 100%;
     }
@@ -24,7 +24,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-height: 338px;
     max-width: 992px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -42,14 +41,13 @@
         padding: 17px;
       }
       .accommodation-header-container {
-        max-height: 48px;
-        max-width: 776px;
         width: 100%;
-        margin: auto;
+        margin-bottom: 16px;
         @media screen and (max-width: $md) {
           max-height: 96px;
           max-width: 300px;
           width: 100%;
+          margin-bottom: 13px;
         }
         .accommodation-header {
           font-size: 32px;
@@ -68,7 +66,6 @@
       }
       .accommodation-text-container {
         height: 168px;
-
         max-width: 785px;
         width: 100%;
         margin: auto;
@@ -78,8 +75,8 @@
           width: 100%;
         }
         .accommodation-text {
-          width: 776x;
-          max-width: 100%;
+          max-width: 776x;
+          width: 100%;
           font-size: 16px;
           font-weight: 400;
           color: rgba(0, 0, 0, 1);
