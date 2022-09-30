@@ -1,0 +1,53 @@
+.content-container {
+  position: relative;
+  text-align: center;
+  left: 0;
+  height: 655px;
+  max-width: 1440px;
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 338px;
+    width: 992px;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+    text-align: center;
+    .text-row {
+      padding-top: 53px;
+      .accommodation-header-container {
+        height: 48px;
+        width: 776px;
+        width: 100%;
+        margin: auto;
+        .accommodation-header {
+          font-size: 32px;
+          font-weight: 900;
+          color: rgba(0, 0, 0, 1);
+          text-align: center;
+          letter-spacing: 3px;
+          line-height: 48px;
+          text-transform: uppercase;
+        }
+      }
+      .accommodation-text-container {
+        height: 168px;
+        height: 100%;
+        max-width: 785px;
+        width: 100%;
+        margin: auto;
+        .accommodation-text {
+          width: 776x;
+          max-width: 100%;
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 1);
+          text-align: center;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
