@@ -2,7 +2,7 @@
 
 .content-container {
   position: absolute;
-  width: 100%;
+  //width: 100%;
   @media screen and (max-width: $md) {
     max-width: 375px;
     width: 100%;
@@ -187,7 +187,7 @@
     }
     .image-container {
       position: relative;
-      right: -125px;
+      right: -250px;
       top: -50px;
       @media screen and (max-width: $sm) {
         top: 24px;
