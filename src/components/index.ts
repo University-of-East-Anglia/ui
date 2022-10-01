@@ -62,4 +62,8 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
+export { ContentWithBackground } from "./Accommodation/ContentWithBackground"
+
+export { ContentWithImage } from "./Accommodation/ContentWithImage"
+
 import "./App.scss";

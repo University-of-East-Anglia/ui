@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { ContentWithImage, Props } from "./ContentWithImage";
 
 const meta: Meta = {
-  title: "Accommodation/Content With Background Image",
+  title: "Accommodation/Content With Image",
   component: ContentWithImage,
 };
 
@@ -14,10 +14,16 @@ const Template: Story<Props> = (args) => <ContentWithImage {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  title: "How to Apply for Accommodation",
+  title: "Costs and What's Included In Your Room",
+  smallTitle: "All our student accommodation has everything you need - it's a home away from home.",
   paragraphFirst:
-    "Once you've received a conditional or unconditional offer from us you can apply for your accommodation. We'll send you an email at that time, which explains what you need to do to apply. Every first year student is guaranteed a room in our student accommodation. When you apply we'll do our best to place you in your preferred option, but you'll also be asked to give a list of alternatives in case your first option is over-subscribed. ",
+    "Your room will be fully furnished with a bed, mattress, desk, chair, wardrobe, drawers, shelves, blinds/curtains and noticeboard. You'll also have access to a bathroom, either en suite or shared, depending on the type of room and a kitchen. ",
   paragraphSecond:
-    "When you apply we'll ask if you have a disability, so that we can make provide you with the best accommodation for your needs. Please also let us know you would prefer to live in single-gender accommodation.",
-  image: "https://picsum.photos/1440/655",
+    "If you fancy a change from cooking you can explore our on-campus cafes and restaurants and we've also got plenty of other study spaces to explore, such as the library and the student's union.",
+  paragraphThird:
+    "Our campus is very safe with a 24 hour security team and a friendly accommodation warden in each residence.",
+  paragraphFourth:
+    "Our best value room is £72.73 a week and our most luxurious option is £264.32 a week. The cost for accommodation includes heating, electricity, high-speed internet. Your contract will be for the length of your course-usually 38 weeks if you're an undergraduate student, and 50 weeks if you're a postgraduate student.",
+  imageTop: "https://picsum.photos/440/360",
+  imageBottom: "https://picsum.photos/220/360",
 };
