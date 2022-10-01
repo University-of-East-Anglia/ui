@@ -1,0 +1,1 @@
+export { SimpleContent } from "./SimpleContentContent";

@@ -66,4 +66,6 @@ export { ContentWithBackground } from "./Accommodation/ContentWithBackground"
 
 export { ContentWithImage } from "./Accommodation/ContentWithImage"
 
+export { SimpleContent } from "./Accommodation/SimpleContent"
+
 import "./App.scss";
