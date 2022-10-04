@@ -56,7 +56,6 @@
         @media screen and (max-width: $sm) {
           font-size: 24px;
           font-weight: 900;
-          color: $black;
           letter-spacing: 4px;
           line-height: 32px;
         }
@@ -80,7 +79,6 @@
         @media screen and (max-width: $sm) {
           font-size: 16px;
           font-weight: 900;
-          color: rgba(0, 0, 0, 1);
           line-height: 24px;
           text-transform: none;
           letter-spacing: 0px;
@@ -123,8 +121,9 @@
     max-width: 629px;
     margin-left: 27px;
     @media screen and (max-width: $sm) {
-      max-width: 286px;
+      width: 286px;
       height: 69px;
+      margin-left: 22px;
     }
   }
   .button-container {
@@ -141,6 +140,148 @@
     padding: 0px;
   }
   .more-button {
+    color: $pink;
+    background-color: none;
+    height: 24px;
+    width: 93px;
+    padding: 0px;
+    text-decoration: underline;
+  }
+}
+.finder-without-image-container {
+  position: absolute;
+  .title-without-image-container {
+    height: 48px;
+    width: 552px;
+    @media screen and (max-width: $sm) {
+      height: 64px;
+      width: 330px;
+    }
+    .title-without-image {
+      font-size: 32px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 3px;
+      line-height: 48px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        line-height: 32px;
+      }
+    }
+  }
+  .smalltitle-without-image-container {
+    width: auto;
+    height: 24px;
+    margin: 17px auto 0px 27px;
+    @media screen and (max-width: $sm) {
+      height: 24px;
+      width: 287px;
+    }
+    .smalltitle-without-image {
+      font-size: 16px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 3px;
+      line-height: 24px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 24px;
+        text-transform: none;
+        letter-spacing: 0px;
+      }
+    }
+  }
+  .dropdown-without-image {
+    padding: 5px;
+    cursor: pointer;
+    line-height: 32px;
+    color: $black;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 1);
+    border: 0px solid rgba(242, 242, 242, 1);
+    border-radius: 6px;
+    max-width: 556px;
+    margin-left: 27px;
+    @media screen and (max-width: $sm) {
+      width: 286px;
+      height: 69px;
+      margin-left: 22px;
+    }
+  }
+  .content-container {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 7px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    height: 395px;
+    width: auto;
+    @media screen and (max-width: $sm) {
+      height: 458px;
+      width: 330px;
+    }
+    .search-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      @media screen and (max-width: $sm) {
+        display: table;
+        width: 100%;
+      }
+      .search-container-column-left {
+        width: 598px;
+        @media screen and (max-width: $sm) {
+          width: 330px;
+        }
+      }
+      .search-container-column-right {
+        width: 598px;
+        @media screen and (max-width: $sm) {
+          width: 330px;
+        }
+      }
+    }
+  }
+  .ensuite-without-image {
+    height: 69px;
+    width: 279px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(0, 174, 240, 1);
+    border-radius: 6px;
+    margin-left: 27px;
+    @media screen and (max-width: $sm) {
+      width: 143px;
+      height: 69px;
+      margin-left: 22px;
+    }
+  }
+  .shared-without-image {
+    height: 69px;
+    width: 279px;
+    background-color: rgba(242, 242, 242, 1);
+    border: 2px solid rgba(242, 242, 242, 1);
+    border-radius: 6px;
+    @media screen and (max-width: $sm) {
+      width: 143px;
+      height: 69px;
+    }
+  }
+  .without-image-button-container {
+    max-width: 1196px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .without-image-search-button {
+    color: $white;
+    background-color: $pink;
+    text-transform: uppercase;
+    height: 39px;
+    width: 214px;
+    padding: 0px;
+  }
+  .without-image-more-button {
     color: $pink;
     background-color: none;
     height: 24px;

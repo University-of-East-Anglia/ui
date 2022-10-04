@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Select from "react-select";
 import "../RoomSearch.scss";
 import { Button } from "../../Button";
@@ -9,10 +9,10 @@ const customStyles = {
     height: 69,
     minHeight: 69,
     maxWidth: 1196,
-    minWidth: 300,
+    minWidth: 286,
     width: "100%",
     backgroundColor: "rgba(255, 255, 255, 1)",
-    border: "2px solid rgba(242, 242, 242, 1)",
+    border: "1px solid rgba(242, 242, 242, 1)",
     borderRadius: 6,
   }),
 };
