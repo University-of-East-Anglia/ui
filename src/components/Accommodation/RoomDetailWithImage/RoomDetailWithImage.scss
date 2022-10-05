@@ -1,0 +1,139 @@
+@import "../../shared_styles/variables.scss";
+
+.room-detail {
+  position: absolute;
+  max-width: 1196px;
+  width: 100%;
+  background-color: $white;
+  .room-title-container {
+    height: 48px;
+    max-width: 621px;
+    width: 100%;
+    margin-bottom: 14px;
+    .room-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 3px;
+      line-height: 48px;
+      text-transform: uppercase;
+    }
+  }
+  img {
+    height: 609px;
+    max-width: 1196px;
+    width: 100%;
+    border-radius: 7px;
+  }
+  .detail-container {
+    height: 269px;
+    width: 586px;
+    border: 3px solid $blue;
+    border-radius: 7px;
+    margin-bottom: 24px;
+    margin-top: 16px;
+    .detail-list {
+      height: 25%;
+      .detail-item {
+        font-size: 24px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 1);
+        line-height: 32px;
+        float: left;
+        margin-top: 24px;
+      }
+    }
+    svg {
+      margin-left: 29px;
+      margin-right: 46px;
+      color: $blue;
+      width: 24px;
+      height: 24px;
+    }
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid rgba(224, 224, 224, 1);
+    }
+  }
+  .video-container {
+    height: 330px;
+    max-width: 586px;
+    width: 100%;
+    border: 1px solid $black;
+    border-radius: 7px;
+  }
+  .excerpt-container {
+    height: 48px;
+    max-width: 586px;
+    width: 100%;
+    margin-top: 16px;
+    .detail-excerpt {
+      height: 48px;
+      max-width: 586px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 1);
+      line-height: 24px;
+    }
+  }
+  .map-container {
+    height: 405px;
+    max-width: 586px;
+    width: 100%;
+    border: 3px solid rgba(234, 234, 234, 1);
+    border-radius: 7px;
+    margin-bottom: 23px;
+    .map-title {
+      height: 32px;
+      max-width: 106px;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 900;
+      color: $black;
+      text-align: center;
+      line-height: 32px;
+      margin-top: 16px;
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+    .map {
+      height: 316px;
+      max-width: 538px;
+      width: 100%;
+      margin-left: 24px;
+    }
+  }
+  .banner-container {
+    height: 229px;
+    max-width: 586px;
+    width: 100%;
+    background-color: yellow;
+    border: 1px solid $black;
+    margin-bottom: 16px;
+    .banner-title-container {
+      position: relative;
+      height: 122px;
+      max-width: 586px;
+      width: 100%;
+      background-color: $pink;
+      padding: 0px;
+      align-items: center;
+      margin-top: 54px;
+      .banner-title {
+        font-size: 24px;
+        font-weight: 900;
+        color: $white;
+        text-align: center;
+        line-height: 32px;
+        height: 64px;
+        max-width: 234px;
+        width: 100%;
+        float: right;
+        padding-top: 29px;
+      }
+    }
+  }
+}

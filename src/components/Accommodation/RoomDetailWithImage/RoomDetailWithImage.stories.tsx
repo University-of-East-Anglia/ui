@@ -15,11 +15,14 @@ export const Default = Template.bind({});
 
 Default.args = {
   room_title: "En-Suite Hickling & Barton",
-  amount_title: "514 rooms",
-  bath_title: "",
+  banner_title: "Find out what our students think!",
+  roomAmount: [{ value: "514 rooms", label: "514 rooms" }],
+  perFlat: [{ value: "All en suite", label: "All en suite" }],
+  roomType: [{ value: "Mostly 12 rooms per flat", label: "Mostly 12 rooms per flat" }],
+  roomPrice: [{ value: "£156.38 a week", label: "£156.38 a week" }],
+  excerpt: "Hickling House and Barton House are two of our newest residences, built in 2016.",
+  map_title: "Floor Plan",
   image: "https://picsum.photos/400/300",
-  excerpt:
-    "A scholarship is usually awarded on merit, such as achieving high grades. A bursary is usually awarded on need, such as having a lower household income. Scholarships and bursaries can be awarded as cash or as tuition fee reductions. As long as you keep to the terms of the award is yours to keep - you don't pay it back",
-  title: "What is the difference between a scholarship and a bursary?",
-  altText: "Scholarships Banner",
+  videoUrl: "https://player.vimeo.com/video/344988769",
+  controls: true,
 };
