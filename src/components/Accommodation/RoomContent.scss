@@ -1,0 +1,255 @@
+@import "../shared_styles/variables.scss";
+
+.content-container {
+  position: absolute;
+  @media screen and (max-width: $md) {
+    max-width: 375px;
+    width: 100%;
+  }
+  img {
+    height: 655px;
+    max-width: 1440px;
+    width: 100%;
+    @media screen and (max-width: $md) {
+      max-width: 375px;
+      width: 100%;
+    }
+  }
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 992px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+    text-align: center;
+    @media screen and (max-width: $md) {
+      max-height: 578px;
+      height: 100%;
+      max-width: 330px;
+      width: 100%;
+    }
+    .text-row {
+      padding: 53px;
+      @media screen and (max-width: $md) {
+        padding: 17px;
+      }
+      .accommodation-header-container {
+        width: 100%;
+        margin-bottom: 16px;
+        @media screen and (max-width: $md) {
+          max-height: 96px;
+          max-width: 300px;
+          width: 100%;
+          margin-bottom: 13px;
+        }
+        .accommodation-header {
+          font-size: 32px;
+          font-weight: 900;
+          color: rgba(0, 0, 0, 1);
+          text-align: center;
+          letter-spacing: 3px;
+          line-height: 48px;
+          text-transform: uppercase;
+          @media screen and (max-width: $md) {
+            font-size: 24px;
+            letter-spacing: 4px;
+            line-height: 32px;
+          }
+        }
+      }
+      .accommodation-text-container {
+        height: 168px;
+        max-width: 785px;
+        width: 100%;
+        margin: auto;
+        @media screen and (max-width: $md) {
+          height: 432px;
+          max-width: 300px;
+          width: 100%;
+        }
+        .accommodation-text {
+          max-width: 776x;
+          width: 100%;
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 1);
+          text-align: center;
+          line-height: 24px;
+          margin: auto;
+          @media screen and (max-width: $md) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+  .content-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 120px;
+    @media screen and (max-width: $sm) {
+      display: table;
+      width: 100%;
+      margin: auto;
+    }
+    .cost-header-container {
+      max-width: 586px;
+      width: 100%;
+      margin-bottom: 16px;
+      @media screen and (max-width: $sm) {
+        max-width: 330px;
+        width: 100%;
+      }
+      .cost-header {
+        font-size: 32px;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 1);
+        letter-spacing: 3px;
+        line-height: 48px;
+        text-transform: uppercase;
+        @media screen and (max-width: $sm) {
+          font-size: 24px;
+          font-weight: 900;
+          letter-spacing: 4px;
+          line-height: 32px;
+        }
+      }
+    }
+    .cost-smallheader-container {
+      max-width: 586px;
+      width: 100%;
+      margin-bottom: 19px;
+      @media screen and (max-width: $sm) {
+        max-width: 330px;
+        width: 100%;
+      }
+      .cost-smallheader {
+        font-size: 24px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 1);
+        line-height: 32px;
+        @media screen and (max-width: $sm) {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+    .cost-excerpt-container {
+      max-width: 586px;
+      width: 100%;
+      height: 330px;
+      height: 100%;
+      @media screen and (max-width: $sm) {
+        max-width: 330px;
+        width: 100%;
+      }
+      .cost-excerpt {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 1);
+        @media screen and (max-width: $sm) {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+    .top-image {
+      border-radius: 7px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 360px;
+      height: 440px;
+      @media screen and (max-width: $sm) {
+        max-width: 245px;
+        width: 100%;
+        height: 300px;
+      }
+    }
+    .bottom-image {
+      border-radius: 7px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 360px;
+      height: 220px;
+      @media screen and (max-width: $sm) {
+        max-width: 245px;
+        width: 100%;
+        height: 150px;
+      }
+    }
+    .image-container {
+      position: relative;
+      right: -250px;
+      top: -50px;
+      @media screen and (max-width: $sm) {
+        top: 24px;
+        right: -80px;
+      }
+    }
+    .cost-bottom-image-container {
+      position: relative;
+      top: -27px;
+      left: -125px;
+      @media screen and (max-width: $sm) {
+        left: -80px;
+      }
+    }
+  }
+}
+.simple-content-container {
+  position: absolute;
+  .simple-header-container {
+    max-width: 642px;
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    @media screen and (max-width: $sm) {
+      max-width: 330px;
+      width: 100%;
+      height: 64px;
+    }
+    .simple-header {
+      font-size: 32px;
+      font-weight: 900;
+      color: $black;
+      text-align: center;
+      letter-spacing: 3px;
+      line-height: 48px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 4px;
+      }
+    }
+  }
+  .simple-excerpt-container {
+    max-width: 586px;
+    width: 100%;
+    height: 144px;
+    text-align: center;
+    @media screen and (max-width: $sm) {
+      height: 240px;
+      max-width: 330px;
+      width: 100%;
+    }
+    .simple-excerpt {
+      font-size: 16px;
+      font-weight: 400;
+      color: $black;
+      text-align: center;
+      line-height: 24px;
+      @media screen and (max-width: $sm) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
