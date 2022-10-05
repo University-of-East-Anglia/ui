@@ -1,0 +1,66 @@
+@import "../../shared_styles/variables.scss";
+
+.number-panel {
+  position: absolute;
+  height: 317px;
+  width: 1440px;
+  max-width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  .panel-container {
+    height: 223px;
+    width: 1146px;
+    max-width: auto;
+    .title-container {
+      height: 48px;
+      width: 1146px;
+      text-align: center;
+      .title {
+        font-size: 32px;
+        font-weight: 900;
+        color: $black;
+        letter-spacing: 3px;
+        line-height: 48px;
+        text-transform: uppercase;
+      }
+    }
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 175px;
+      text-align: center;
+      .content-item {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        .content-title {
+          font-size: 64px;
+          font-weight: 900;
+          color: $black;
+          margin-bottom: 30px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        .content-data {
+          height: 48px;
+          max-width: 177px;
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 1);
+          line-height: 24px;
+          text-align: center;
+          margin: auto;
+        }
+      }
+    }
+  }
+  hr {
+    border: 1px solid $green;
+    border-radius: 5px;
+    width: 80px;
+    margin: 0px auto;
+  }
+}

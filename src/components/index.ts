@@ -62,4 +62,6 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
+export { UEANumbers } from "./Accommodation/UEANumbers";
+
 import "./App.scss";
