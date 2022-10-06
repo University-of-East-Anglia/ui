@@ -64,4 +64,6 @@ export { SimpleSearch } from "./Search/SimpleSearch";
 
 export { RoomDetailWithImage } from "./Accommodation/RoomDetailWithImage";
 
+export { RoomDetailWithVideo } from "./Accommodation/RoomDetailWithVideo";
+
 import "./App.scss";

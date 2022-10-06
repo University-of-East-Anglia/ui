@@ -1,6 +1,6 @@
 import React from "react";
 import { Video } from "../../Video";
-import "./RoomDetailWithImage.scss";
+import "./RoomDetailWithVideo.scss";
 
 export interface Props {
   roomAmount: RoomAmount[];
@@ -10,6 +10,7 @@ export interface Props {
   room_title: string;
   banner_title: string;
   map_title: string;
+  image_title: string;
   excerpt: string;
   image: string;
   videoUrl: string | string[];
@@ -33,21 +34,21 @@ export interface RoomPrice {
   value: string;
   label: string;
 }
-export const RoomDetailWithImage = ({ ...props }: Props) => {
+export const RoomDetailWithVideo = ({ ...props }: Props) => {
   return (
-    <div className="room-detail">
-      <div className="room-title-container">
-        <h1 className="room-title">{props.room_title}</h1>
+    <div className="video-room-detail">
+      <div className="video-room-title-container">
+        <h1 className="video-room-title">{props.room_title}</h1>
       </div>
-      <div className="image-container">
-        <img src={props.image} alt={props.room_title} />
+      <div className="video-container">
+        <Video videoUrl={props.videoUrl} controls={props.controls} />
       </div>
-      <div className="content-container">
-        <div className="column-left">
-          <div className="detail-container">
+      <div className="video-content-container">
+        <div className="video-column-left">
+          <div className="video-detail-container">
             {props.roomAmount.map((amount, index) => (
-              <div key={index} className="detail-list">
-                <span className="detail-item">
+              <div key={index} className="video-detail-list">
+                <span className="video-detail-item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -65,8 +66,8 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
             ))}
             <hr />
             {props.perFlat.map((flat, index) => (
-              <div key={index} className="detail-list">
-                <span className="detail-item">
+              <div key={index} className="video-detail-list">
+                <span className="video-detail-item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -84,8 +85,8 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
             ))}
             <hr />
             {props.roomType.map((type, index) => (
-              <div key={index} className="detail-list">
-                <span className="detail-item">
+              <div key={index} className="video-detail-list">
+                <span className="video-detail-item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -110,8 +111,8 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
             ))}
             <hr />
             {props.roomPrice.map((price, index) => (
-              <div key={index} className="detail-list">
-                <span className="detail-item">
+              <div key={index} className="video-detail-list">
+                <span className="video-detail-item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -128,28 +129,28 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
               </div>
             ))}
           </div>
-          <div className="video-container">
-            <Video videoUrl={props.videoUrl} controls={props.controls} />
+          <div className="video-image-container">
+            <img src={props.image} alt={props.room_title} />
           </div>
-          <div className="column-right-map-second">
-            <div className="map-container-second">
-              <h1 className="map-title-second">{props.map_title}</h1>
-              <img src={props.image} alt={props.map_title} className="map-second" />
-            </div>
+          <div className="video-slide-container">
+            <img src={props.image} alt={props.room_title} className="slide" />
+            <img src={props.image} alt={props.room_title} className="slide" />
           </div>
         </div>
-        <div className="right-content">
-          <div className="excerp-container">
-            <p className="detail-excerpt">{props.excerpt}</p>
+        <div className="video-right-content">
+          <div className="video-excerpt-container">
+            <p className="video-excerpt">{props.excerpt}</p>
           </div>
-          <div className="map-container">
-            <h1 className="map-title">{props.map_title}</h1>
-            <img src={props.image} alt={props.map_title} className="map" />
+
+          <div className="video-map-container">
+            <h1 className="video-map-title">{props.map_title}</h1>
+            <img src={props.image} alt={props.map_title} className="video-map" />
           </div>
-          <div className="banner-container">
-            <div className="banner-title-container">
+
+          <div className="video-banner-container">
+            <div className="video-banner-title-container">
               {" "}
-              <p className="banner-title">{props.banner_title}</p>
+              <p className="video-banner-title">{props.banner_title}</p>
             </div>
           </div>
         </div>
