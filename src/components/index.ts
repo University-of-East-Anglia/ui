@@ -66,4 +66,6 @@ export { RoomDetailWithImage } from "./Accommodation/RoomDetailWithImage";
 
 export { RoomDetailWithVideo } from "./Accommodation/RoomDetailWithVideo";
 
+export { LessWithVideo } from "./Accommodation/LessWithVideo";
+
 import "./App.scss";
