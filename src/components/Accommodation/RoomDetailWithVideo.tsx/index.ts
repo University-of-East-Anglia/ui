@@ -1,1 +1,0 @@
-export { RoomDetailWithVideo } from "./RoomDetailWithVideo";
