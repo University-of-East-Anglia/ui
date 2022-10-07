@@ -24,6 +24,7 @@
     width: 1148px;
     background-color: $white;
     box-shadow: 0 2px 10px 0 $black;
+    border-radius: 7px;
     transform: translate(2%, -20%);
     @media screen and (max-width: $sm) {
       height: 286px;
