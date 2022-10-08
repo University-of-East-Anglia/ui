@@ -78,4 +78,15 @@
       }
     }
   }
+  &.room-card {
+    position: absolute;
+    width: 100%;
+  }
+  &.room-card {
+    .room-image {
+      width: 100%;
+      width: 1000px;
+      height: 316px;
+    }
+  }
 }

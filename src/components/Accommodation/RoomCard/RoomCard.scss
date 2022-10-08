@@ -1,0 +1,182 @@
+@import "../../shared_styles/variables.scss";
+.card {
+  width: 100%;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  &.room-card {
+    position: absolute;
+    width: 100%;
+    max-width: 586px;
+    height: auto;
+    margin: 24px 24px 24px 4px;
+    border-radius: 5px;
+    @media screen and (max-width: $sm) {
+      width: 100%;
+      max-width: 330px;
+    }
+    .image-container {
+      .room-image {
+        height: 316px;
+        width: 586px;
+        width: 100%;
+        border-radius: 5px;
+        @media screen and (max-width: $sm) {
+          width: 100%;
+          max-width: 330px;
+          height: 177px;
+        }
+      }
+      .roomcard-header-container {
+        position: absolute;
+        height: 24px;
+        width: 334px;
+        width: 100%;
+        color: rgba(0, 0, 0, 1);
+        background-color: transparent;
+        top: 0px;
+
+        .roomcard-header {
+          font-size: 16px;
+          text-align: right;
+          float: right;
+          line-height: 24px;
+          font-weight: 900;
+          padding: 20px;
+          color: $white;
+        }
+      }
+    }
+    .roomcard-title-container {
+      height: auto;
+      max-width: 538px;
+      width: 100%;
+      margin: 24px;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 298px;
+      }
+      .roomcard-title {
+        font-size: 32px;
+        letter-spacing: 3px;
+        text-align: left;
+        float: left;
+        line-height: 48px;
+        font-weight: 900;
+        color: $black;
+        text-transform: uppercase;
+        @media screen and (max-width: $sm) {
+          font-size: 24px;
+          font-weight: 900;
+          letter-spacing: 4px;
+          line-height: 32px;
+        }
+      }
+    }
+    .roomcard-excerpt-container {
+      height: auto;
+      max-width: 539px;
+      width: 100%;
+      margin: 24px;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 298px;
+      }
+      .roomcard-excerpt {
+        font-size: 16px;
+        text-align: left;
+        float: left;
+        line-height: 24px;
+        font-weight: 400;
+        color: $black;
+        margin-bottom: 19px;
+        @media screen and (max-width: $sm) {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+    .grid-container {
+      height: auto;
+      max-width: 539px;
+      width: 100%;
+      margin: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 280px;
+        display: table;
+        margin-bottom: 0px;
+      }
+      .room-item {
+        margin-bottom: 12px;
+        height: 50%;
+        font-size: 16px;
+        font-weight: 400;
+        color: $black;
+        line-height: 24px;
+        border-bottom: 1px solid rgba(224, 224, 224, 1);
+        @media screen and (max-width: $sm) {
+          margin-bottom: 0px;
+          margin-top: 12px;
+        }
+      }
+      .room-item:last-child {
+        border-bottom: 0px;
+        @media screen and (max-width: $sm) {
+          border-bottom: 1px solid rgba(224, 224, 224, 1);
+        }
+        .horizontal {
+          @media screen and (max-width: $sm) {
+            border: none;
+          }
+        }
+      }
+      .room-text {
+        margin: 12px;
+      }
+      .vertical {
+        border-left: 1px solid rgba(224, 224, 224, 1);
+        @media screen and (max-width: $sm) {
+          border: none;
+        }
+      }
+    }
+  }
+  button {
+    background-color: $pink;
+    color: $white;
+    height: 48px;
+    width: 100%;
+    max-width: 537px;
+    border-radius: 7px;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    display: block;
+    @media screen and (max-width: $sm) {
+      margin-top: 0px;
+      margin-left: 15px;
+      margin-bottom: 24px;
+      max-width: 300px;
+      width: 100%;
+    }
+    .cta-chevron--right {
+      float: right;
+      color: $white;
+    }
+  }
+  .chevron--plus {
+    height: 24px;
+    padding: 20px;
+    color: $white;
+  }
+  svg {
+    color: $blue;
+    margin-right: 12px;
+  }
+}
