@@ -119,6 +119,10 @@
         color: $black;
         line-height: 24px;
         border-bottom: 1px solid rgba(224, 224, 224, 1);
+        @media screen and (max-width: $sm) {
+          margin-bottom: 0px;
+          margin-top: 12px;
+        }
       }
       .room-item:last-child {
         border-bottom: 0px;
@@ -151,11 +155,11 @@
     border-radius: 7px;
     font-size: 16px;
     text-align: left;
-    margin: 24px;
+    margin: 20px;
     display: block;
     @media screen and (max-width: $sm) {
       margin-top: 0px;
-      max-width: 280px;
+      max-width: 290px;
       width: 100%;
     }
     .cta-chevron--right {
