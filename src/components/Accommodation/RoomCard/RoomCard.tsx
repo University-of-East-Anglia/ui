@@ -62,8 +62,8 @@ export const RoomCard = ({ ...props }: Props) => {
         <div className="grid-container">
           <div className="grid-child">
             {props.roomAmount.map((amount, index) => (
-              <div key={index}>
-                <span>
+              <div key={index} className="room-item">
+                <span className="room-text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -80,8 +80,8 @@ export const RoomCard = ({ ...props }: Props) => {
               </div>
             ))}
             {props.perFlat.map((flat, index) => (
-              <div key={index}>
-                <span>
+              <div key={index} className="room-item">
+                <span className="room-text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -98,10 +98,10 @@ export const RoomCard = ({ ...props }: Props) => {
               </div>
             ))}
           </div>
-          <div className="grid-child">
+          <div className="grid-child vertical">
             {props.roomType.map((type, index) => (
-              <div key={index}>
-                <span>
+              <div key={index} className="room-item">
+                <span className="room-text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -125,8 +125,8 @@ export const RoomCard = ({ ...props }: Props) => {
               </div>
             ))}
             {props.roomPrice.map((price, index) => (
-              <div key={index}>
-                <span>
+              <div key={index} className="room-item horizontal">
+                <span className="room-text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"

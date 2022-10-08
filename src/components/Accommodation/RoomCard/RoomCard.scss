@@ -12,12 +12,21 @@
     height: auto;
     margin: 24px 24px 24px 4px;
     border-radius: 5px;
+    @media screen and (max-width: $sm) {
+      width: 100%;
+      max-width: 330px;
+    }
     .image-container {
       .room-image {
         height: 316px;
         width: 586px;
         width: 100%;
         border-radius: 5px;
+        @media screen and (max-width: $sm) {
+          width: 100%;
+          max-width: 330px;
+          height: 177px;
+        }
       }
       .roomcard-header-container {
         position: absolute;
@@ -27,6 +36,7 @@
         color: rgba(0, 0, 0, 1);
         background-color: transparent;
         top: 0px;
+
         .roomcard-header {
           font-size: 16px;
           text-align: right;
@@ -34,6 +44,7 @@
           line-height: 24px;
           font-weight: 900;
           padding: 20px;
+          color: $white;
         }
       }
     }
@@ -42,6 +53,10 @@
       max-width: 538px;
       width: 100%;
       margin: 24px;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 298px;
+      }
       .roomcard-title {
         font-size: 32px;
         letter-spacing: 3px;
@@ -49,8 +64,14 @@
         float: left;
         line-height: 48px;
         font-weight: 900;
-        color: rgba(0, 0, 0, 1);
+        color: $black;
         text-transform: uppercase;
+        @media screen and (max-width: $sm) {
+          font-size: 24px;
+          font-weight: 900;
+          letter-spacing: 4px;
+          line-height: 32px;
+        }
       }
     }
     .roomcard-excerpt-container {
@@ -58,22 +79,67 @@
       max-width: 539px;
       width: 100%;
       margin: 24px;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 298px;
+      }
       .roomcard-excerpt {
         font-size: 16px;
         text-align: left;
         float: left;
         line-height: 24px;
         font-weight: 400;
-        color: rgba(0, 0, 0, 1);
+        color: $black;
+        margin-bottom: 19px;
+        @media screen and (max-width: $sm) {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
       }
     }
-    .item-container {
+    .grid-container {
       height: auto;
       max-width: 539px;
       width: 100%;
       margin: 24px;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 280px;
+        display: table;
+        margin-bottom: 0px;
+      }
+      .room-item {
+        margin-bottom: 12px;
+        height: 50%;
+        font-size: 16px;
+        font-weight: 400;
+        color: $black;
+        line-height: 24px;
+        border-bottom: 1px solid rgba(224, 224, 224, 1);
+      }
+      .room-item:last-child {
+        border-bottom: 0px;
+        @media screen and (max-width: $sm) {
+          border-bottom: 1px solid rgba(224, 224, 224, 1);
+        }
+        .horizontal {
+          @media screen and (max-width: $sm) {
+            border: none;
+          }
+        }
+      }
+      .room-text {
+        margin: 12px;
+      }
+      .vertical {
+        border-left: 1px solid rgba(224, 224, 224, 1);
+        @media screen and (max-width: $sm) {
+          border: none;
+        }
+      }
     }
   }
   button {
@@ -85,14 +151,25 @@
     border-radius: 7px;
     font-size: 16px;
     text-align: left;
-    margin: 24px 24px 24px 24px;
+    margin: 24px;
     display: block;
+    @media screen and (max-width: $sm) {
+      margin-top: 0px;
+      max-width: 280px;
+      width: 100%;
+    }
     .cta-chevron--right {
       float: right;
+      color: $white;
     }
   }
   .chevron--plus {
     height: 24px;
     padding: 20px;
+    color: $white;
+  }
+  svg {
+    color: $blue;
+    margin-right: 12px;
   }
 }
