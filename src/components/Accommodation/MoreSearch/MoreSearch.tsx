@@ -2,6 +2,7 @@ import React from "react";
 import Select from "react-select";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import "tippy.js/themes/light.css";
 import "../RoomSearch.scss";
 import { Button } from "../../Button";
 
@@ -81,7 +82,7 @@ export const MoreSearch = (props: any) => {
               <div className="smalltitle-without-image-container">
                 <h1 className="smalltitle-without-image">
                   {props.price_title}{" "}
-                  <Tippy content="Lorem ipsum">
+                  <Tippy theme={"light"} content="Lorem ipsum">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
@@ -118,7 +119,7 @@ export const MoreSearch = (props: any) => {
               <div className="smalltitle-without-image-container">
                 <h1 className="smalltitle-without-image">
                   {props.shared_title}{" "}
-                  <Tippy content="Lorem ipsum">
+                  <Tippy theme={"light"} content="Lorem ipsum">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
@@ -150,7 +151,7 @@ export const MoreSearch = (props: any) => {
               <div className="smalltitle-without-image-container">
                 <h1 className="smalltitle-without-image">
                   {props.study_title}{" "}
-                  <Tippy content="Lorem ipsum">
+                  <Tippy theme={"light"} content="Lorem ipsum">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
@@ -187,7 +188,7 @@ export const MoreSearch = (props: any) => {
               <div className="smalltitle-without-image-container">
                 <h1 className="smalltitle-without-image">
                   {props.family_title}{" "}
-                  <Tippy content="Lorem ipsum">
+                  <Tippy theme={"light"} content="Lorem ipsum">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="14"
