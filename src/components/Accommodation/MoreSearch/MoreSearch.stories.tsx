@@ -24,6 +24,7 @@ Default.args = {
   study_title: "Study Level",
   family_title: "Family House",
   bed_title: "Bed Size",
+  tooltip: "Lorem ipsum",
   suite_label: "En Suite",
   shared_label: "Shared Bathroom",
   cheap_label: "£",
