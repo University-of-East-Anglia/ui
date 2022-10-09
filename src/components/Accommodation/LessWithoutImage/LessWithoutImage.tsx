@@ -30,18 +30,24 @@ export const LessWithoutImage = (props: any) => {
               <div className="smalltitle-without-image-container">
                 <h1 className="smalltitle-without-image">{props.bathroom_title}</h1>
               </div>
-              <form>
-                <label>
-                  <input type="button" value="En Suite" className="ensuite-without-image"></input>
-                </label>
-                <label>
-                  <input
-                    type="button"
-                    value="Shared Bathroom"
-                    className="shared-without-image"
-                  ></input>
-                </label>
-              </form>
+              <div className="radio">
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="En Suite"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">En Suite</label>
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Shared Bathroom"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Shared Bathroom</label>
+              </div>
             </div>
             <div className="dropdown-container-without-image">
               <div className="smalltitle-without-image-container">

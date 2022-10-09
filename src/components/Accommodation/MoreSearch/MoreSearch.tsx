@@ -3,10 +3,6 @@ import Select from "react-select";
 import "../RoomSearch.scss";
 import { Button } from "../../Button";
 
-const ColoredTooltip = () => {
-  return <span style={{ color: "yellow" }}>x</span>;
-};
-
 const customStyles = {
   control: (base: any) => ({
     ...base,
@@ -34,18 +30,24 @@ export const MoreSearch = (props: any) => {
               <div className="smalltitle-without-image-container">
                 <h1 className="smalltitle-without-image">{props.bathroom_title}</h1>
               </div>
-              <form>
-                <label>
-                  <input type="button" value="En Suite" className="ensuite-without-image"></input>
-                </label>
-                <label>
-                  <input
-                    type="button"
-                    value="Shared Bathroom"
-                    className="shared-without-image"
-                  ></input>
-                </label>
-              </form>
+              <div className="radio">
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="En Suite"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">En Suite</label>
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Shared Bathroom"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Shared Bathroom</label>
+              </div>
             </div>
             <div className="dropdown-container-without-image">
               <div className="smalltitle-without-image-container">
@@ -96,20 +98,16 @@ export const MoreSearch = (props: any) => {
                   </div>
                 </h1>
               </div>
-              <form>
-                <label>
-                  <input type="button" value="£" className="cheap"></input>
-                </label>
-                <label>
-                  <input type="button" value="££" className="average"></input>
-                </label>
-                <label>
-                  <input type="button" value="£££" className="expensive"></input>
-                </label>
-                <label>
-                  <input type="button" value="All" className="all"></input>
-                </label>
-              </form>
+              <div className="radio">
+                <input className="radio-input" type="radio" value="£" name="radio" id="radio" />
+                <label className="radio-label">£</label>
+                <input className="radio-input" type="radio" value="££" name="radio" id="radio" />
+                <label className="radio-label">££</label>
+                <input className="radio-input" type="radio" value="£££" name="radio" id="radio" />
+                <label className="radio-label">£££</label>
+                <input className="radio-input" type="radio" value="All" name="radio" id="radio" />
+                <label className="radio-label">All</label>
+              </div>
             </div>
           </div>
           <div className="search-container-column-right">
@@ -134,17 +132,26 @@ export const MoreSearch = (props: any) => {
                   </div>
                 </h1>
               </div>
-              <form>
-                <label>
-                  <input type="button" value="Yes, Twin" className="twin"></input>
-                </label>
-                <label>
-                  <input type="button" value="Yes, Bunk" className="bunk"></input>
-                </label>
-                <label>
-                  <input type="button" value="No" className="reject"></input>
-                </label>
-              </form>
+              <div className="radio">
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Tes, Twin"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Yes, Twin</label>
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Yes, Bunk"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Yes, Bunk</label>
+                <input className="radio-input" type="radio" value="No" name="radio" id="radio" />
+                <label className="radio-label">No</label>
+              </div>
             </div>
             <div className="select-container-without-image">
               <div className="smalltitle-without-image-container">
@@ -167,22 +174,24 @@ export const MoreSearch = (props: any) => {
                   </div>
                 </h1>
               </div>
-              <form>
-                <label>
-                  <input
-                    type="button"
-                    value="Undergraduate"
-                    className="ensuite-without-image"
-                  ></input>
-                </label>
-                <label>
-                  <input
-                    type="button"
-                    value="Postgraduate"
-                    className="shared-without-image"
-                  ></input>
-                </label>
-              </form>
+              <div className="radio">
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Undergraduate"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Undergraduate</label>
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Postgraduate"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Postgraduate</label>
+              </div>
             </div>
             <div className="select-container-without-image">
               <div className="smalltitle-without-image-container">
@@ -205,27 +214,35 @@ export const MoreSearch = (props: any) => {
                   </div>
                 </h1>
               </div>
-              <form>
-                <label>
-                  <input type="button" value="Yes" className="ensuite-without-image"></input>
-                </label>
-                <label>
-                  <input type="button" value="No" className="shared-without-image"></input>
-                </label>
-              </form>
+              <div className="radio">
+                <input className="radio-input" type="radio" value="Yes" name="radio" id="radio" />
+                <label className="radio-label">Yes</label>
+                <input className="radio-input" type="radio" value="No" name="radio" id="radio" />
+                <label className="radio-label">No</label>
+              </div>
             </div>
             <div className="select-container-without-image">
               <div className="smalltitle-without-image-container">
                 <h1 className="smalltitle-without-image">{props.bed_title}</h1>
               </div>
-              <form>
-                <label>
-                  <input type="button" value="Double" className="ensuite-without-image"></input>
-                </label>
-                <label>
-                  <input type="button" value="Single" className="shared-without-image"></input>
-                </label>
-              </form>
+              <div className="radio">
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Double"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Double</label>
+                <input
+                  className="radio-input"
+                  type="radio"
+                  value="Single"
+                  name="radio"
+                  id="radio"
+                />
+                <label className="radio-label">Single</label>
+              </div>
             </div>
           </div>
         </div>

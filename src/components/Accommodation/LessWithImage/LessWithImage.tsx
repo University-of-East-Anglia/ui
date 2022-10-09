@@ -27,19 +27,28 @@ export const LessWithImage = (props: any) => {
         <div className="title-container">
           <h1 className="title">{props.title}</h1>
         </div>
-        <div className="select-container">
-          <div className="small-title-container">
-            <h1 className="small-title">{props.bathroom_title}</h1>
-          </div>
-          <form>
-            <label>
-              <input type="button" value="En Suite" className="suite"></input>
-            </label>
-            <label>
-              <input type="button" value="Shared Bathroom" className="shared"></input>
-            </label>
-          </form>
+        <div className="small-title-container">
+          <h1 className="small-title">{props.bathroom_title}</h1>
         </div>
+        <div className="radio-with-image">
+          <input
+            className="radio-input-with-image"
+            type="radio"
+            value="En Suite"
+            name="radio"
+            id="radio"
+          />
+          <label className="radio-label-with-image">En Suite</label>
+          <input
+            className="radio-input-with-image"
+            type="radio"
+            value="Shared Bathroom"
+            name="radio"
+            id="radio"
+          />
+          <label className="radio-label-with-image">Shared Bathroom</label>
+        </div>
+
         <div className="dropdown-container">
           <div className="small-title-container">
             <h1 className="small-title">{props.location_title}</h1>

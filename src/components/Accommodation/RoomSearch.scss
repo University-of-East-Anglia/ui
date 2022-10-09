@@ -37,6 +37,32 @@
       transform: translate(7%, -15%);
       border-radius: 7px;
     }
+    .radio-with-image {
+      display: inline-flex;
+      overflow: hidden;
+      border-radius: 6px;
+      background-color: rgba(242, 242, 242, 1);
+      height: 69px;
+      width: 630px;
+      margin-left: 27px;
+    }
+
+    .radio-input-with-image {
+      display: none;
+    }
+    .radio-label-with-image {
+      font-size: 16px;
+      font-weight: 400;
+      color: $black;
+      text-align: center;
+      line-height: 24px;
+      text-align: center;
+      height: 69px;
+      width: 315px;
+      padding-top: 24px;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+    }
     .title-container {
       height: 48px;
       width: 552px;
@@ -86,29 +112,7 @@
       }
     }
   }
-  .suite {
-    height: 69px;
-    width: 316px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 2px solid rgba(0, 174, 240, 1);
-    border-radius: 6px;
-    margin-left: 27px;
-    @media screen and (max-width: $sm) {
-      width: 143px;
-      height: 69px;
-    }
-  }
-  .shared {
-    height: 69px;
-    width: 316px;
-    background-color: rgba(242, 242, 242, 1);
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 6px;
-    @media screen and (max-width: $sm) {
-      width: 143px;
-      height: 69px;
-    }
-  }
+
   .dropdown {
     cursor: pointer;
     line-height: 32px;
@@ -317,116 +321,10 @@
     }
   }
 
-  .ensuite-without-image {
-    height: 69px;
-    width: 279px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 2px solid rgba(0, 174, 240, 1);
-    border-radius: 6px;
-    margin-left: 27px;
-    @media screen and (max-width: $sm) {
-      width: 143px;
-      height: 69px;
-      margin-left: 22px;
-    }
+  .radio-input:checked + .radio-label {
+    background-color: $white;
+    border: 2px solid $blue;
   }
-  .shared-without-image {
-    height: 69px;
-    width: 279px;
-    background-color: rgba(242, 242, 242, 1);
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 6px;
-    @media screen and (max-width: $sm) {
-      width: 143px;
-      height: 69px;
-    }
-  }
-
-  .all {
-    height: 69px;
-    width: 139px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 2px solid rgba(0, 174, 240, 1);
-    border-radius: 6px;
-    @media screen and (max-width: $sm) {
-      width: 70px;
-      height: 69px;
-    }
-  }
-  .cheap {
-    height: 69px;
-    width: 139px;
-    background-color: rgba(242, 242, 242, 1);
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 6px;
-    margin-left: 27px;
-    @media screen and (max-width: $sm) {
-      width: 70px;
-      height: 69px;
-      margin-left: 22px;
-    }
-  }
-
-  .average {
-    height: 69px;
-    width: 139px;
-    background-color: rgba(242, 242, 242, 1);
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 6px;
-    @media screen and (max-width: $sm) {
-      width: 70px;
-      height: 69px;
-    }
-  }
-  .expensive {
-    height: 69px;
-    width: 139px;
-    background-color: rgba(242, 242, 242, 1);
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 6px;
-    @media screen and (max-width: $sm) {
-      width: 70px;
-      height: 69px;
-    }
-  }
-
-  .reject {
-    height: 69px;
-    width: 186px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 2px solid rgba(0, 174, 240, 1);
-    border-radius: 6px;
-    @media screen and (max-width: $sm) {
-      width: 96px;
-      height: 69px;
-    }
-  }
-  .twin {
-    height: 69px;
-    width: 186px;
-    background-color: rgba(242, 242, 242, 1);
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 6px;
-    margin-left: 27px;
-    @media screen and (max-width: $sm) {
-      width: 96px;
-      height: 69px;
-      margin-left: 22px;
-    }
-  }
-
-  .bunk {
-    height: 69px;
-    width: 186px;
-    background-color: rgba(242, 242, 242, 1);
-    border: 2px solid rgba(242, 242, 242, 1);
-    border-radius: 6px;
-    @media screen and (max-width: $sm) {
-      width: 96px;
-      height: 69px;
-    }
-  }
-
   .without-image-button-container {
     max-width: 1196px;
     text-align: center;
@@ -447,5 +345,31 @@
     width: 93px;
     padding: 0px;
     text-decoration: underline;
+  }
+  .radio {
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: rgba(242, 242, 242, 1);
+    height: 69px;
+    width: 560px;
+    margin-left: 27px;
+  }
+
+  .radio-input {
+    display: none;
+  }
+  .radio-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
+    text-align: center;
+    line-height: 24px;
+    text-align: center;
+    height: 69px;
+    width: 280px;
+    padding-top: 24px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
   }
 }
