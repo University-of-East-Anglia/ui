@@ -20,5 +20,11 @@ Default.args = {
   excerpt:
     "Featuring an entrance hall, bedroom with double bed, study area, kitchen/dinner, lounge area, shower room, and balcony.",
   excerpt_title: "One Bedroom Premier Flat, Colman House",
-  image: "https://picsum.photos/400/300",
+  images: [
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+  ],
 };

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Video } from "../../Video";
 import "./MoreWithImage.scss";
 
 export interface Props {
   roomAmount: RoomAmount[];
+  slideImages: SlideImages[];
   roomPrice: RoomPrice[];
   room_title: string;
   banner_title: string;
@@ -25,15 +26,76 @@ export interface RoomPrice {
   label: string;
 }
 
+export interface SlideImages {
+  value: string;
+  label: string;
+}
+
 export const MoreWithImage = ({ ...props }: Props) => {
+  const slideImages = [
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+  ];
+  const [imageData, setImageData] = useState(slideImages[0].value);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleClick = (index: number) => {
+    console.log(index);
+    const imageSlider = props.slideImages[index].value;
+    setImageData(imageSlider);
+    setActiveIndex(index);
+  };
   return (
     <div className="more-image-room-detail">
       <div className="more-room-title-container">
         <h1 className="more-room-title">{props.room_title}</h1>
       </div>
-      <div className="more-image-container">
-        <img src={props.image} alt={props.room_title} />
+      <div className="slider-container">
+        <div className="more-image-container">
+          <img src={imageData} alt={props.room_title} />
+        </div>
+        <div className="slider">
+          {props.slideImages.map((image, i) => (
+            <div key={i} onClick={() => handleClick(i)} className="slider-button">
+              {i === activeIndex ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <circle cx="8" cy="8" r="8" />{" "}
+                </svg>
+              ) : (
+                " "
+              )}
+              {i !== activeIndex ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-circle"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />{" "}
+                </svg>
+              ) : (
+                " "
+              )}
+            </div>
+          ))}
+        </div>
       </div>
+
       <div className="more-image-content-container">
         <div className="more-content-container">
           <div className="more-image-column-left">

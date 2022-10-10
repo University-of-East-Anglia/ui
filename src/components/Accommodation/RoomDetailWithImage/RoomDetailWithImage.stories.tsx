@@ -28,7 +28,6 @@ Default.args = {
     { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
     { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
     { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
-    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
   ],
   videoUrl: "https://player.vimeo.com/video/344988769",
   controls: true,

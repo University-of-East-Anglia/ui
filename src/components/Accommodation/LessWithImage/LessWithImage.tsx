@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LessWithImage.scss";
 export interface Props {
   roomAmount: RoomAmount[];
@@ -6,7 +6,7 @@ export interface Props {
   excerpt: string;
   excerpt_title: string;
   room_title: string;
-  image: string;
+  images: Images[];
 }
 
 export interface RoomAmount {
@@ -19,12 +19,72 @@ export interface RoomPrice {
   label: string;
 }
 
+export interface Images {
+  value: string;
+  label: string;
+}
+
 export const LessWithImage = ({ ...props }: Props) => {
+  const images = [
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+  ];
+  const [imageData, setImageData] = useState(images[0].value);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleClick = (index: number) => {
+    console.log(index);
+    const imageSlider = props.images[index].value;
+    setImageData(imageSlider);
+    setActiveIndex(index);
+  };
   return (
     <div className="less-image-room-detail">
-      <div className="less-image-container">
-        <img src={props.image} alt={props.room_title} />
+      <div className="slide-container">
+        <div className="less-image-container">
+          <img src={imageData} alt={props.room_title} />
+        </div>
+        <div className="slider">
+          {props.images.map((image, i) => (
+            <div key={i} onClick={() => handleClick(i)} className="slider-button">
+              {i === activeIndex ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <circle cx="8" cy="8" r="8" />{" "}
+                </svg>
+              ) : (
+                " "
+              )}
+              {i !== activeIndex ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-circle"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />{" "}
+                </svg>
+              ) : (
+                " "
+              )}
+            </div>
+          ))}
+        </div>
       </div>
+
       <div className="less-image-content-container">
         <div className="less-content-container">
           <div className="less-image-column-left">

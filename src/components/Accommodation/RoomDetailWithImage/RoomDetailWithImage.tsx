@@ -47,7 +47,6 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
     { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
     { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
     { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
-    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
   ];
   const [imageData, setImageData] = useState(images[0].value);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -74,8 +73,8 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
               {i === activeIndex ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="24"
+                  height="24"
                   fill="currentColor"
                   className="bi bi-circle-fill"
                   viewBox="0 0 16 16"
@@ -89,8 +88,8 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
               {i !== activeIndex ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="24"
+                  height="24"
                   fill="currentColor"
                   className="bi bi-circle"
                   viewBox="0 0 16 16"

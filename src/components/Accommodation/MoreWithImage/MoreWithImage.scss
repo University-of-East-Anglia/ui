@@ -35,6 +35,10 @@
       }
     }
   }
+  .slider-container {
+    position: relative;
+    text-align: center;
+  }
   img {
     height: 609px;
     max-width: 1196px;
@@ -46,6 +50,30 @@
       max-width: 330px;
       display: none;
     }
+  }
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 46px;
+    padding-bottom: 33px;
+    height: 16px;
+    position: absolute;
+    bottom: 84px;
+    right: 89px;
+    @media screen and (max-width: $sm) {
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+  .bi-circle {
+    color: $white;
+    margin: 5px;
+  }
+  .bi-circle-fill {
+    color: $white;
+    margin: 5px;
   }
 
   .more-image-content-container {
