@@ -50,6 +50,18 @@
       display: table;
     }
   }
+  .video-image-container {
+    position: relative;
+    text-align: center;
+  }
+  .caption {
+    position: absolute;
+    bottom: 16px;
+    left: 19px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 900;
+  }
 
   .video-detail-container {
     height: 269px;

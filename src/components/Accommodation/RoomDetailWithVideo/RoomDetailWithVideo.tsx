@@ -131,6 +131,7 @@ export const RoomDetailWithVideo = ({ ...props }: Props) => {
           </div>
           <div className="video-image-container">
             <img src={props.image} alt={props.room_title} />
+            <div className="caption">{props.image_title}</div>
           </div>
           <div className="video-slide-container">
             <img src={props.image} alt={props.room_title} className="slide" />
