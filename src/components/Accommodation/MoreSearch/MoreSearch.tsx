@@ -36,17 +36,21 @@ export const MoreSearch = (props: any) => {
                   type="radio"
                   value="En Suite"
                   name="radio"
-                  id="radio"
+                  id="radio1"
                 />
-                <label className="radio-label">En Suite</label>
+                <label className="radio-label" htmlFor="radio1">
+                  En Suite
+                </label>
                 <input
                   className="radio-input"
                   type="radio"
                   value="Shared Bathroom"
                   name="radio"
-                  id="radio"
+                  id="radio2"
                 />
-                <label className="radio-label">Shared Bathroom</label>
+                <label className="radio-label" htmlFor="radio2">
+                  Shared Bathroom
+                </label>
               </div>
             </div>
             <div className="dropdown-container-without-image">
