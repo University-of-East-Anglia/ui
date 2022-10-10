@@ -62,7 +62,6 @@
     font-size: 16px;
     font-weight: 900;
   }
-
   .video-detail-container {
     height: 269px;
     width: 586px;
@@ -81,7 +80,6 @@
       @media screen and (max-width: $sm) {
         height: 25%;
       }
-
       .video-detail-item {
         font-size: 24px;
         font-weight: 400;
@@ -163,33 +161,31 @@
       width: 150px;
     }
   }
-
+  .slider-container {
+    margin-left: 5px;
+  }
   .slider {
-    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    display: none;
+    @media screen and (max-width: $sm) {
+      display: flex;
+    }
   }
-
+  .angles {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
+  }
   svg {
     margin: 1px;
   }
-
-  // .slider {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   cursor: pointer;
-  //   padding-top: 46px;
-  //   padding-bottom: 33px;
-  //   height: 16px;
-
-  //   @media screen and (max-width: $sm) {
-  //     bottom: 16px;
-  //     right: 16px;
-  //   }
-  // }
-
+  .angle-right {
+    float: right;
+  }
   .video-map-container {
     height: 405px;
     width: 586px;

@@ -52,9 +52,19 @@ export const RoomDetailWithVideo = ({ ...props }: Props) => {
 
   const [imageData, setImageData] = useState(smallImages[0].value);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const length = smallImages.length;
 
+  const nextImage = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+  const prevImage = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+  if (!Array.isArray(smallImages) || smallImages.length <= 0) {
+    return null;
+  }
   const handleClick = (index: number) => {
-    console.log(index);
     const imageSlider = props.smallImages[index].value;
     setImageData(imageSlider);
     setActiveIndex(index);
@@ -160,8 +170,50 @@ export const RoomDetailWithVideo = ({ ...props }: Props) => {
 
           <div className="slider-container">
             <div className="video-slide-container">
-              <img src={imageData} alt={props.room_title} className="slide" />
-              <img src={imageData} alt={props.room_title} className="slide" />
+              {props.smallImages.map((image, i) => {
+                return (
+                  <div className={i === current ? "image-active" : "image"} key={i}>
+                    {i === current && (
+                      <div>
+                        <img src={imageData} alt={props.room_title} className="slide" />
+                        <img src={imageData} alt={props.room_title} className="slide" />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="angles">
+              <div className="angle-left" onClick={prevImage}>
+                <svg
+                  className="angle-left"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 512"
+                  id="IconChangeColor"
+                  height="16"
+                  width="16"
+                >
+                  <path
+                    d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                    id="mainIconPathAttribute"
+                  ></path>
+                </svg>
+              </div>
+              <div className="angle-right" onClick={nextImage}>
+                <svg
+                  className="angle-right"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 512"
+                  id="IconChangeColor"
+                  height="16"
+                  width="16"
+                >
+                  <path
+                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                    id="mainIconPathAttribute"
+                  ></path>
+                </svg>
+              </div>
             </div>
             <div className="slider">
               {props.smallImages.map((image, i) => (
