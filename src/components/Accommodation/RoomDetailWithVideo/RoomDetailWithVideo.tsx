@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Video } from "../../Video";
 import "./RoomDetailWithVideo.scss";
 
 export interface Props {
   roomAmount: RoomAmount[];
+  smallImages: SmallImages[];
   perFlat: PerFlat[];
   roomType: RoomType[];
   roomPrice: RoomPrice[];
@@ -22,6 +23,11 @@ export interface RoomAmount {
   label: string;
 }
 
+export interface SmallImages {
+  value: string;
+  label: string;
+}
+
 export interface PerFlat {
   value: string;
   label: string;
@@ -35,6 +41,24 @@ export interface RoomPrice {
   label: string;
 }
 export const RoomDetailWithVideo = ({ ...props }: Props) => {
+  const smallImages = [
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+  ];
+
+  const [imageData, setImageData] = useState(smallImages[0].value);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleClick = (index: number) => {
+    console.log(index);
+    const imageSlider = props.smallImages[index].value;
+    setImageData(imageSlider);
+    setActiveIndex(index);
+  };
   return (
     <div className="video-room-detail">
       <div className="video-room-title-container">
@@ -133,9 +157,48 @@ export const RoomDetailWithVideo = ({ ...props }: Props) => {
             <img src={props.image} alt={props.room_title} />
             <div className="caption">{props.image_title}</div>
           </div>
-          <div className="video-slide-container">
-            <img src={props.image} alt={props.room_title} className="slide" />
-            <img src={props.image} alt={props.room_title} className="slide" />
+
+          <div className="slider-container">
+            <div className="video-slide-container">
+              <img src={imageData} alt={props.room_title} className="slide" />
+              <img src={imageData} alt={props.room_title} className="slide" />
+            </div>
+            <div className="slider">
+              {props.smallImages.map((image, i) => (
+                <div key={i} onClick={() => handleClick(i)} className="slider-button">
+                  {i === activeIndex ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      {" "}
+                      <circle cx="8" cy="8" r="8" />{" "}
+                    </svg>
+                  ) : (
+                    " "
+                  )}
+                  {i !== activeIndex ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      {" "}
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />{" "}
+                    </svg>
+                  ) : (
+                    " "
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="video-right-content">

@@ -163,6 +163,33 @@
       width: 150px;
     }
   }
+
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  svg {
+    margin: 1px;
+  }
+
+  // .slider {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   cursor: pointer;
+  //   padding-top: 46px;
+  //   padding-bottom: 33px;
+  //   height: 16px;
+
+  //   @media screen and (max-width: $sm) {
+  //     bottom: 16px;
+  //     right: 16px;
+  //   }
+  // }
+
   .video-map-container {
     height: 405px;
     width: 586px;
