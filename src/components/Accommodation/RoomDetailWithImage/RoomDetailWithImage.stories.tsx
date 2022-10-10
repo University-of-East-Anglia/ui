@@ -22,7 +22,15 @@ Default.args = {
   roomPrice: [{ value: "£156.38 a week", label: "£156.38 a week" }],
   excerpt: "Hickling House and Barton House are two of our newest residences, built in 2016.",
   map_title: "Floor Plan",
-  image: "https://picsum.photos/400/300",
+  images: [
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+  ],
   videoUrl: "https://player.vimeo.com/video/344988769",
   controls: true,
+  floorImage: "https://picsum.photos/400/300",
 };

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Video } from "../../Video";
 import "./RoomDetailWithImage.scss";
 
 export interface Props {
   roomAmount: RoomAmount[];
+  images: Images[];
   perFlat: PerFlat[];
   roomType: RoomType[];
   roomPrice: RoomPrice[];
@@ -14,9 +15,15 @@ export interface Props {
   image: string;
   videoUrl: string | string[];
   controls: boolean;
+  floorImage: string;
 }
 
 export interface RoomAmount {
+  value: string;
+  label: string;
+}
+
+export interface Images {
   value: string;
   label: string;
 }
@@ -34,14 +41,71 @@ export interface RoomPrice {
   label: string;
 }
 export const RoomDetailWithImage = ({ ...props }: Props) => {
+  const images = [
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+    { value: "https://picsum.photos/400/300", label: "https://picsum.photos/400/300" },
+  ];
+  const [imageData, setImageData] = useState(images[0].value);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleClick = (index: number) => {
+    console.log(index);
+    const imageSlider = props.images[index].value;
+    setImageData(imageSlider);
+    setActiveIndex(index);
+  };
+
   return (
     <div className="room-detail">
       <div className="room-title-container">
         <h1 className="room-title">{props.room_title}</h1>
       </div>
-      <div className="image-container">
-        <img src={props.image} alt={props.room_title} />
+      <div className="slider-container">
+        <div className="image-container">
+          <img src={imageData} alt={props.room_title} />
+        </div>
+        <div className="slider">
+          {props.images.map((image, i) => (
+            <div key={i} onClick={() => handleClick(i)} className="slider-button">
+              {i === activeIndex ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <circle cx="8" cy="8" r="8" />{" "}
+                </svg>
+              ) : (
+                " "
+              )}
+              {i !== activeIndex ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-circle"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />{" "}
+                </svg>
+              ) : (
+                " "
+              )}
+            </div>
+          ))}
+        </div>
       </div>
+
       <div className="content-container">
         <div className="column-left">
           <div className="detail-container">
@@ -134,7 +198,7 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
           <div className="column-right-map-second">
             <div className="map-container-second">
               <h1 className="map-title-second">{props.map_title}</h1>
-              <img src={props.image} alt={props.map_title} className="map-second" />
+              <img src={props.floorImage} alt={props.map_title} className="map-second" />
             </div>
           </div>
         </div>
@@ -144,7 +208,7 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
           </div>
           <div className="map-container">
             <h1 className="map-title">{props.map_title}</h1>
-            <img src={props.image} alt={props.map_title} className="map" />
+            <img src={props.floorImage} alt={props.map_title} className="map" />
           </div>
           <div className="banner-container">
             <div className="banner-title-container">

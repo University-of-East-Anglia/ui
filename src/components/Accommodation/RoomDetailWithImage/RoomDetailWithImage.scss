@@ -32,6 +32,10 @@
       }
     }
   }
+  .slider-container {
+    position: relative;
+    text-align: center;
+  }
   img {
     height: 609px;
     max-width: 1196px;
@@ -39,8 +43,32 @@
     border-radius: 7px;
     @media screen and (max-width: $sm) {
       height: 168px;
-      max-width: 300px;
+      max-width: 330px;
     }
+  }
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 46px;
+    padding-bottom: 33px;
+    height: 16px;
+    position: absolute;
+    bottom: 34px;
+    right: 39px;
+    @media screen and (max-width: $sm) {
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+  .bi-circle {
+    color: $white;
+    margin: 5px;
+  }
+  .bi-circle-fill {
+    color: $white;
+    margin: 5px;
   }
 
   .content-container {
