@@ -36,17 +36,21 @@ export const LessWithoutImage = (props: any) => {
                   type="radio"
                   value="En Suite"
                   name="radio"
-                  id="radio"
+                  id="radio18"
                 />
-                <label className="radio-label">En Suite</label>
+                <label className="radio-label" htmlFor="radio18">
+                  En Suite
+                </label>
                 <input
                   className="radio-input"
                   type="radio"
                   value="Shared Bathroom"
                   name="radio"
-                  id="radio"
+                  id="radio19"
                 />
-                <label className="radio-label">Shared Bathroom</label>
+                <label className="radio-label" htmlFor="radio19">
+                  Shared Bathroom
+                </label>
               </div>
             </div>
             <div className="dropdown-container-without-image">

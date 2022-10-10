@@ -36,17 +36,21 @@ export const LessWithImage = (props: any) => {
             type="radio"
             value="En Suite"
             name="radio"
-            id="radio"
+            id="radio16"
           />
-          <label className="radio-label-with-image">En Suite</label>
+          <label className="radio-label-with-image" htmlFor="radio16">
+            En Suite
+          </label>
           <input
             className="radio-input-with-image"
             type="radio"
             value="Shared Bathroom"
             name="radio"
-            id="radio"
+            id="radio17"
           />
-          <label className="radio-label-with-image">Shared Bathroom</label>
+          <label className="radio-label-with-image" htmlFor="radio17">
+            Shared Bathroom
+          </label>
         </div>
 
         <div className="dropdown-container">

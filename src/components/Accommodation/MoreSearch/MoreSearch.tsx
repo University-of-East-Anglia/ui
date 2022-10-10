@@ -103,14 +103,22 @@ export const MoreSearch = (props: any) => {
                 </h1>
               </div>
               <div className="radio">
-                <input className="radio-input" type="radio" value="£" name="radio" id="radio" />
-                <label className="radio-label">£</label>
-                <input className="radio-input" type="radio" value="££" name="radio" id="radio" />
-                <label className="radio-label">££</label>
-                <input className="radio-input" type="radio" value="£££" name="radio" id="radio" />
-                <label className="radio-label">£££</label>
-                <input className="radio-input" type="radio" value="All" name="radio" id="radio" />
-                <label className="radio-label">All</label>
+                <input className="radio-input" type="radio" value="£" name="radio" id="radio3" />
+                <label className="radio-label" htmlFor="radio3">
+                  £
+                </label>
+                <input className="radio-input" type="radio" value="££" name="radio" id="radio4" />
+                <label className="radio-label" htmlFor="radio4">
+                  ££
+                </label>
+                <input className="radio-input" type="radio" value="£££" name="radio" id="radio5" />
+                <label className="radio-label" htmlFor="radio5">
+                  £££
+                </label>
+                <input className="radio-input" type="radio" value="All" name="radio" id="radio6" />
+                <label className="radio-label" htmlFor="radio6">
+                  All
+                </label>
               </div>
             </div>
           </div>
@@ -142,19 +150,25 @@ export const MoreSearch = (props: any) => {
                   type="radio"
                   value="Tes, Twin"
                   name="radio"
-                  id="radio"
+                  id="radio7"
                 />
-                <label className="radio-label">Yes, Twin</label>
+                <label className="radio-label" htmlFor="radio7">
+                  Yes, Twin
+                </label>
                 <input
                   className="radio-input"
                   type="radio"
                   value="Yes, Bunk"
                   name="radio"
-                  id="radio"
+                  id="radio8"
                 />
-                <label className="radio-label">Yes, Bunk</label>
-                <input className="radio-input" type="radio" value="No" name="radio" id="radio" />
-                <label className="radio-label">No</label>
+                <label className="radio-label" htmlFor="radio8">
+                  Yes, Bunk
+                </label>
+                <input className="radio-input" type="radio" value="No" name="radio" id="radio9" />
+                <label className="radio-label" htmlFor="radio9">
+                  No
+                </label>
               </div>
             </div>
             <div className="select-container-without-image">
@@ -184,17 +198,21 @@ export const MoreSearch = (props: any) => {
                   type="radio"
                   value="Undergraduate"
                   name="radio"
-                  id="radio"
+                  id="radio10"
                 />
-                <label className="radio-label">Undergraduate</label>
+                <label className="radio-label" htmlFor="radio10">
+                  Undergraduate
+                </label>
                 <input
                   className="radio-input"
                   type="radio"
                   value="Postgraduate"
                   name="radio"
-                  id="radio"
+                  id="radio11"
                 />
-                <label className="radio-label">Postgraduate</label>
+                <label className="radio-label" htmlFor="radio11">
+                  Postgraduate
+                </label>
               </div>
             </div>
             <div className="select-container-without-image">
@@ -219,10 +237,14 @@ export const MoreSearch = (props: any) => {
                 </h1>
               </div>
               <div className="radio">
-                <input className="radio-input" type="radio" value="Yes" name="radio" id="radio" />
-                <label className="radio-label">Yes</label>
-                <input className="radio-input" type="radio" value="No" name="radio" id="radio" />
-                <label className="radio-label">No</label>
+                <input className="radio-input" type="radio" value="Yes" name="radio" id="radio12" />
+                <label className="radio-label" htmlFor="radio12">
+                  Yes
+                </label>
+                <input className="radio-input" type="radio" value="No" name="radio" id="radio13" />
+                <label className="radio-label" htmlFor="radio13">
+                  No
+                </label>
               </div>
             </div>
             <div className="select-container-without-image">
@@ -235,17 +257,21 @@ export const MoreSearch = (props: any) => {
                   type="radio"
                   value="Double"
                   name="radio"
-                  id="radio"
+                  id="radio14"
                 />
-                <label className="radio-label">Double</label>
+                <label className="radio-label" htmlFor="radio14">
+                  Double
+                </label>
                 <input
                   className="radio-input"
                   type="radio"
                   value="Single"
                   name="radio"
-                  id="radio"
+                  id="radio15"
                 />
-                <label className="radio-label">Single</label>
+                <label className="radio-label" htmlFor="radio15">
+                  Single
+                </label>
               </div>
             </div>
           </div>
