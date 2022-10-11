@@ -336,7 +336,7 @@ export const MoreSearch = (props: any) => {
             <Button
               className="without-image-search-button"
               variant="primary"
-              children="Update"
+              children={showLess === true ? "Update" : "Search"}
             ></Button>
           </div>
           <div className="without-image-button-container">
