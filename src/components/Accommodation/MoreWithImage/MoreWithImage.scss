@@ -395,4 +395,13 @@
       display: none;
     }
   }
+  .bi-plus-circle {
+    color: $pink;
+    padding: 0px;
+    margin-left: 1px;
+    text-align: center;
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
+  }
 }

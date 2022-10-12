@@ -42,6 +42,7 @@ export const MoreWithImage = ({ ...props }: Props) => {
   ];
   const [imageData, setImageData] = useState(slideImages[0].value);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showLess, setShowLes] = useState(true);
 
   const handleClick = (index: number) => {
     console.log(index);
@@ -138,9 +139,11 @@ export const MoreWithImage = ({ ...props }: Props) => {
                 </div>
               ))}
             </div>
-            <div className="more-video-container">
-              <Video videoUrl={props.videoUrl} controls={props.controls} />
-            </div>
+            {showLess && (
+              <div className="more-video-container">
+                <Video videoUrl={props.videoUrl} controls={props.controls} />
+              </div>
+            )}
 
             <div className="map-container-second">
               <h1 className="map-title-second">{props.map_title}</h1>
@@ -153,37 +156,56 @@ export const MoreWithImage = ({ ...props }: Props) => {
               <h1 className="more-image-excerpt-title">{props.excerpt_title}</h1>
               <p className="more-image-excerpt">{props.excerpt}</p>
             </div>
-            <div className="more-map-container">
-              <h1 className="more-map-title">{props.map_title}</h1>
-              <img src={props.image} alt={props.map_title} className="more-map" />
-            </div>
-            <div className="more-banner-container">
-              <div className="more-banner-title-container">
-                {" "}
-                <p className="more-banner-title">{props.banner_title}</p>
+            {showLess && (
+              <div className="more-map-container">
+                <h1 className="more-map-title">{props.map_title}</h1>
+                <img src={props.image} alt={props.map_title} className="more-map" />
               </div>
-            </div>
+            )}
+            {showLess && (
+              <div className="more-banner-container">
+                <div className="more-banner-title-container">
+                  {" "}
+                  <p className="more-banner-title">{props.banner_title}</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="show-less-container">
-          <a type="button" className="show-less-button">
-            Show less
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="feather feather-minus-circle"
-              id="IconChangeColor"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="8" y1="12" x2="16" y2="12"></line>
-            </svg>
+          <a type="button" className="show-less-button" onClick={() => setShowLes(!showLess)}>
+            {showLess === true ? "Show less" : "Show more"}
+            {showLess === true ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="feather feather-minus-circle"
+                id="IconChangeColor"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                fill="currentColor"
+                className="bi bi-plus-circle"
+                viewBox="0 0 16 16"
+              >
+                {" "}
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />{" "}
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />{" "}
+              </svg>
+            )}
           </a>
         </div>
       </div>
