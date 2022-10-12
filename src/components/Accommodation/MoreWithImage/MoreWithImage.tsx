@@ -145,9 +145,9 @@ export const MoreWithImage = ({ ...props }: Props) => {
               </div>
             )}
 
-            <div className="map-container-second">
-              <h1 className="map-title-second">{props.map_title}</h1>
-              <img src={props.image} alt={props.map_title} className="map-second" />
+            <div className="more-map-container second">
+              <h1 className="more-map-title">{props.map_title}</h1>
+              <img src={props.image} alt={props.map_title} className="more-map" />
             </div>
           </div>
           <div className="more-image-right-content">
@@ -157,7 +157,7 @@ export const MoreWithImage = ({ ...props }: Props) => {
               <p className="more-image-excerpt">{props.excerpt}</p>
             </div>
             {showLess && (
-              <div className="more-map-container">
+              <div className="more-map-container first">
                 <h1 className="more-map-title">{props.map_title}</h1>
                 <img src={props.image} alt={props.map_title} className="more-map" />
               </div>
