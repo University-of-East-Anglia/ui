@@ -194,18 +194,16 @@ export const RoomDetailWithImage = ({ ...props }: Props) => {
           <div className="video-container">
             <Video videoUrl={props.videoUrl} controls={props.controls} />
           </div>
-          <div className="column-right-map-second">
-            <div className="map-container-second">
-              <h1 className="map-title-second">{props.map_title}</h1>
-              <img src={props.floorImage} alt={props.map_title} className="map-second" />
-            </div>
+          <div className="map-container second">
+            <h1 className="map-title">{props.map_title}</h1>
+            <img src={props.floorImage} alt={props.map_title} className="map" />
           </div>
         </div>
         <div className="right-content">
           <div className="excerp-container">
             <p className="detail-excerpt">{props.excerpt}</p>
           </div>
-          <div className="map-container">
+          <div className="map-container first">
             <h1 className="map-title">{props.map_title}</h1>
             <img src={props.floorImage} alt={props.map_title} className="map" />
           </div>
