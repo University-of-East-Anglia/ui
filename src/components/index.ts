@@ -72,4 +72,6 @@ export { LessWithImage } from "./Accommodation/LessWithImage";
 
 export { MoreWithImage } from "./Accommodation/MoreWithImage";
 
+export { MoreWithVideo } from "./Accommodation/MoreWithVideo";
+
 import "./App.scss";
