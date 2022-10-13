@@ -24,7 +24,7 @@ export const MoreSearch = (props: any) => {
       <div className="title-without-image-container">
         <h1 className="title-without-image">{props.title}</h1>
       </div>
-      <div className="more-content-container">
+      <div className={showLess === true ? "more-content-container" : "content-container"}>
         <div className="search-container">
           <div className="search-container-column-left">
             <div className="select-container-without-image">
