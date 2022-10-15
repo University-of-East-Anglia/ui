@@ -1,0 +1,187 @@
+@import "../../shared_styles/variables.scss";
+
+.less-image-room-detail {
+  position: absolute;
+  max-width: 1196px;
+  width: 100%;
+  @media screen and (max-width: $sm) {
+    max-width: 330px;
+    width: 100%;
+  }
+  .slide-container {
+    position: relative;
+    text-align: center;
+  }
+  img {
+    height: 609px;
+    max-width: 1196px;
+    width: 100%;
+    border-radius: 7px;
+    background-color: $white;
+    @media screen and (max-width: $sm) {
+      height: 157px;
+      max-width: 330px;
+    }
+  }
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 46px;
+    padding-bottom: 33px;
+    height: 16px;
+    position: absolute;
+    bottom: 34px;
+    right: 39px;
+    @media screen and (max-width: $sm) {
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+  .bi-circle {
+    color: $white;
+    margin: 5px;
+  }
+  .bi-circle-fill {
+    color: $white;
+    margin: 5px;
+  }
+  .less-image-content-container {
+    height: 249px;
+    width: 1148px;
+    background-color: $white;
+    box-shadow: 0 2px 10px 0 $black;
+    border-radius: 7px;
+    transform: translate(2%, -20%);
+    @media screen and (max-width: $sm) {
+      height: 286px;
+      max-width: 330px;
+      transform: translate(0%, 0%);
+      margin-top: 16px;
+    }
+  }
+  .less-content-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    @media screen and (max-width: $sm) {
+      display: table;
+    }
+  }
+  .less-image-detail-container {
+    height: 145px;
+    width: 538px;
+    border: 3px solid $blue;
+    border-radius: 7px;
+    margin-bottom: 24px;
+    margin-top: 16px;
+    margin-left: 24px;
+    @media screen and (max-width: $sm) {
+      height: 104px;
+      width: 300px;
+      margin-left: 15px;
+    }
+  }
+  .less-image-detail-list {
+    height: 50%;
+    @media screen and (max-width: $sm) {
+      height: 50%;
+    }
+    .less-image-detail-item {
+      font-size: 24px;
+      font-weight: 400;
+      color: $black;
+      line-height: 32px;
+      float: left;
+      margin-top: 24px;
+      @media screen and (max-width: $sm) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 12px;
+      }
+    }
+  }
+  svg {
+    margin-left: 29px;
+    margin-right: 46px;
+    color: $blue;
+    width: 24px;
+    height: 24px;
+    @media screen and (max-width: $sm) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(224, 224, 224, 1);
+  }
+  .less-image-excerpt-container {
+    margin-top: 16px;
+    .less-image-excerpt-title {
+      height: 32px;
+      width: 538px;
+      font-size: 24px;
+      font-weight: 900;
+      color: $black;
+      line-height: 32px;
+      @media screen and (max-width: $sm) {
+        width: 300px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 15px;
+      }
+    }
+    .less-image-excerpt {
+      height: 48px;
+      width: 527px;
+      font-size: 16px;
+      font-weight: 400;
+      color: $black;
+      line-height: 24px;
+      @media screen and (max-width: $sm) {
+        width: 300px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .show-more-container {
+    max-width: 1196px;
+    text-align: center;
+    margin-bottom: 24px;
+    height: 32px;
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
+  }
+  .show-more-button {
+    font-size: 24px;
+    font-weight: 900;
+    color: $pink;
+    background-color: none;
+    height: 32px;
+    width: 147px;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
+  }
+  .bi-plus-circle {
+    color: $pink;
+    padding: 0px;
+    margin-left: 1px;
+    text-align: center;
+    @media screen and (max-width: $sm) {
+      display: none;
+    }
+  }
+}

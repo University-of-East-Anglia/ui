@@ -1,0 +1,1 @@
+export { RoomDetailWithImage } from "./RoomDetailWithImage";
