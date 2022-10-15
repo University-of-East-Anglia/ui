@@ -62,4 +62,10 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
+export { LessWithImage } from "./Accommodation/LessWithImage";
+
+export { LessWithoutImage } from "./Accommodation/LessWithoutImage";
+
+export { MoreSearch } from "./Accommodation/MoreSearch";
+
 import "./App.scss";

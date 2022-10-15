@@ -1,0 +1,387 @@
+@import "../shared_styles/variables.scss";
+
+.finder-container {
+  position: absolute;
+  width: 100;
+  display: grid;
+  grid-template-columns: 508px 20px 20px 20px;
+  @media screen and (max-width: $sm) {
+    display: table;
+    width: 100%;
+  }
+  .image-container {
+    height: 720px;
+    width: 789px;
+    @media screen and (max-width: $sm) {
+      height: 345px;
+      width: 375px;
+    }
+    img {
+      height: 720px;
+      width: 789px;
+      @media screen and (max-width: $sm) {
+        height: 345px;
+        width: 375px;
+      }
+    }
+  }
+  .searchbar-container {
+    height: 557px;
+    width: 687px;
+    background-color: $white;
+    margin-top: 80px;
+    @media screen and (max-width: $sm) {
+      height: 543px;
+      width: 330px;
+      margin-top: 0px;
+      transform: translate(7%, -15%);
+      border-radius: 7px;
+    }
+    .radio-with-image {
+      display: inline-flex;
+      overflow: hidden;
+      border-radius: 6px;
+      height: 69px;
+      width: 630px;
+      margin-left: 27px;
+      @media screen and (max-width: $sm) {
+        width: 286px;
+      }
+    }
+    .radio-input-with-image {
+      display: none;
+    }
+    .radio-label-with-image {
+      font-size: 16px;
+      font-weight: 400;
+      color: $black;
+      text-align: center;
+      line-height: 24px;
+      text-align: center;
+      background-color: rgba(242, 242, 242, 1);
+      height: 40px;
+      width: 315px;
+      padding-top: 24px;
+      cursor: pointer;
+      transition: background-color 0.1s;
+    }
+
+    .radio-input-with-image:checked + .radio-label-with-image {
+      background-color: $white;
+      border: 2px solid $blue;
+    }
+  }
+  .title-container {
+    height: 48px;
+    width: 552px;
+    margin: 17px auto 12px 27px;
+    @media screen and (max-width: $sm) {
+      height: 64px;
+      width: 286px;
+      padding-top: 14px;
+    }
+    .title {
+      font-size: 32px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 3px;
+      line-height: 48px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        line-height: 32px;
+      }
+    }
+  }
+  .small-title-container {
+    width: 100%;
+    height: 24px;
+    margin: 12px auto 0px 27px;
+    @media screen and (max-width: $sm) {
+      height: 24px;
+      width: 287px;
+    }
+    .small-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 3px;
+      line-height: 24px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 24px;
+        text-transform: none;
+        letter-spacing: 0px;
+      }
+    }
+  }
+}
+
+.dropdown {
+  cursor: pointer;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: left;
+  background-color: rgba(255, 255, 255, 1);
+  border: 0px solid rgba(242, 242, 242, 1);
+  border-radius: 6px;
+  max-width: 629px;
+  margin-left: 27px;
+  @media screen and (max-width: $sm) {
+    width: 286px;
+    height: 69px;
+    margin-left: 22px;
+  }
+}
+.button-container {
+  max-width: 1196px;
+  text-align: center;
+  margin-top: 24px;
+}
+.search-button {
+  color: $white;
+  background-color: $pink;
+  text-transform: uppercase;
+  height: 39px;
+  width: 214px;
+  padding: 0px;
+}
+.more-button {
+  color: $pink;
+  background-color: none;
+  height: 24px;
+  width: 93px;
+  padding: 0px;
+  text-decoration: underline;
+}
+
+.finder-without-image-container {
+  position: absolute;
+  .title-without-image-container {
+    height: 48px;
+    width: 552px;
+    @media screen and (max-width: $sm) {
+      height: 64px;
+      width: 330px;
+    }
+    .title-without-image {
+      font-size: 32px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 3px;
+      line-height: 48px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        line-height: 32px;
+      }
+    }
+  }
+  .smalltitle-without-image-container {
+    width: auto;
+    height: 24px;
+    margin: 12px auto 0px 27px;
+    @media screen and (max-width: $sm) {
+      height: 24px;
+      width: 287px;
+    }
+    .smalltitle-without-image {
+      font-size: 16px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 3px;
+      line-height: 24px;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm) {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 24px;
+        text-transform: none;
+        letter-spacing: 0px;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .tooltip .tooltiptext {
+        height: 48px;
+        width: 281px;
+        visibility: hidden;
+        width: 120px;
+        background-color: $white;
+        color: $black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0px;
+        border-radius: 7px;
+        box-shadow: 0 2px 6px 0 #000000;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    }
+  }
+  .dropdown-without-image {
+    cursor: pointer;
+    line-height: 32px;
+    color: $black;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 1);
+    border: 0px solid rgba(242, 242, 242, 1);
+    border-radius: 6px;
+    max-width: 556px;
+    margin-left: 27px;
+    @media screen and (max-width: $sm) {
+      width: 286px;
+      height: 69px;
+      margin-left: 22px;
+    }
+  }
+  .content-container {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 7px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    height: 395px;
+    width: auto;
+    @media screen and (max-width: $sm) {
+      height: 458px;
+      width: 330px;
+    }
+    .search-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      @media screen and (max-width: $sm) {
+        display: table;
+        width: 100%;
+      }
+      .search-container-column-left {
+        width: 598px;
+        @media screen and (max-width: $sm) {
+          width: 330px;
+        }
+      }
+      .search-container-column-right {
+        width: 598px;
+        @media screen and (max-width: $sm) {
+          width: 330px;
+        }
+      }
+    }
+  }
+
+  .more-content-container {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 7px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    height: 640px;
+    width: auto;
+    @media screen and (max-width: $sm) {
+      height: 1048px;
+      width: 330px;
+    }
+    .search-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      @media screen and (max-width: $sm) {
+        display: table;
+        width: 100%;
+      }
+      .search-container-column-left {
+        width: 598px;
+        @media screen and (max-width: $sm) {
+          width: 330px;
+        }
+      }
+      .search-container-column-right {
+        width: 598px;
+        @media screen and (max-width: $sm) {
+          width: 330px;
+        }
+      }
+    }
+  }
+
+  .without-image-button-container {
+    max-width: 1196px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .without-image-search-button {
+    color: $white;
+    background-color: $pink;
+    text-transform: uppercase;
+    height: 39px;
+    width: 214px;
+    padding: 0px;
+  }
+  .without-image-more-button {
+    color: $pink;
+    background-color: none;
+    height: 24px;
+    width: 93px;
+    padding: 0px;
+    text-decoration: underline;
+  }
+  .radio {
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 6px;
+    height: 69px;
+    width: 560px;
+    margin-left: 27px;
+    @media screen and (max-width: $sm) {
+      width: 286px;
+    }
+  }
+
+  .radio-input {
+    display: none;
+  }
+  .radio-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
+    text-align: center;
+    line-height: 24px;
+    text-align: center;
+    height: 40px;
+    width: 280px;
+    padding-top: 24px;
+    cursor: pointer;
+    background-color: rgba(242, 242, 242, 1);
+    transition: background-color 0.1s;
+  }
+
+  .radio-input:checked + .radio-label {
+    background-color: $white;
+    border: 3px solid $blue;
+  }
+}
