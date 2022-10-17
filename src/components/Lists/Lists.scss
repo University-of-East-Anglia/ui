@@ -7,13 +7,19 @@ dl {
       font-weight: 400;
       padding-top: 16px;
       margin-bottom: 4px;
+      &.bold {
+        font-weight: $weight-bold;
+      }
     }
     dd {
-      font-weight: $weight-bold;
+      font-weight: 400;
       padding-bottom: 16px;
       border-bottom: $lightGrey 1px solid;
       margin-left: 0;
       margin-bottom: 0;
+      &.bold {
+        font-weight: $weight-bold;
+      }
     }
   }
 }

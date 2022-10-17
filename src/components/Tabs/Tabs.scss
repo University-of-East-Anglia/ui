@@ -16,6 +16,7 @@
       border-radius: 8px 8px 0 0;
       border-bottom: solid $blue 2px;
       padding: 18px 24px;
+      margin-right: 2px;
       background: white;
       box-shadow: none;
       -webkit-box-shadow: none;
@@ -24,6 +25,10 @@
       }
       &.tab--active {
         background: $blue;
+      }
+      &:focus {
+        outline: none;
+        border-color: $black;
       }
     }
   }
