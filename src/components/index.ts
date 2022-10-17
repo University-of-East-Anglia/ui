@@ -62,8 +62,11 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
+export { DropdownSearch } from "./Scholarships/DropdownSearch";
+
 export { ScholarshipsContent } from "./ScholarshipsContent";
 
 export { InfoContent } from "./ScholarshipsContent/InfoContent";
+
 
 import "./App.scss";
