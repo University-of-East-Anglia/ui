@@ -62,6 +62,8 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
+export { ScholarshipsCard } from "./Scholarships/ScholarshipsCard";
+
 export { ScholarshipsBanner } from "./Scholarships/ScholarshipsBanner";
 
 export { DropdownSearch } from "./Scholarships/DropdownSearch";
