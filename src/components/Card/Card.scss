@@ -78,4 +78,93 @@
       }
     }
   }
+  &.scholarships-card {
+    position: absolute;
+    width: 100%;
+    max-width: 281px;
+    padding: 14px 12px 12px 14px;
+    border-radius: 0;
+    text-align: left;
+    @media screen and (max-width: $sm) {
+      width: 100%;
+      max-width: 330px;
+    }
+
+    .card-heading {
+      font-size: 16px;
+      text-align: right;
+      float: right;
+      line-height: 24px;
+      font-weight: 900;
+      color: rgba(0, 0, 0, 1);
+    }
+    .card-content {
+      justify-content: space-between;
+      flex-direction: column;
+      display: flex;
+      .card-text {
+        display: block;
+      }
+      .card-title-container {
+        width: 100%;
+        max-width: 264px;
+        margin: 15px 0;
+        @media screen and (max-width: $sm) {
+          width: 100%;
+          max-width: 312px;
+        }
+      }
+      .card-title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      .key-values {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        line-height: 32px;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(224, 224, 224, 1);
+        box-sizing: border-box;
+      }
+      .row:last-child {
+        border-bottom: 0px;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .column {
+        float: left;
+        min-width: 50%;
+        padding: 4px;
+      }
+      .vertical {
+        border-left: 1px solid rgba(224, 224, 224, 1);
+      }
+    }
+    .chevron--plus {
+      height: 24px;
+    }
+    .card-button {
+      background-color: $pink;
+      color: $white;
+      height: 48px;
+      width: 100%;
+      max-width: 270px;
+      text-align: left;
+      border-radius: 7px;
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        max-width: 317px;
+      }
+    }
+  }
+  .cta-chevron--right {
+    float: right;
+  }
 }

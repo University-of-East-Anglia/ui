@@ -1,0 +1,1 @@
+export { ScholarshipsCard } from "./ScholarshipsCard";

@@ -1,0 +1,1 @@
+export { ScholarshipsContent } from "./ScholarshipsContent";
