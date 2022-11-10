@@ -57,7 +57,7 @@ export const MoreWithImage = ({ ...props }: Props) => {
       </div>
       <div className="slider-container">
         <div className="more-image-container">
-          <img src={imageData} alt={props.room_title} />
+          <img src={imageData} alt={props.room_title} className="more-img" />
         </div>
         <div className="slider">
           {props.slideImages.map((image, i) => (
