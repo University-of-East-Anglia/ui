@@ -1,11 +1,11 @@
 @import "../shared_styles/variables.scss";
 
 .content-container {
-  background-color: $white;
   max-width: 789px;
   width: 100%;
+  justify-content: center;
+  align-items: center;
   .header-container {
-    height: 192px;
     height: 100%;
     .scholarship-header {
       font-size: 64px;
@@ -22,7 +22,6 @@
     }
   }
   .excerpt-container {
-    height: 136px;
     height: 100%;
     .scholarship-excerpt {
       font-size: 24px;
