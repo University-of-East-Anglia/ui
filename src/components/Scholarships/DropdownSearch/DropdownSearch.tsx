@@ -19,9 +19,13 @@ const customStyles = {
 
 export const DropdownSearch = (props: any) => {
   const [isDisabled, setIsDisabled] = useState(true);
+  const [textHidden, setTextHidden] = useState(true);
+  const getData = () => {
+    setTextHidden(false);
+  };
   const onChange = () => {};
   return (
-    <div>
+    <div className="dropdown">
       <h1 className="ui-dropdown-search scholarships-title">{props.page_title}</h1>
       <div className="dropdown-items-container">
         <div className="dropdown-item">
@@ -104,10 +108,17 @@ export const DropdownSearch = (props: any) => {
         </div>
       </div>
       <div className="button-container">
-        <Button className="update-button" variant="primary" children="Update"></Button>
+        <Button
+          className="update-button"
+          variant="primary"
+          children="Search"
+          onClick={getData}
+        ></Button>
       </div>
       <div className="warning-text-container">
-        <p className="warning-text">No results to show, search again?</p>
+        <p className="warning-text" hidden={textHidden}>
+          No results to show, search again?
+        </p>
       </div>
     </div>
   );

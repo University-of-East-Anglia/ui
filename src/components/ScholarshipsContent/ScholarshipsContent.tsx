@@ -8,13 +8,15 @@ export interface Props {
 
 export const ScholarshipsContent = ({ ...props }: Props) => {
   return (
-    <div className="content-container">
-      <div className="header-container">
-        <h1 className="scholarship-header">{props.header}</h1>
+    <section>
+      <div className="content-container">
+        <div className="header-container">
+          <h1 className="scholarship-header">{props.header}</h1>
+        </div>
+        <div className="excerpt-container">
+          <p className="scholarship-excerpt">{props.content}</p>
+        </div>
       </div>
-      <div className="excerpt-container">
-        <p className="scholarship-excerpt">{props.content}</p>
-      </div>
-    </div>
+    </section>
   );
 };

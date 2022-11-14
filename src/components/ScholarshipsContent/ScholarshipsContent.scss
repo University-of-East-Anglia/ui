@@ -1,11 +1,11 @@
 @import "../shared_styles/variables.scss";
 
 .content-container {
-  background-color: $white;
   max-width: 789px;
   width: 100%;
+  justify-content: center;
+  align-items: center;
   .header-container {
-    height: 192px;
     height: 100%;
     .scholarship-header {
       font-size: 64px;
@@ -22,7 +22,6 @@
     }
   }
   .excerpt-container {
-    height: 136px;
     height: 100%;
     .scholarship-excerpt {
       font-size: 24px;
@@ -37,44 +36,52 @@
     }
   }
 }
-.info-container {
-  position: absolute;
-  height: 480px;
-  max-width: 585px;
-  width: 100%;
-  @media screen and (max-width: $sm) {
-    height: 720px;
-    max-width: 330px;
+section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .info-container {
+    position: relative;
+    height: 480px;
+    max-width: 585px;
     width: 100%;
-  }
-  .info-header {
-    height: 32px;
-    max-width: 586px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 900;
-    color: rgba(0, 0, 0, 1);
-    line-height: 32px;
-  }
-  .item-container {
-    display: flex;
     align-items: center;
-  }
-  .item-title {
-    font-size: 16px;
-    font-weight: 900;
-    color: rgba(0, 0, 0, 1);
-    line-height: 24px;
-  }
-  .item-content {
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 1);
-    line-height: 24px;
-    margin-bottom: 12px;
-  }
-  .info-link {
-    color: #e40087;
-    text-decoration-color: #e40087;
+    justify-content: center;
+    @media screen and (max-width: $sm) {
+      height: 720px;
+      max-width: 330px;
+      width: 100%;
+    }
+    .info-header {
+      height: 32px;
+      max-width: 586px;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 900;
+      color: rgba(0, 0, 0, 1);
+      line-height: 32px;
+    }
+    .item-container {
+      display: flex;
+      align-items: center;
+    }
+    .item-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: rgba(0, 0, 0, 1);
+      line-height: 24px;
+    }
+    .item-content {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 1);
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+    .info-link {
+      color: $pink;
+      text-decoration-color: $pink;
+    }
   }
 }
