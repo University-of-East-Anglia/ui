@@ -2,8 +2,9 @@
 
 .banner-container {
   width: 100%;
-  display: grid;
-  grid-template-columns: 630px auto auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: $sm) {
     display: table;
     width: 100%;
@@ -11,9 +12,10 @@
   .text-container {
     background-color: $white;
     border-radius: 7px;
-    margin-top: 115px;
     height: 254px;
     width: 810px;
+    margin-left: -180px;
+    flex-wrap: wrap;
     @media screen and (max-width: $sm) {
       margin-top: 0px;
       height: 192px;
@@ -23,7 +25,6 @@
     .image-container {
       height: 507px;
       width: 810px;
-      display: table-footer-group;
     }
   }
   .scholarship-image {
@@ -37,13 +38,11 @@
     }
   }
   .scholarship-title {
-    height: 34px;
-    width: 634px;
+    display: flex;
     font-size: 24px;
     font-weight: $weight-black;
     color: $black;
     padding: 27px 0px 8px 57px;
-    float: left;
     @media screen and (max-width: $sm) {
       height: 44px;
       width: 330px;
@@ -54,14 +53,12 @@
     }
   }
   .scholarship-excerpt {
-    height: 96px;
-    width: 585px;
+    display: flex;
     font-size: 16px;
     font-weight: $weight-medium;
     color: $black;
     line-height: 24px;
     padding: 0px 0px 0px 57px;
-    float: left;
     @media screen and (max-width: $sm) {
       height: 192px;
       width: 330px;
