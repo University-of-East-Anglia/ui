@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { InfoContent, Props } from "./InfoContent";
 
 const meta: Meta = {
-  title: "Info Content",
+  title: "Scholarships/Info Content",
   component: InfoContent,
 };
 
