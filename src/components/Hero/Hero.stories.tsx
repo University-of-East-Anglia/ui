@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { Hero, Props } from "./Hero";
 
 const meta: Meta = {
-    title: "Hero",
+    title: "Molecule Components/Hero",
     component: Hero,
 };
 
@@ -17,5 +17,7 @@ Default.args = {
     variant: "default",
     header: "Hero Banner Title",
     uppercase: false,
-    image: "https://images.pexels.com/photos/6147369/pexels-photo-6147369.jpeg"
+    image: "https://images.pexels.com/photos/6147369/pexels-photo-6147369.jpeg",
+    position: "bottom",
+    subtext: "Hero Banner Subtext"
 };

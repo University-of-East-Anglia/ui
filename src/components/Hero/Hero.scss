@@ -1,6 +1,7 @@
 @import "../shared_styles/variables.scss";
 
 .hero-container {
+    position: relative;
     display: grid;
     background: $black;
 
@@ -9,21 +10,39 @@
         grid-area: 1/1;
         position: relative;
         place-items: center;
+        z-index: 1;
+        color: $white;
+        -webkit-font-smoothing: subpixel-antialiased;
+        text-align: center;
+
+        &.bottom {
+            place-items: end center;
+            padding-bottom: 50px;
+        }
 
         h1 {
-            color: $white;
-            font-size: 1.25em;
             text-shadow: -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;
-            -webkit-font-smoothing: subpixel-antialiased;
+            font-size: 1.25rem;
+            letter-spacing: 0.2rem;
+            font-weight: 600;
+
             &.uppercase {
                 text-transform: uppercase;
             }
             @media (min-width: $sm) {
-                font-size: 2.25em;
+                letter-spacing: 0.2rem;
+                font-size: 2.25rem;
             }
             @media (min-width: $md) {
-                font-size: 4.25em;
+                letter-spacing: 0.8rem;
+                font-size: 4.25rem;
+                line-height: 5rem;
             }
+        }
+
+        .subtext {
+            font-size: 1.0rem;
+            text-align: center;
         }
     }
 
@@ -45,5 +64,13 @@
         &.deep {
             max-height: 700px;
         }
+    }
+
+    .gradient {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #010101 0, #010101 20%, rgba(1, 1, 1, 0) 60%);
     }
 }

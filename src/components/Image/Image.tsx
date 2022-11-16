@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Image.scss";
 
 export interface ComponentProps {
+  className: string;
   src: string;
   alt: string;
   width?: string;
@@ -15,14 +16,13 @@ export class Image extends Component<ComponentProps, ComponentState> {
 
   render() {
     return (
-      <div className="image">
         <img
+          className={this.props.className}
           src={this.props.src}
           alt={this.props.alt}
           height={this.props.height}
           width={this.props.width}
         />
-      </div>
     );
   }
 }
