@@ -89,7 +89,6 @@
       width: 100%;
       max-width: 330px;
     }
-
     .card-heading {
       font-size: 16px;
       text-align: right;
@@ -164,7 +163,64 @@
       }
     }
   }
-  .cta-chevron--right {
-    float: right;
+  &.standard-card {
+    background: $black;
+    box-shadow: 0px 2px 6px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0px 2px 6px rgb(0 0 0 / 1);
+
+    &:hover {
+      .card--content {
+        bottom: 12px;
+        transition-property: bottom;
+        transition-duration: 0.3s;
+      }
+    }
+
+    .card--image {
+      line-height: 0;
+      img {
+        height: 200px;
+        border-radius: 7px 7px 0px 0px;
+      }
+    }
+    .card--content {
+      justify-content: space-between;
+      flex-direction: row;
+      display: flex;
+      position: relative;
+      align-items: center;
+      background: $black;
+      padding: 12px;
+      border-radius: 0px 0px 7px 7px;
+      bottom: 0px;
+      transition-property: bottom;
+      transition-duration: 0.3s;
+
+      .card--excerpt {
+        display: none;
+      }
+      .card--type {
+        display: none;
+      }
+      .card--link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        color: $white;
+        min-width: 65px;
+
+        &:after {
+          border-top: 2px solid $white;
+          border-right: 2px solid $white;
+          right: 0;
+        }
+      }
+      .card--title {
+        color: $white;
+        font-size: 20px;
+        line-height: 32px;
+      }
+    }
   }
 }
