@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import FacebookSVG from "../Facebook";
-import TwitterSVG from "../Twitter";
-import InstagramSVG from "../Instagram";
-import LinkedInSVG from "../LinkedIn";
-import YouTubeSVG from "../YouTube";
+import FacebookSVG from "../Icons/Facebook";
+import TwitterSVG from "../Icons/Twitter";
+import InstagramSVG from "../Icons/Instagram";
+import LinkedInSVG from "../Icons/LinkedIn";
+import YouTubeSVG from "../Icons/YouTube";
+import TiktokSVG from "../Icons/TikTok";
 
 import "./Footer.scss";
 
@@ -44,6 +45,15 @@ export class Footer extends Component<Props, ComponentState> {
             </a>
             <a
               className="social-icon"
+              href="https://youtube.com/user/ueaofficial"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              <span className="sr-only">Go to our Youtube page</span>
+              <YouTubeSVG />
+            </a>
+            <a
+              className="social-icon"
               href="https://instagram.com/uniofeastanglia"
               target="_blank"
               rel="nofollow noreferrer"
@@ -53,21 +63,21 @@ export class Footer extends Component<Props, ComponentState> {
             </a>
             <a
               className="social-icon"
+              href="https://www.tiktok.com/@uniofeastanglia"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              <span className="sr-only">Go to our Tiktok page</span>
+              <TiktokSVG />
+            </a>
+            <a
+              className="social-icon"
               href="https://linkedin.com/school/university-of-east-anglia/"
               target="_blank"
               rel="nofollow noreferrer"
             >
               <span className="sr-only">Go to our Linkedin page</span>
               <LinkedInSVG />
-            </a>
-            <a
-              className="social-icon"
-              href="https://youtube.com/user/ueaofficial"
-              target="_blank"
-              rel="nofollow noreferrer"
-            >
-              <span className="sr-only">Go to our Youtube page</span>
-              <YouTubeSVG />
             </a>
           </div>
           <div className="policy-links">

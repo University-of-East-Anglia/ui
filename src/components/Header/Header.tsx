@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { UEALogo } from "../UEALogo";
+import { UEALogo } from "../Icons/UEALogo";
 import { Menu } from "../Menu";
 import "./Header.scss";
 

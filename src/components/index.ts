@@ -20,7 +20,7 @@ export { CTACard } from "./CTAs/CTACard";
 
 export { BlockQuote } from "./BlockQuote";
 
-export { default as FacebookSVG } from "./Facebook";
+export { default as FacebookSVG } from "./Icons/Facebook";
 
 export { Footer } from "./Footer";
 
@@ -34,11 +34,9 @@ export { Image } from "./Image";
 
 export { Input } from "./Input";
 
-export { default as InstagramSVG } from "./Instagram";
-
 export { Link } from "./Link";
 
-export { UEALogo } from "./UEALogo";
+export { UEALogo } from "./Icons/UEALogo";
 
 export { Select } from "./Select";
 
@@ -46,15 +44,19 @@ export { SidebarNav } from "./SidebarNav";
 
 export { Textarea } from "./Textarea";
 
-export { default as TwitterSVG } from "./Twitter";
-
 export { KeyDetails } from "../components/_CourseComponents/KeyDetails";
 
 export { Tabs } from "./Tabs";
 
 export { Menu } from "./Menu";
 
-export { default as YouTube } from "./YouTube";
+export { default as InstagramSVG } from "./Icons/Instagram";
+
+export { default as TwitterSVG } from "./Icons/Twitter";
+
+export { default as YouTubeSVG } from "./Icons/YouTube";
+
+export { default as TiktokSVG } from "./Icons/TikTok"
 
 export { Pagination } from "./Pagination";
 
@@ -71,8 +73,6 @@ export { DropdownSearch } from "./Scholarships/DropdownSearch";
 export { ScholarshipsContent } from "./ScholarshipsContent";
 
 export { InfoContent } from "./ScholarshipsContent/InfoContent";
-
-
 
 import "./App.scss";
 
