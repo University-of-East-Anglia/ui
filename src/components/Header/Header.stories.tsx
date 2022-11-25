@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { Header, Props } from "./Header";
 
 const meta: Meta = {
-  title: "Header/--Header",
+  title: "Header/Header",
   component: Header,
 };
 
@@ -2925,6 +2925,32 @@ Default.args = {
       "content": {
         "title": "Vacancies",
         "url": "https://myview.uea.ac.uk/webrecruitment/"
+      }
+    }
+  ],
+  quickLinksArray: [
+    {
+      "uuid": "d945f7a5-3377-4da8-bf12-59aab53b712e",
+      "name": "Research",
+      "content": {
+        "title": "Research",
+        "url": "/Research"
+      }
+    },
+    {
+      "uuid": "11e44ae2-07b6-4ab5-934d-93f5bd21a410",
+      "name": "Campus",
+      "content": {
+        "title": "Campus",
+        "url": "/Campus"
+      }
+    },
+    {
+      "uuid": "cac9856d-6525-4332-a683-0464a5f9ffa2",
+      "name": "International",
+      "content": {
+        "title": "International",
+        "url": "/International"
       }
     }
   ],

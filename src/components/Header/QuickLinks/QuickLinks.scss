@@ -1,0 +1,24 @@
+@import "../../shared_styles/variables.scss";
+
+.quicklinks {
+  margin-left: auto;
+  width:fit-content
+  ul {
+    li {
+      color: $black;
+      padding: 0px 20px;
+    }
+  }
+}
+
+.header-container {
+  &--dark {
+    .quicklinks {
+      ul {
+        li {
+          color: $white;
+        }
+      }
+    }
+  }
+}

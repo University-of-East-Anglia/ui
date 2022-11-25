@@ -3,6 +3,9 @@
   width: 100%;
   position: relative;
   z-index: 98;
+  a {
+    text-decoration: none;
+  }
   &--dark {
     background: $black;
     svg {
@@ -15,6 +18,11 @@
     }
     button {
       color: white;
+    }
+    a{
+      &:hover {
+        text-decoration: underline $white;
+      }
     }
   }
   &--light {
@@ -36,6 +44,13 @@
         @media screen and (min-width: 768px) {
           max-width: 270px;
         }
+      }
+    }
+    .quicklinks {
+      display: none;
+      margin-right: 10px;
+      @media screen and (min-width: 768px) {
+        display: block;
       }
     }
   }

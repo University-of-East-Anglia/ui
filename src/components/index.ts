@@ -12,6 +12,8 @@ export { OrderedList } from "./Lists/OrderedList";
 
 export { UnorderedList } from "./Lists/UnorderedList";
 
+export { HorizontalList } from "./Lists/HorizontalList"
+
 export { CTA } from "./CTAs/CTA";
 
 export { CTAWithImage } from "./CTAs/CTAWithImage";
@@ -25,6 +27,8 @@ export { default as FacebookSVG } from "./Icons/Facebook";
 export { Footer } from "./Footer";
 
 export { Header } from "./Header";
+
+export { QuickLinks } from "./Header/QuickLinks"
 
 export { Heading } from "./Heading";
 
