@@ -79,7 +79,6 @@
     }
   }
   &.scholarships-card {
-    position: absolute;
     width: 100%;
     max-width: 281px;
     padding: 14px 12px 12px 14px;
@@ -153,7 +152,6 @@
     .card-button {
       background-color: $pink;
       color: $black;
-      text-decoration: none;
       width: 100%;
       max-width: 270px;
       text-align: left;
@@ -166,7 +164,8 @@
         max-width: 317px;
       }
       span {
-        max-width: 85%;
+        width: 85%;
+        word-break: break-word;
       }
     }
   }
