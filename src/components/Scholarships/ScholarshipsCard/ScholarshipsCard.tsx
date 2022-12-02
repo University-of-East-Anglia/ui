@@ -11,6 +11,7 @@ export interface Props {
   URLforDetailsPage?: string;
   ApplicantsNationality?: string;
   TypeOfCourse?: string;
+  buttonText?: string;
 }
 
 export const ScholarshipsCard = ({ ...props }: Props) => {
@@ -86,7 +87,7 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
       <div>
         <a href={props.URLforDetailsPage}>
           <button className="card-button" aria-label="find out more">
-            <span>Find out more</span>
+            <span>{props.buttonText}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="cta-chevron--right"
