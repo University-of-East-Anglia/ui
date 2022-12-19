@@ -79,15 +79,11 @@
     }
   }
   &.scholarships-card {
-    width: 100%;
-    max-width: 281px;
-    padding: 14px 12px 12px 14px;
     border-radius: 7px;
     text-align: left;
     box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 25%);
-    @media screen and (max-width: $sm) {
-      width: 100%;
-      max-width: 330px;
+    .card-container {
+      padding: 20px;
     }
     .card-heading {
       font-size: 16px;
@@ -143,7 +139,9 @@
       }
       .vertical {
         border-left: 1px solid rgba(224, 224, 224, 1);
-        padding-left: 10px;
+        p {
+          padding: 0px 10px;
+        }
       }
     }
     .chevron--plus {
@@ -153,7 +151,6 @@
       background-color: $pink;
       color: $black;
       width: 100%;
-      max-width: 270px;
       text-align: left;
       border-radius: 7px;
       display: flex;

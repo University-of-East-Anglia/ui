@@ -72,7 +72,7 @@ export { ScholarshipsCard } from "./Scholarships/ScholarshipsCard";
 
 export { ScholarshipsBanner } from "./Scholarships/ScholarshipsBanner";
 
-export { DropdownSearch } from "./Scholarships/DropdownSearch";
+export { DropdownSearch } from "./Scholarships/ScholarshipFinder";
 
 export { ScholarshipsContent } from "./ScholarshipsContent";
 
