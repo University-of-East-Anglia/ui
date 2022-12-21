@@ -12,12 +12,13 @@ export interface Props {
   ApplicantsNationality?: string;
   TypeOfCourse?: string;
   buttonText?: string;
+  uuid?: any;
 }
 
 export const ScholarshipsCard = ({ ...props }: Props) => {
 
   return (
-    <div className="card scholarships-card">
+    <div className="card scholarships-card" key={props.uuid}>
       <div className="card-container">
         <div className="card-header-container">
           {" "}

@@ -1,11 +1,9 @@
 import * as React from "react";
-import "./ScholarshipFinder.scss"
+import "./ScholarshipsFinder.scss"
 import { useState, useEffect } from "react";
 import { ScholarshipsCard } from "../ScholarshipsCard";
 import { Button } from "../../Button";
 import Select from "react-select";
-
-// import { useStaticQuery, graphql } from "gatsby";
 
 const customStyles = {
   control: (base: any) => ({
@@ -21,7 +19,7 @@ export interface Props {
   storyBlokCardObjects?: any;
 }
 
-export const ScholarshipFinder = ({ ...props }: Props) => {
+export const ScholarshipsFinder = ({ ...props }: Props) => {
 
   const [unfilteredData, setUnfilteredData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -47,7 +45,7 @@ export const ScholarshipFinder = ({ ...props }: Props) => {
   }, [props.storyBlokCardObjects]);
 
   const getOptions = (field: any) => {
-    let returnOptions = null;
+    let returnOptions;
     //get each object in array containing field type i.e. TypeOfCourse
     let options = unfilteredData.map((eachObj) => {
       return { value: eachObj[field], label: eachObj[field] };
@@ -121,7 +119,7 @@ export const ScholarshipFinder = ({ ...props }: Props) => {
   // console.log(searchResults);
 
   return (
-    <div className="scholarship-finder">
+    <div className="scholarships-finder">
       <div className="dropdown-items">
         <div className="dropdown">
           <fieldset>
@@ -200,19 +198,20 @@ export const ScholarshipFinder = ({ ...props }: Props) => {
         {searchResults.length > 0 || !hasSearched ? (
           <div className="results-grid"
           >
-            {searchResults.map((arr: any, index) => {
+            {searchResults.map((arr: any) => {
               return (
-                <ScholarshipsCard
-                  Years={arr.Years}
-                  TotalValue={arr.Value}
-                  OfficialNameOfScholarship={arr.OfficialNameOfScholarship}
-                  URLforDetailsPage={arr.URLforDetailsPage}
-                  buttonText="View more"
-                  SchoolFaculty={arr.schoolFaculty}
-                  FundingType={arr.FundingType}
-                  ApplicantsNationality={arr.ApplicantsNationality}
-                  TypeOfCourse={arr.TypeOfCourse}
-                />
+                  <ScholarshipsCard
+                    key={arr.uuid}
+                    Years={arr.Years}
+                    TotalValue={arr.Value}
+                    OfficialNameOfScholarship={arr.OfficialNameOfScholarship}
+                    URLforDetailsPage={arr.URLforDetailsPage}
+                    buttonText="View more"
+                    SchoolFaculty={arr.schoolFaculty}
+                    FundingType={arr.FundingType}
+                    ApplicantsNationality={arr.ApplicantsNationality}
+                    TypeOfCourse={arr.TypeOfCourse}
+                  />
               );
             })}
           </div>
