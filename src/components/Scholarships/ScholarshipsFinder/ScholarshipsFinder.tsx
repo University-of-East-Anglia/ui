@@ -6,7 +6,7 @@ import { Button } from "../../Button";
 import Select from "react-select";
 
 const customStyles = {
-  control: (base) => ({
+  control: (base: any) => ({
     ...base,
     width: "100%",
     backgroundColor: "rgba(255, 255, 255, 1)",
@@ -15,33 +15,37 @@ const customStyles = {
   }),
 };
 
-export const ScholarshipsFinder = ({ ...props }) => {
+export interface Props {
+  storyBlokCardObjects?: any;
+}
+
+export const ScholarshipsFinder = ({ ...props }: Props) => {
 
   const [unfilteredData, setUnfilteredData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 
-  const [courseType, setCourseType] = useState(null);
-  const [schoolFaculty, setSchoolFaculty] = useState(null);
-  const [CountryRegion, setCountryRegion] = useState(null);
-  const [year, setYear] = useState(null);
+  const [courseType, setCourseType] = useState<any>(null);
+  const [schoolFaculty, setSchoolFaculty] = useState<any>(null);
+  const [CountryRegion, setCountryRegion] = useState<any>(null);
+  const [year, setYear] = useState<any>(null);
 
   const [hasSearched, setHasSearched] = useState(false);
 
   //load initial state
   useEffect(() => {
-    const content = props.storyBlokCardObjects.allStoryblokEntry.edges.map((content) =>
+    const content = props.storyBlokCardObjects.allStoryblokEntry.edges.map((content: any) =>
       JSON.parse(content.node.content)
     );
     //grab the storyblok body content from the json
-    const scholarshipData = content.map((body) => body.body[0]);
+    const scholarshipData = content.map((body: any) => body.body[0]);
 
     setUnfilteredData(scholarshipData);
     setFilteredData(scholarshipData);
   }, [props.storyBlokCardObjects]);
 
-  const getOptions = (field) => {
-    let returnOptions;
+  const getOptions = (field: any) => {
+    let returnOptions: any = null;
     //get each object in array containing field type i.e. TypeOfCourse
     let options = unfilteredData.map((eachObj) => {
       return { value: eachObj[field], label: eachObj[field] };
@@ -56,24 +60,24 @@ export const ScholarshipsFinder = ({ ...props }) => {
     return returnOptions;
   };
 
-  const updateCourseTypeState = (field) => {
+  const updateCourseTypeState = (field: any) => {
     setCourseType(field);
   };
 
-  const updatSchoolFacultyState = (field) => {
+  const updatSchoolFacultyState = (field: any) => {
     setSchoolFaculty(field);
   };
 
-  const updateCountryRegion = (field) => {
+  const updateCountryRegion = (field: any) => {
     setCountryRegion(field);
   };
 
-  const updateYear = (field) => {
+  const updateYear = (field: any) => {
     setYear(field);
   };
 
   useEffect(() => {
-    var newData = unfilteredData.filter(function (item) {
+    var newData: any = unfilteredData.filter(function (item: any) {
       return (
         item !== null &&
         (courseType?.value == null || courseType.value === item.TypeOfCourse) &&
@@ -86,14 +90,14 @@ export const ScholarshipsFinder = ({ ...props }) => {
   }, [unfilteredData, courseType, schoolFaculty, CountryRegion, year]);
 
   // Removes duplicates from array
-  const getUnique = (arr, comp) => {
+  const getUnique = (arr: any, comp: any) => {
     const unique = arr
-      .map((e) => e[comp])
+      .map((e: any) => e[comp])
       // store the keys of the unique objects
-      .map((e, i, final) => final.indexOf(e) === i && i)
+      .map((e: any, i: any, final: any) => final.indexOf(e) === i && i)
       // eliminate the dead keys & store unique objects
-      .filter((e) => arr[e])
-      .map((e) => arr[e]);
+      .filter((e: any) => arr[e])
+      .map((e: any) => arr[e]);
     return unique;
   };
 
@@ -194,7 +198,7 @@ export const ScholarshipsFinder = ({ ...props }) => {
         {searchResults.length > 0 || !hasSearched ? (
           <div className="results-grid"
           >
-            {searchResults.map((arr) => {
+            {searchResults.map((arr: any) => {
               return (
                   <ScholarshipsCard
                     key={arr.uuid}
