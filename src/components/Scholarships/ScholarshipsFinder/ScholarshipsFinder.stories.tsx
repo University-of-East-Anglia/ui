@@ -1,20 +1,16 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { ScholarshipFinder } from "./ScholarshipFinder";
+import { ScholarshipsFinder } from "./ScholarshipsFinder";
 import "../../App.scss";
 
 const meta: Meta = {
   title: "Scholarships/Scholarships Finder",
-  component: ScholarshipFinder,
+  component: ScholarshipsFinder,
 };
 
 export default meta;
 
-const Template: Story = (args) => {
-  return (
-    <ScholarshipFinder {...args} />
-  )
-}
+const Template: Story = (args) => <ScholarshipsFinder {...args} />
 
 export const Default = Template.bind({});
 
