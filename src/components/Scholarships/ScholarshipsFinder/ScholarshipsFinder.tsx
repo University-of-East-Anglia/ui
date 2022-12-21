@@ -15,11 +15,7 @@ const customStyles = {
   }),
 };
 
-export interface Props {
-  storyBlokCardObjects?: any;
-}
-
-export const ScholarshipsFinder = ({ ...props }: Props) => {
+export const ScholarshipsFinder = ({ ...props }) => {
 
   const [unfilteredData, setUnfilteredData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
