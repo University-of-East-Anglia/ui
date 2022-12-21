@@ -40,7 +40,7 @@ export const ScholarshipFinder = ({ ...props }: Props) => {
       JSON.parse(content.node.content)
     );
     //grab the storyblok body content from the json
-    const scholarshipData = content.map((body: any) => body.Body[0]);
+    const scholarshipData = content.map((body: any) => body.body[0]);
 
     setUnfilteredData(scholarshipData);
     setFilteredData(scholarshipData);
