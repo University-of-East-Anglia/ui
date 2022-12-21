@@ -6,7 +6,7 @@ import { Button } from "../../Button";
 import Select from "react-select";
 
 const customStyles = {
-  control: (base: any) => ({
+  control: (base) => ({
     ...base,
     width: "100%",
     backgroundColor: "rgba(255, 255, 255, 1)",
@@ -21,26 +21,26 @@ export const ScholarshipsFinder = ({ ...props }) => {
   const [filteredData, setFilteredData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 
-  const [courseType, setCourseType] = useState<any>(null);
-  const [schoolFaculty, setSchoolFaculty] = useState<any>(null);
-  const [CountryRegion, setCountryRegion] = useState<any>(null);
-  const [year, setYear] = useState<any>(null);
+  const [courseType, setCourseType] = useState(null);
+  const [schoolFaculty, setSchoolFaculty] = useState(null);
+  const [CountryRegion, setCountryRegion] = useState(null);
+  const [year, setYear] = useState(null);
 
   const [hasSearched, setHasSearched] = useState(false);
 
   //load initial state
   useEffect(() => {
-    const content = props.storyBlokCardObjects.allStoryblokEntry.edges.map((content: any) =>
+    const content = props.storyBlokCardObjects.allStoryblokEntry.edges.map((content) =>
       JSON.parse(content.node.content)
     );
     //grab the storyblok body content from the json
-    const scholarshipData = content.map((body: any) => body.body[0]);
+    const scholarshipData = content.map((body) => body.body[0]);
 
     setUnfilteredData(scholarshipData);
     setFilteredData(scholarshipData);
   }, [props.storyBlokCardObjects]);
 
-  const getOptions = (field: any) => {
+  const getOptions = (field) => {
     let returnOptions;
     //get each object in array containing field type i.e. TypeOfCourse
     let options = unfilteredData.map((eachObj) => {
@@ -56,24 +56,24 @@ export const ScholarshipsFinder = ({ ...props }) => {
     return returnOptions;
   };
 
-  const updateCourseTypeState = (field: any) => {
+  const updateCourseTypeState = (field) => {
     setCourseType(field);
   };
 
-  const updatSchoolFacultyState = (field: any) => {
+  const updatSchoolFacultyState = (field) => {
     setSchoolFaculty(field);
   };
 
-  const updateCountryRegion = (field: any) => {
+  const updateCountryRegion = (field) => {
     setCountryRegion(field);
   };
 
-  const updateYear = (field: any) => {
+  const updateYear = (field) => {
     setYear(field);
   };
 
   useEffect(() => {
-    var newData: any = unfilteredData.filter(function (item: any) {
+    var newData = unfilteredData.filter(function (item) {
       return (
         item !== null &&
         (courseType?.value == null || courseType.value === item.TypeOfCourse) &&
@@ -86,14 +86,14 @@ export const ScholarshipsFinder = ({ ...props }) => {
   }, [unfilteredData, courseType, schoolFaculty, CountryRegion, year]);
 
   // Removes duplicates from array
-  const getUnique = (arr: any, comp: any) => {
+  const getUnique = (arr, comp) => {
     const unique = arr
-      .map((e: any) => e[comp])
+      .map((e) => e[comp])
       // store the keys of the unique objects
-      .map((e: any, i: any, final: any) => final.indexOf(e) === i && i)
+      .map((e, i, final) => final.indexOf(e) === i && i)
       // eliminate the dead keys & store unique objects
-      .filter((e: any) => arr[e])
-      .map((e: any) => arr[e]);
+      .filter((e) => arr[e])
+      .map((e) => arr[e]);
     return unique;
   };
 
@@ -194,7 +194,7 @@ export const ScholarshipsFinder = ({ ...props }) => {
         {searchResults.length > 0 || !hasSearched ? (
           <div className="results-grid"
           >
-            {searchResults.map((arr: any) => {
+            {searchResults.map((arr) => {
               return (
                   <ScholarshipsCard
                     key={arr.uuid}
