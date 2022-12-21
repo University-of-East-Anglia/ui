@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./ScholarshipFinder.scss"
 import { useState, useEffect } from "react";
-import { ScholarshipsCard } from "../ScholarshipsCard/index";
+import { ScholarshipsCard } from "../ScholarshipsCard";
 import { Button } from "../../Button";
 import Select from "react-select";
 
