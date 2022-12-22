@@ -1,1 +1,0 @@
-export { ScholarshipsFinder } from "./ScholarshipsFinder";

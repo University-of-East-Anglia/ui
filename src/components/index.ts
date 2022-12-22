@@ -68,8 +68,6 @@ export { Search } from "./Search";
 
 export { SimpleSearch } from "./Search/SimpleSearch";
 
-export { ScholarshipsFinder } from "./Scholarships/ScholarshipsFinder"
-
 export { ScholarshipsCard } from "./Scholarships/ScholarshipsCard";
 
 export { ScholarshipsBanner } from "./Scholarships/ScholarshipsBanner";
