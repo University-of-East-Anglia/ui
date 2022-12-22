@@ -34,15 +34,15 @@ export const ScholarshipsFinder = ({ ...props }: Props) => {
 
   //load initial state
   useEffect(() => {
-    const content = props.storyBlokCardObjects.allStoryblokEntry.edges.map((content: any) =>
-      JSON.parse(content.node.content)
-    );
-    //grab the storyblok body content from the json
-    const scholarshipData = content.map((body: any) => body.body[0]);
+    // const content = props.storyBlokCardObjects.allStoryblokEntry.edges.map((content: any) =>
+    //   JSON.parse(content.node.content)
+    // );
+    // //grab the storyblok body content from the json
+    // const scholarshipData = content.map((body: any) => body.body[0]);
 
-    setUnfilteredData(scholarshipData);
-    setFilteredData(scholarshipData);
-  }, [props.storyBlokCardObjects]);
+    setUnfilteredData(props.storyBlokCardObjects);
+    setFilteredData(props.storyBlokCardObjects);
+  }, []);
 
   const getOptions = (field: any) => {
     let returnOptions: any = null;

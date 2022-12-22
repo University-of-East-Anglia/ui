@@ -74,9 +74,9 @@ export { ScholarshipsCard } from "./Scholarships/ScholarshipsCard";
 
 export { ScholarshipsBanner } from "./Scholarships/ScholarshipsBanner";
 
-export { ScholarshipsContent } from "./ScholarshipsContent";
+export { ScholarshipsContent } from "./Scholarships/ScholarshipsContent";
 
-export { InfoContent } from "./ScholarshipsContent/InfoContent";
+export { InfoContent } from "./Scholarships/ScholarshipsContent/InfoContent";
 
 import "./App.scss";
 
