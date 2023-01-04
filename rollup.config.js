@@ -13,6 +13,9 @@ import cssnano from "cssnano";
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
+import copy from "rollup-plugin-copy";
+import del from "rollup-plugin-delete";
+
 const packageJson = require("./package.json");
 
 export default [
@@ -39,6 +42,7 @@ export default [
         extensions: [".css", ".scss"],
         plugins: [simplevars(), nested(), cssnext({ warnForDuplicates: true }), cssnano()],
         exlude: ["**/**/fonts.scss"],
+        extract: true,
       }),
       terser(),
     ],
@@ -49,7 +53,19 @@ export default [
       { file: "dist/index.d.ts", format: "esm" },
       { file: "dist/index.js", format: "cjs" },
     ],
-    plugins: [dts()],
+    plugins: [
+      copy({
+        targets: [{ src: "dist/cjs/index.css", dest: "dist" }],
+        verbose: true,
+        hook: "buildStart",
+      }),
+      del({
+        targets: ["dist/cjs/index.css", "dist/esm/index.css"],
+        verbose: true,
+        hook: "buildEnd",
+      }),
+      dts(),
+    ],
     external: [/\.scss$/],
   },
 ];
