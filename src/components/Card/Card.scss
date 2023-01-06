@@ -171,6 +171,11 @@
     box-shadow: 0px 2px 6px rgb(0 0 0 / 10%);
     -webkit-box-shadow: 0px 2px 6px rgb(0 0 0 / 1);
     margin: auto;
+    min-width: 350px;
+
+    @media screen and (max-width: $sm) {
+      min-width: calc(100vw - 50px);
+    }
 
     &:hover {
       .card--content {
