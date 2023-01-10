@@ -24,7 +24,7 @@ export class SidebarNav extends Component<ComponentProps, ComponentState> {
     };
     const isActive = this.state.active === true ? "open" : null;
     return (
-      <div className="sidebar">
+      <aside className="sidebar">
         <nav>
           <button className="toggle-menu" onClick={setMenuState} title="Sidebar Menu">
             {this.state.active === false ? (
@@ -69,7 +69,7 @@ export class SidebarNav extends Component<ComponentProps, ComponentState> {
             ))}
           </ul>
         </nav>
-      </div>
+      </aside>
     );
   }
 }
