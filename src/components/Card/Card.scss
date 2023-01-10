@@ -79,17 +79,12 @@
     }
   }
   &.scholarships-card {
-    position: absolute;
-    width: 100%;
-    max-width: 281px;
-    padding: 14px 12px 12px 14px;
-    border-radius: 0;
+    border-radius: 7px;
     text-align: left;
-    @media screen and (max-width: $sm) {
-      width: 100%;
-      max-width: 330px;
+    box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 25%);
+    .card-container {
+      padding: 20px;
     }
-
     .card-heading {
       font-size: 16px;
       text-align: right;
@@ -139,12 +134,14 @@
         clear: both;
       }
       .column {
-        float: left;
         min-width: 50%;
         padding: 4px;
       }
       .vertical {
         border-left: 1px solid rgba(224, 224, 224, 1);
+        p {
+          padding: 0px 10px;
+        }
       }
     }
     .chevron--plus {
@@ -152,19 +149,86 @@
     }
     .card-button {
       background-color: $pink;
-      color: $white;
-      height: 48px;
+      color: $black;
       width: 100%;
-      max-width: 270px;
       text-align: left;
       border-radius: 7px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       @media screen and (max-width: $sm) {
         width: 100%;
         max-width: 317px;
       }
+      span {
+        width: 85%;
+        word-break: break-word;
+      }
     }
   }
-  .cta-chevron--right {
-    float: right;
+  &.standard-card {
+    background: $black;
+    box-shadow: 0px 2px 6px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0px 2px 6px rgb(0 0 0 / 1);
+    margin: auto;
+
+    &:hover {
+      .card--content {
+        bottom: 12px;
+        transition-property: bottom;
+        transition-duration: 0.3s;
+      }
+    }
+
+    .card--image {
+      line-height: 0;
+      img {
+        height: 200px;
+        border-radius: 7px 7px 0px 0px;
+      }
+    }
+    .card--content {
+      justify-content: space-between;
+      flex-direction: row;
+      display: flex;
+      position: relative;
+      align-items: center;
+      background: $black;
+      padding: 12px;
+      border-radius: 0px 0px 7px 7px;
+      bottom: 0px;
+      transition-property: bottom;
+      transition-duration: 0.3s;
+      height: 70px;
+
+      .card--excerpt {
+        display: none;
+      }
+      .card--type {
+        display: none;
+      }
+      .card--link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        color: $white;
+        min-width: 85px;
+
+        &:after {
+          position: relative;
+          border-top: 2px solid $white;
+          border-right: 2px solid $white;
+          margin-left: 10px;
+          top: -1px;
+          right: 0px;
+        }
+      }
+      .card--title {
+        color: $white;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
   }
 }

@@ -3,6 +3,7 @@ import "./logo.scss";
 
 export interface Props {
   glint?: "pink" | "blue" | "black" | "orange" | "lilac" | "green";
+  class?: String;
 }
 
 interface ComponentState {}
@@ -42,6 +43,7 @@ export class UEALogo extends Component<Props, ComponentState> {
           viewBox="35 70 175 38"
           role="img"
           aria-label="logo"
+          class={this.props.class}
         >
           <defs></defs>
           <path d="M116.51,84.61c-3.07,0-4.9-2.21-4.9-5.91V71.38h1.89V78.6c0,2.78,1.26,4,3,4s3-1.22,3-3.93V71.38h1.89v7.2c0,3.78-1.84,6-4.93,6" />

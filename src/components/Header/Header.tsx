@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { UEALogo } from "../UEALogo";
+import { UEALogo } from "../Icons/UEALogo";
 import { Menu } from "../Menu";
+import { QuickLinks } from "./QuickLinks";
 import "./Header.scss";
 
 export interface Props {
@@ -8,6 +9,7 @@ export interface Props {
   navItemArray: navObj[];
   navLinkArray: linkObj[];
   utilityItemArray: linkObj[];
+  quickLinksArray: linkObj[];
 }
 
 interface navObj {
@@ -39,7 +41,7 @@ interface linkObj {
   uuid: string;
 }
 
-interface ComponentState {}
+interface ComponentState { }
 
 export class Header extends Component<Props, ComponentState> {
   state: ComponentState = {};
@@ -49,7 +51,10 @@ export class Header extends Component<Props, ComponentState> {
       <div className={"header-container header-container--" + this.props.background}>
         <header className="header">
           <UEALogo />
-          <Menu navItemArray={this.props.navItemArray} navLinkArray={this.props.navLinkArray} utilityItemArray={this.props.utilityItemArray}/>
+          <div className="quicklinks">
+            <QuickLinks quickLinksArray={this.props.quickLinksArray} />
+          </div>
+          <Menu navItemArray={this.props.navItemArray} navLinkArray={this.props.navLinkArray} utilityItemArray={this.props.utilityItemArray} />
         </header>
       </div>
     );

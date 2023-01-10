@@ -23,3 +23,19 @@ dl {
     }
   }
 }
+
+.list {
+
+  &--listitem {
+    padding: 0px 20px;
+  }
+
+  &--horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &--none {
+    list-style: none;
+  }
+}

@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { Menu, Props } from "./Menu";
 
 const meta: Meta = {
-  title: "List/Unordered List",
+  title: "Header/Menu",
   component: Menu,
 };
 

@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { ScholarshipsContent, Props } from "./ScholarshipsContent";
 
 const meta: Meta = {
-  title: "Scholarships Content",
+  title: "Scholarships/Scholarships Content",
   component: ScholarshipsContent,
 };
 
