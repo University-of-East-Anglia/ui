@@ -15,5 +15,11 @@
     display: grid;
     grid-template-columns: 2fr 2fr;
     column-gap: 17px;
+    div {
+      display: grid;
+      &:nth-last-child(-n + 2) dd {
+        border-bottom: none;
+      }
+    }
   }
 }
