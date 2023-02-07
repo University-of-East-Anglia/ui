@@ -67,7 +67,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
-              <span className="sr-only">Go to our Tiktok page</span>
+              <span className="sr-only">Go to our TikTok page</span>
               <TiktokSVG />
             </a>
             <a
