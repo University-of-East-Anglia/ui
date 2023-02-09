@@ -22,7 +22,6 @@ export class Select extends Component<Props, ComponentState> {
   };
 
   render() {
-    console.log(this.state.value);
     return (
       <div className="select">
         <label className="select-label">
