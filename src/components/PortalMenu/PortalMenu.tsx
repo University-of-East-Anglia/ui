@@ -6,6 +6,35 @@ export interface Props {
 }
 
 interface navItem {
+  colorSchemeId: string;
+  companyId: string;
+  createDate: number;
+  css: any;
+  description: string;
+  descriptionCurrentValue: string;
+  groupId: string;
+  iconImageId: string;
+  keywords: string;
+  keywordsCurrentValue: string;
+  lastPublishDate: any;
+  layoutPrototypeLinkEnabled: boolean;
+  layoutPrototypeUuid: string;
+  modifiedDate: number;
+  mvccVersion: string;
+  name: string;
+  plid: string,
+  privateLayout: true,
+  robots: string;
+  robotsCurrentValue: string;
+  sourcePrototypeLayoutUuid: string;
+  themeId: string;
+  title: string;
+  titleCurrentValue: string;
+  type: string;
+  typeSettings: string;
+  userId: string,
+  userName: string;
+
   children?: [];
   friendlyURL?: string;
   hidden?: boolean;
@@ -29,7 +58,7 @@ export class PortalMenu extends Component<Props, ComponentState> {
   };
 
   setActiveLink() {
-    var links = document.getElementsByTagName('a');
+    var links: any = document.getElementsByTagName('a');
     //set the pathname unless at home url in which case we set it to target /my-dashboard
     var searchedFor = ""
     if(document.location.pathname === "/") {
@@ -99,7 +128,7 @@ export class PortalMenu extends Component<Props, ComponentState> {
 
     //----
 
-    var items = this.props.data;
+    var items: any = this.props.data;
     var newArr: any = [];
 
     //clean API data from Liferay and create new array
