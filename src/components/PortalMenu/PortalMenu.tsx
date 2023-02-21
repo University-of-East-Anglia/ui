@@ -51,7 +51,7 @@ export class PortalMenu extends Component<Props, ComponentState> {
     }
   }
 
-  //use componentDidMount to set state when the component is ready
+  //set state after the component is ready
   componentDidUpdate() {
     this.setActiveLink();
   }
