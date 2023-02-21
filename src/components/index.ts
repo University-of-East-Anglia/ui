@@ -28,6 +28,8 @@ export { Footer } from "./Footer";
 
 export { Header } from "./Header";
 
+export { PortalHeader } from "./PortalHeader";
+
 export { QuickLinks } from "./Header/QuickLinks"
 
 export { Heading } from "./Heading";
