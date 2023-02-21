@@ -11,9 +11,13 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.19em;
   }
   svg {
+    position: relative;
     margin-left: 15px;
+    top: 3px;
     height: 25px;
     width: 25px;
   }
@@ -96,8 +100,6 @@
           padding-left: 1.2rem;
           > span {
             &:hover {
-              //background: $blue;
-              //color: $black;
               text-decoration: underline;
             }
           }
@@ -110,9 +112,6 @@
             text-transform: uppercase;
             padding: 13px 10px;
           }
-          // &:active {
-          //   background: $blue;
-          // }
         }
         &.oc-menu-group-container {
           list-style: none;
@@ -236,5 +235,3 @@
     }
   }
 }
-
-// create tiered classes
