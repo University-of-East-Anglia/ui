@@ -1,0 +1,55 @@
+@import "../shared_styles/variables.scss";
+.portal-header-container {
+  width: 100%;
+  position: relative;
+  z-index: 98;
+  background: $black;
+  border-bottom: 5px solid $blue;
+  a {
+    text-decoration: none;
+  }
+  svg {
+    path {
+      fill: white;
+    }
+    polygon {
+      fill: white;
+    }
+  }
+  button {
+    color: white;
+  }
+  a{
+    &:hover {
+      text-decoration: underline $white;
+    }
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 22px 15px;
+    margin: 0 auto;
+    .logo-area {
+      display: flex;
+      color: $white;
+      text-transform: uppercase;
+      align-items: center;
+      text-decoration: none;
+      text-align: left;
+      letter-spacing: 0.19em;
+      h1 {
+        font-size: 24px;
+        font-weight: 900;
+      }
+      svg {
+        height: 17px;
+        max-width: 50px;
+        @media screen and (min-width: 768px) {
+          max-width: 40px;
+        }
+      }
+    }
+  }
+}

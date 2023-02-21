@@ -8,6 +8,7 @@ import LinkedInSVG from "./LinkedIn";
 import YouTubeSVG from "./YouTube";
 import TicktokSVG from "./TikTok"
 import { UEALogo } from "./UEALogo";
+import { UEAGlint } from "./UEAGlints"; 
 
 import "./All_icons.scss"
 
@@ -22,7 +23,15 @@ const All_icons = ({...props }: Props) => {
             <div className="icons-set">
                 <UEALogo class="icons-display" />
                 <p>UEA Logo</p>
-            </div>            
+            </div>
+            <div className="icons-set">
+                <UEAGlint glint="pink"/>
+                <p>UEA Glint</p>
+            </div>
+            <div className="icons-set">
+                <UEAGlint glint="blue"/>
+                <p>UEA Glint</p>
+            </div>
             <div className="icons-set">
                 <TicktokSVG class="icons-display" />
                 <p>Tiktok</p>
