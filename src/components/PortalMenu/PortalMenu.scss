@@ -30,6 +30,7 @@
   svg {
     position: relative;
     margin-left: 5px;
+    top: 4px;
     height: 25px;
     width: 25px;
   }
@@ -43,7 +44,7 @@
     top: 0;
     right: -448px;
     width: 448px;
-    color: white;
+    color: $white;
     padding-top: 100px;
     overflow: scroll;
     transition: 0.5s;
@@ -53,7 +54,7 @@
     }
     button {
       &.close-menu {
-        color: white;
+        color: $white;
         position: absolute;
         top: 15px;
         right: 15px;
@@ -82,7 +83,7 @@
         list-style: none;
         padding: 5px;
         a {
-          color: white;
+          color: $white;
           text-decoration: none;
           position: relative;
           z-index: 1;
@@ -105,11 +106,12 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          color: white;
+          color: $white;
           text-decoration: none;
           position: relative;
           z-index: 1;
           padding-left: 1.2rem;
+          border-bottom: 1px solid $black;
           > span {
             &:hover {
               text-decoration: underline;
@@ -123,6 +125,9 @@
             letter-spacing: 0.19em;
             text-transform: uppercase;
             padding: 13px 10px;
+          }
+          .menu-item-toggle {
+            padding: 10px 0px 10px 20px;
           }
         }
         &.oc-menu-group-container {
@@ -150,6 +155,7 @@
             background: $gray;
             list-style: none;
             .menu-item-title {
+              font-weight: normal;
               text-transform: capitalize;
               letter-spacing: 0;
             }
@@ -197,7 +203,7 @@
         padding: 15px;
         border: solid 2px $blue;
         height: 40px;
-        background: white;
+        background: $white;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -240,7 +246,7 @@
 
         li {
           a {
-            color: white;
+            color: $white;
           }
         }
       }

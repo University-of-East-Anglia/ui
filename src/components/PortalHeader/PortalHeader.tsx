@@ -8,34 +8,34 @@ export interface Props {
 }
 
 interface navItem {
-  colorSchemeId: string;
-  companyId: string;
-  createDate: number;
-  css: any;
-  description: string;
-  descriptionCurrentValue: string;
-  groupId: string;
-  iconImageId: string;
-  keywords: string;
-  keywordsCurrentValue: string;
-  lastPublishDate: any;
-  layoutPrototypeLinkEnabled: boolean;
-  layoutPrototypeUuid: string;
-  modifiedDate: number;
-  mvccVersion: string;
-  name: string;
-  plid: string,
-  privateLayout: true,
-  robots: string;
-  robotsCurrentValue: string;
-  sourcePrototypeLayoutUuid: string;
-  themeId: string;
-  title: string;
-  titleCurrentValue: string;
-  type: string;
-  typeSettings: string;
-  userId: string,
-  userName: string;
+  colorSchemeId?: string;
+  companyId?: string;
+  createDate?: number;
+  css?: any;
+  description?: string;
+  descriptionCurrentValue?: string;
+  groupId?: string;
+  iconImageId?: string;
+  keywords?: string;
+  keywordsCurrentValue?: string;
+  lastPublishDate?: any;
+  layoutPrototypeLinkEnabled?: boolean;
+  layoutPrototypeUuid?: string;
+  modifiedDate?: number;
+  mvccVersion?: string;
+  name?: string;
+  plid?: string;
+  privateLayout?: boolean;
+  robots?: string;
+  robotsCurrentValue?: string;
+  sourcePrototypeLayoutUuid?: string;
+  themeId?: string;
+  title?: string;
+  titleCurrentValue?: string;
+  type?: string;
+  typeSettings?: string;
+  userId?: string;
+  userName?: string;
   friendlyURL?: string;
   hidden?: boolean;
   layoutId?: string;
