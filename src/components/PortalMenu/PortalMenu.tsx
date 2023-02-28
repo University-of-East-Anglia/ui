@@ -63,11 +63,11 @@ export class PortalMenu extends Component<Props, ComponentState> {
     if(document.location.pathname === "/") {
       searchedFor = "/my-dashboard"
     } else {
-      searchedFor = document.location.pathname; //'/departments/learning-and-teaching/students/academic-cycle/regulations-and-discipline'
+      searchedFor = document.location.pathname;
     }; 
     //couldn't think of a more elegant way to do this but here we are opening the navigation at the current page url
     for (const link of links) {
-      if (link.pathname === searchedFor) {
+      if (link.pathname === searchedFor || link.pathname === (searchedFor + "/")) {
         var level = searchedFor.split('/').length;
         {level > 0 && link.classList.add("active")};
         {level > 1 && link.parentElement.parentElement.classList.add("open")};
