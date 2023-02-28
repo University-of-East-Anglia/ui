@@ -252,7 +252,7 @@ export class PortalMenu extends Component<Props, ComponentState> {
       <nav data-swiftype-index="false" className="oc-portal-main">
         <button onClick={menuState} className="" title="Open Menu">
           <svg
-            className="oc-search-icon"
+            className="oc-find-icon"
             focusable="false"
             role="presentation"
             viewBox="0 0 712 712"
