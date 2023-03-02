@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./PortalMenu.scss";
 
 export interface Props {
+  navEntryPoint?: string;
   data: navItem[];
 }
 
@@ -59,22 +60,27 @@ export class PortalMenu extends Component<Props, ComponentState> {
   setActiveLink() {
     var links: any = document.getElementsByTagName('a');
     //set the pathname unless at home url in which case we set it to target /my-dashboard
-    var searchedFor = ""
-    if(document.location.pathname === "/") {
-      searchedFor = "/my-dashboard"
-    } else {
-      searchedFor = document.location.pathname;
-    }; 
+    console.log(this.props.navEntryPoint)
+    var searchedFor = this.props.navEntryPoint ? this.props.navEntryPoint : "";
+    if(searchedFor === "") {
+      if(document.location.pathname === "/") {
+        searchedFor = "/my-dashboard"
+      } else {
+        searchedFor = document.location.pathname;
+      }; 
+    }
     //couldn't think of a more elegant way to do this but we are opening the nav at the current page url and all its parents
     for (const link of links) {
-      if (link.pathname === searchedFor || (link.pathname + "/") === searchedFor) { //the slash to check for trailing slash in gatsby pages 
-        var level = searchedFor.split('/').length;
-        {level > 0 && link.classList.add("active")};
-        {level > 1 && link.parentElement.parentElement.classList.add("open")};
-        {level > 2 && link.parentElement.parentElement.parentElement.parentElement.classList.add("open")};
-        {level > 3 && link.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("open")};
-        {level > 4 && link.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("open")};
-        {level > 5 && link.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("open")};
+      //the slash to check for trailing slash in gatsby pages - navEntryPoint is just to check this feature in Storybook
+      if (link.pathname === searchedFor || link.pathname + "/" === searchedFor ) {
+        var level = searchedFor.split('/').length - 1;
+        //console.log(level)
+        level >= 1 && link.classList.add("active");
+        level >= 2 && link.parentElement.parentElement.classList.add("open");
+        level >= 3 && link.parentElement.parentElement.parentElement.parentElement.classList.add("open");
+        level >= 4 && link.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("open");
+        level >= 5 && link.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("open");
+        level >= 6 && link.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("open");
       }
     }
   }
@@ -83,7 +89,6 @@ export class PortalMenu extends Component<Props, ComponentState> {
   componentDidUpdate() {
     this.setActiveLink();
   }
-
 
   render() {
     const menuState = () => {
