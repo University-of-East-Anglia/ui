@@ -65,9 +65,9 @@ export class PortalMenu extends Component<Props, ComponentState> {
     } else {
       searchedFor = document.location.pathname;
     }; 
-    //couldn't think of a more elegant way to do this but here we are opening the navigation at the current page url
+    //couldn't think of a more elegant way to do this but we are opening the nav at the current page url and all its parents
     for (const link of links) {
-      if (link.pathname === searchedFor || link.pathname === (searchedFor + "/")) {
+      if (link.pathname === searchedFor || (link.pathname + "/") === searchedFor) { //the slash to check for trailing slash in gatsby pages 
         var level = searchedFor.split('/').length;
         {level > 0 && link.classList.add("active")};
         {level > 1 && link.parentElement.parentElement.classList.add("open")};
