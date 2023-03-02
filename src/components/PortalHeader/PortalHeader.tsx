@@ -4,6 +4,7 @@ import { PortalMenu } from "../PortalMenu";
 import "./PortalHeader.scss";
 
 export interface Props {
+  navEntryPoint: string;
   data: navItem[];
 }
 
@@ -58,7 +59,7 @@ export class PortalHeader extends Component<Props, ComponentState> {
             <h1>My UEA</h1>
             <UEAGlint glint="blue"/>
           </a>
-          <PortalMenu data={this.props.data} />
+          <PortalMenu data={this.props.data} navEntryPoint={this.props.navEntryPoint}/>
         </header>
       </div>
     );
