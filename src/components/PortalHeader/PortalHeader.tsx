@@ -4,7 +4,7 @@ import { PortalMenu } from "../PortalMenu";
 import "./PortalHeader.scss";
 
 export interface Props {
-  navEntryPoint: string;
+  navEntryPoint?: string;
   data: navItem[];
 }
 
