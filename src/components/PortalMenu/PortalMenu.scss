@@ -44,7 +44,7 @@
     right: -448px;
     width: 448px;
     color: $white;
-    padding-top: 100px;
+    padding: 100px 0px;
     overflow: scroll;
     transition: 0.5s;
     z-index: 99;
@@ -98,7 +98,7 @@
     }
     .oc-menu {
       list-style: none;
-      height: 100%;
+      //height: 100%;
       .oc-menu-item {
         list-style: none;
         a {
