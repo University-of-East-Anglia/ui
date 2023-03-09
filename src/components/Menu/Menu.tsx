@@ -168,7 +168,6 @@ export class Menu extends Component<Props, ComponentState> {
                   >
                     <span className="menu-item-title">{item.title}</span>
                     <svg
-                      id="arrow-icon"
                       className="svg-inline--fa fa-angle-down fa-w-10 canvas_menu_group_item__icon fa-fw"
                       aria-hidden="true"
                       data-prefix="fas"
@@ -220,7 +219,7 @@ export class Menu extends Component<Props, ComponentState> {
                           >
                             <span className="menu-item-title">{item.title}</span>
                             <svg
-                              id="arrow-icon"
+      
                               className="svg-inline--fa fa-angle-down fa-w-10 canvas_menu_group_item__icon fa-fw"
                               aria-hidden="true"
                               data-prefix="fas"
@@ -271,7 +270,7 @@ export class Menu extends Component<Props, ComponentState> {
                                   >
                                     <span className="menu-item-title">{item.title}</span>
                                     <svg
-                                      id="arrow-icon"
+              
                                       className="svg-inline--fa fa-angle-down fa-w-10 canvas_menu_group_item__icon fa-fw"
                                       aria-hidden="true"
                                       data-prefix="fas"
