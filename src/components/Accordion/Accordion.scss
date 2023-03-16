@@ -1,13 +1,19 @@
 @import "../shared_styles/variables.scss";
 
 .accordion {
+  min-width: 320px;
   .accordion--header {
+    width: 100%;
+    background: #ffffff;
     padding: 16px;
     font-weight: $weight-bold;
+    border: none;
     border-bottom: 2px solid $blue;
+    border-radius: 0;
     position: relative;
     display: flex;
     align-items: center;
+    box-shadow: none;
     &:after {
       content: "";
       height: 7px;
@@ -19,6 +25,8 @@
       right: 16px;
     }
     &-open {
+      background: $blue;
+      color: $black;
       &:after {
         transform: rotate(-45deg);
       }
@@ -30,5 +38,8 @@
       padding: 16px;
       display: block;
     }
+  }
+  .accordion {
+    margin: -16px;
   }
 }
