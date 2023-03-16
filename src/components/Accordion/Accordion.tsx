@@ -41,26 +41,29 @@ export class Accordion extends Component<Props, ComponentState> {
     };
     return (
       <div className="accordion">
-        {this.props.accordion.map((pane: any, index: number) => (
-          <div key={index}>
-            <button
-              id={"accordion-title--" + pane.title.substring(0, 9) + index}
-              className="accordion--header"
-              onClick={toggleClass}
-            >
-              {pane.title}
-            </button>
+        {this.props.accordion.map((pane: any, index: number) => {
+          const groupID = Math.floor(Math.random() * 99999);
+          return (
+            <div key={index}>
+              <button
+                id={"accordion-title--" + groupID + index}
+                className="accordion--header"
+                onClick={toggleClass}
+              >
+                {pane.title}
+              </button>
 
-            <div
-              id={"accordion-content--" + pane.title.substring(0, 9) + index}
-              role="region"
-              aria-labelledby={"accordion-title" + index}
-              className="accordion--panel"
-            >
-              {pane.content}
+              <div
+                id={"accordion-content--" + groupID + index}
+                role="region"
+                aria-labelledby={"accordion-title" + index}
+                className="accordion--panel"
+              >
+                {pane.content}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     );
   }
