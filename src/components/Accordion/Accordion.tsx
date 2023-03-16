@@ -44,7 +44,7 @@ export class Accordion extends Component<Props, ComponentState> {
         {this.props.accordion.map((pane: any, index: number) => (
           <div key={index}>
             <button
-              id={"accordion-title" + index}
+              id={"accordion-title--" + pane.title.substring(0, 9) + index}
               className="accordion--header"
               onClick={toggleClass}
             >
@@ -52,7 +52,7 @@ export class Accordion extends Component<Props, ComponentState> {
             </button>
 
             <div
-              id={"accordion-content" + index}
+              id={"accordion-content--" + pane.title.substring(0, 9) + index}
               role="region"
               aria-labelledby={"accordion-title" + index}
               className="accordion--panel"
