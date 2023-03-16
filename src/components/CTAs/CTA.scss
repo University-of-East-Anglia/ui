@@ -23,6 +23,11 @@
       background: $gray;
       border: 2px solid $pink;
       color: white;
+      &:hover {
+        color: white;
+        text-decoration: underline white;
+        text-decoration-thickness: 2px;
+      }
     }
   }
   &-card {
