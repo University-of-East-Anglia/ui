@@ -13,7 +13,7 @@ export interface Props {
 }
 
 export const Card = ({ ...props }: Props) => {
-  useEffect(() => {
+  if (typeof window !== 'undefined') {
     const cards: any = document.querySelectorAll(".card");
     Array.prototype.forEach.call(cards, (card: any) => {
       let down: number,
@@ -27,7 +27,7 @@ export const Card = ({ ...props }: Props) => {
         }
       };
     });
-  },[]);
+  };
   const constructClass = props.class ? " " + props.class : null;
   const cardClass = "card" + constructClass;
 
