@@ -27,7 +27,7 @@ export const Card = ({ ...props }: Props) => {
         }
       };
     });
-  });
+  },[]);
   const constructClass = props.class ? " " + props.class : null;
   const cardClass = "card" + constructClass;
 
