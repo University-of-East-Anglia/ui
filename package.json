@@ -1,6 +1,6 @@
 {
   "name": "@ueaweb/ui",
-  "version": "3.1.19",
+  "version": "3.1.20",
   "private": false,
   "description": "UEA UI Component Library",
   "dependencies": {
