@@ -27,12 +27,31 @@ export const Default = Template.bind({});
 
 Default.args = {
   OfficialNameOfScholarship: "MA Educational Practice and Research Scholarship",
-  TotalValue: "2815",
-  SchoolFaculty: "Education",
-  Years: "2023",
-  FundingType: "Tuition Fees",
-  URLforDetailsPage: "/study/fees-and-funding/scholarships-finder/scholarships-a-z/ma-educational-practice-and-research-scholarship",
-  ApplicantsNationality: "Any",
-  TypeOfCourse: "Postgraduate Taught",
+  ResultsPanel: [
+    {
+        "itemTitle": "AnnualValue",
+        "itemData": "2000"
+    },
+    {
+        "itemTitle": "CountryRegion",
+        "itemData": "London"
+    },
+    {
+        "itemTitle": "CountryOfDomicile",
+        "itemData": "Aland Islands"
+    },
+    {
+        "itemTitle": "AcademicExcellence",
+        "itemData": "something"
+    },
+    {
+        "itemTitle": "ApplicationProcess",
+        "itemData": ""
+    },
+    {
+      "itemTitle": "Restrictions With The Other Scholarships",
+      "itemData": "something"
+    },
+  ],
   buttonText: "View more"
 }

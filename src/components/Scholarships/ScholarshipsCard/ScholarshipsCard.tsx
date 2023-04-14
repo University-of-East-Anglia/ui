@@ -13,9 +13,17 @@ export interface Props {
   TypeOfCourse?: string;
   buttonText?: string;
   uuid?: any;
+  ResultsPanel?: any;
+}
+
+export interface ResultsPanel {
+  itemTitle: String;
+  itemData: String;
 }
 
 export const ScholarshipsCard = ({ ...props }: Props) => {
+
+  console.log(props.ResultsPanel)
 
   return (
     <div className="card scholarships-card" key={props.uuid}>
@@ -44,45 +52,32 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
               <h3 className="card-title">{props.OfficialNameOfScholarship}</h3>
             </div>
             <div className="key-values">
-              {props.ApplicantsNationality &&
-                <div className="row">
-                  <div className="column">
-                    <p>Nationality</p>
+              {props.ResultsPanel.map((result: ResultsPanel) => {
+
+                //use this list to replace the 'key' words when converting to sentence case (remember to add them into the replace regex below)
+                const replaceList = {
+                  Of: "of",
+                  The: "the",
+                  With: "with",
+                  And: "and"
+                }
+
+                var capSpace = result.itemTitle.replace(/([A-Z])/g, " $1");
+                var capFirst = capSpace.charAt(0).toUpperCase() + capSpace.slice(1);
+                var replaceShort = capFirst.replace(/Of|The|With|And/g, (matched: String) => { return replaceList[matched] });
+
+                return (
+                  <div className="row">
+                    <div className="column">
+                      <p>{replaceShort}</p>
+                    </div>
+                    <div className="column vertical">
+                      <p>{result.itemData}</p>
+                    </div>
                   </div>
-                  <div className="column vertical">
-                    <p>{props.ApplicantsNationality}</p>
-                  </div>
-                </div>
+                )
+              })
               }
-              {props.TypeOfCourse &&
-                <div className="row">
-                  <div className="column">
-                    <p>Level of Study</p>
-                  </div>
-                  <div className="column vertical">
-                    <p>{props.TypeOfCourse}</p>
-                  </div>
-                </div>
-              }
-              {props.Years &&
-                <div className="row">
-                  <div className="column">
-                    <p>Intake</p>
-                  </div>
-                  <div className="column vertical">
-                    <p>{props.Years}</p>
-                  </div>
-                </div>
-              }
-              {props.TotalValue &&
-                <div className="row">
-                  <div className="column">
-                    <p>Value</p>
-                  </div>
-                  <div className="column vertical">
-                    <p><span>£</span>{props.TotalValue}</p>
-                  </div>
-                </div>}
             </div>
           </div>
         </div>
