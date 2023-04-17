@@ -70,7 +70,7 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
                 if(result.itemData) {
                   return (
                     <div className="row" key={index}>
-                      <div className="column">
+                      <div className="column title">
                         <p>{replaceShort}</p>
                       </div>
                       <div className="column vertical">
