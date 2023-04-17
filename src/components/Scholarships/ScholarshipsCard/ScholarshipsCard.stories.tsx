@@ -29,8 +29,16 @@ Default.args = {
   OfficialNameOfScholarship: "MA Educational Practice and Research Scholarship",
   ResultsPanel: [
     {
+        "itemTitle": "AcademicExcellence",
+        "itemData": "something"
+    },
+    {
         "itemTitle": "AnnualValue",
         "itemData": "2000"
+    },
+    {
+        "itemTitle": "ApplicationProcess",
+        "itemData": ""
     },
     {
         "itemTitle": "CountryRegion",
@@ -38,20 +46,16 @@ Default.args = {
     },
     {
         "itemTitle": "CountryOfDomicile",
-        "itemData": "Aland Islands"
-    },
-    {
-        "itemTitle": "AcademicExcellence",
-        "itemData": "something"
-    },
-    {
-        "itemTitle": "ApplicationProcess",
         "itemData": ""
     },
     {
-      "itemTitle": "Restrictions With The Other Scholarships",
-      "itemData": "something"
+        "itemTitle": "Years",
+        "itemData": "2025"
     },
-  ],
+    {
+        "itemTitle": "ApplicantsNationality",
+        "itemData": "Anguilla"
+    }
+],
   buttonText: "View more"
 }
