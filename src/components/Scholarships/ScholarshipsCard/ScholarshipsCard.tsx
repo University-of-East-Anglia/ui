@@ -23,7 +23,7 @@ export interface ResultsPanel {
 
 export const ScholarshipsCard = ({ ...props }: Props) => {
 
-  console.log(props.ResultsPanel)
+  //console.log(props.ResultsPanel)
 
   return (
     <div className="card scholarships-card" key={props.uuid}>
@@ -52,7 +52,7 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
               <h3 className="card-title">{props.OfficialNameOfScholarship}</h3>
             </div>
             <div className="key-values">
-              {props.ResultsPanel.map((result: ResultsPanel) => {
+              {props.ResultsPanel.map((result: ResultsPanel, index: React.Key) => {
 
                 //use this list to replace the 'key' words when converting to sentence case (remember to add them into the replace regex below)
                 const replaceList = {
@@ -64,18 +64,21 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
 
                 var capSpace = result.itemTitle.replace(/([A-Z])/g, " $1");
                 var capFirst = capSpace.charAt(0).toUpperCase() + capSpace.slice(1);
+                //REGEX - match any of the words in the string, if found replace with the matched word in replaceList
                 var replaceShort = capFirst.replace(/Of|The|With|And/g, (matched: String) => { return replaceList[matched] });
 
-                return (
-                  <div className="row">
-                    <div className="column">
-                      <p>{replaceShort}</p>
+                if(result.itemData) {
+                  return (
+                    <div className="row" key={index}>
+                      <div className="column">
+                        <p>{replaceShort}</p>
+                      </div>
+                      <div className="column vertical">
+                        <p>{result.itemData}</p>
+                      </div>
                     </div>
-                    <div className="column vertical">
-                      <p>{result.itemData}</p>
-                    </div>
-                  </div>
-                )
+                  )
+                }
               })
               }
             </div>
