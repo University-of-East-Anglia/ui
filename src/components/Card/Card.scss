@@ -213,7 +213,6 @@
         align-items: center;
         padding: 0px 15px;
         color: $white;
-        min-width: 85px;
 
         &:after {
           position: relative;
@@ -228,6 +227,7 @@
         color: $white;
         font-size: 16px;
         line-height: 20px;
+        margin: 0;
       }
     }
   }
