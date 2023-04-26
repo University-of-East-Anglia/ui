@@ -67,14 +67,28 @@ export const ScholarshipsCard = ({ ...props }: Props) => {
                 //REGEX - match any of the words in the string, if found replace with the matched word in replaceList
                 var replaceShort = capFirst.replace(/Of|The|With|And/g, (matched: String) => { return replaceList[matched] });
 
-                if(result.itemData) {
+                if (result.itemData) {
                   return (
                     <div className="row" key={index}>
                       <div className="column title">
                         <p>{replaceShort}</p>
                       </div>
                       <div className="column vertical">
-                        <p>{result.itemData}</p>
+                        {Array.isArray(result.itemData) ? (
+                          <ul>
+                            {result.itemData?.map((item) => {
+                              return (
+                                <li key={item}>
+                                  {item}
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        ) : (
+                          <p>
+                            {result.itemData}
+                          </p>
+                        )}
                       </div>
                     </div>
                   )

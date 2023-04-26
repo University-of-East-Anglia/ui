@@ -122,9 +122,11 @@
         width: 100%;
         margin-bottom: 15px;
         line-height: 32px;
-        
         .title {
           font-weight: bold;
+        }
+        ul {
+          list-style-type: none;
         }
       }
       .row {
