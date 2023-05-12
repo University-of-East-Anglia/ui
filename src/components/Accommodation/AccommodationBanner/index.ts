@@ -1,0 +1,1 @@
+export { AccommodationBanner } from "./AccommodationBanner";

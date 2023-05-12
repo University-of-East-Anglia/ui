@@ -1,0 +1,24 @@
+@import "../../shared_styles/variables.scss";
+
+.AccommodationBanner {
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("https://a.storyblok.com/f/185167/2000x1200/c4e58d0ef9/concrete-background.jpeg");
+
+  &__BannerItem {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 20px;
+
+    &__spacer {
+      height: 3px;
+      width: 80%;
+      margin: auto;
+      background-color: $green;
+      border-radius: 8px;
+    }
+  }
+}
