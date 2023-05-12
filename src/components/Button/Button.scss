@@ -20,4 +20,9 @@ button {
   &.button-secondary {
     background: $blue;
   }
+  &.full {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
