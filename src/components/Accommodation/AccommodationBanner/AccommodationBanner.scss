@@ -1,24 +1,40 @@
 @import "../../shared_styles/variables.scss";
 
 .AccommodationBanner {
-  height: 500px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
   background-image: url("https://a.storyblok.com/f/185167/2000x1200/c4e58d0ef9/concrete-background.jpeg");
 
-  &__BannerItem {
-    width: 100%;
-    height: 100px;
-    text-align: center;
+  &__BannerTitle {
+    display: flex;
+    justify-content: center;
     padding: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
 
-    &__spacer {
-      height: 3px;
-      width: 80%;
-      margin: auto;
-      background-color: $green;
-      border-radius: 8px;
+  &__BannerItems {
+    display: flex;
+    justify-content: space-between;
+
+    &__BannerItem {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+
+      h3 {
+        font-size: 3em;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      &__spacer {
+        height: 3px;
+        width: 100px;
+        margin: 20px auto;
+        background-color: $green;
+        border-radius: 8px;
+      }
     }
   }
 }

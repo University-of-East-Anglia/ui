@@ -27,6 +27,14 @@ Default.args = {
         {
             "itemStat": "8",
             "itemDescription": "minute average walk time to the library"
+        },
+        {
+            "itemStat": "XX",
+            "itemDescription": "Typical broadband internet speed"
+        },
+        {
+            "itemStat": "2 Grade II",
+            "itemDescription": "listed accomodation buildings"
         }
     ]
 }
