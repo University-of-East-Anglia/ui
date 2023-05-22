@@ -78,5 +78,9 @@ export { ScholarshipsContent } from "./Scholarships/ScholarshipsContent";
 
 export { InfoContent } from "./Scholarships/ScholarshipsContent/InfoContent";
 
+export { AccommodationCard } from "./Accommodation/AccommodationCard";
+
+export { AccommodationBanner } from "./Accommodation/AccommodationBanner";
+
 import "./App.scss";
 
