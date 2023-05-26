@@ -23,10 +23,9 @@ export class QuickLinks extends Component<Props> {
                     <ul className="list--horizontal list--none">
                         {this.props.quickLinksArray.map((item, key) => {
                             return (
-                                <a key={key} href={item.content.url}>
-                                    <li className="list--listitem">{item.name}</li>
-                                </a>
-                                
+                                <li className="list--listitem">
+                                    <a key={key} href={item.content.url}>{item.name}</a>
+                                </li>
                             )
                         })}
                     </ul>
