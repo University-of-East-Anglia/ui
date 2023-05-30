@@ -2,8 +2,7 @@
 
 .quicklinks {
   margin-left: auto;
-  width:fit-content
-  ul {
+  width:fit-content ul {
     li {
       color: $black;
       padding: 0px 20px;
@@ -16,7 +15,9 @@
     .quicklinks {
       ul {
         li {
-          color: $white;
+          a {
+            color: $white;
+          }
         }
       }
     }
