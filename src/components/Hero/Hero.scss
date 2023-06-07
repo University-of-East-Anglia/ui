@@ -1,11 +1,11 @@
 @import "../shared_styles/variables.scss";
 
-.hero-container {
+.hero {
   position: relative;
   display: grid;
   background: $black;
 
-  .header {
+  &__header {
     display: grid;
     grid-area: 1/1;
     position: relative;
@@ -41,9 +41,13 @@
       }
     }
 
-    .subtext {
+    &__subtext {
       text-align: center;
     }
+  }
+
+  &__content {
+    max-width: $xl;
   }
 
   img {
@@ -66,7 +70,7 @@
     }
   }
 
-  .gradient {
+  &__gradient {
     position: absolute;
     bottom: 0;
     width: 100%;

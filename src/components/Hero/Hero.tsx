@@ -17,18 +17,18 @@ export interface Props {
 export const Hero = ({ header, ...props }: Props) => {
 
     return (
-        <div className="hero-container">
+        <div className="hero">
             {props.image && <Image className={props.variant} src={props.image} alt={props.alt} />}
             {props.srcSet && props.srcSet}
-            <div className={`header ${props.position}`}>
-                <div>
+            <div className={`hero__header ${props.position}`}>
+                <div className="hero__content">
                     <h1 className={props.uppercase ? 'uppercase' : ''}>
                         {header}
                     </h1>
-                    {props.subtext && <p className="subtext">{props.subtext}</p>}
+                    {props.subtext && <p className="hero__header__subtext">{props.subtext}</p>}
                 </div>
             </div>
-            <div className="gradient"></div>
+            <div className="hero__gradient"></div>
         </div>
     );
 };
