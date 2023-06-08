@@ -7,19 +7,19 @@ export interface Props {
     variant: "default" | "shallow" | "deep";
     header?: string;
     uppercase: true | false;
-    image?: string;
+    src: string;
+    srcSet?: string;
+    sizes?: string;
     alt: string;
     position: "middle" | "bottom";
     subtext?: string;
-    srcSet?: HTMLImageElement;
 }
 
 export const Hero = ({ header, ...props }: Props) => {
 
     return (
         <div className="hero">
-            {props.image && <Image className={props.variant} src={props.image} alt={props.alt} />}
-            {props.srcSet && props.srcSet}
+            <Image className={props.variant} src={props.src} srcSet={props.srcSet} sizes={props.sizes} alt={props.alt} />
             <div className={`hero__header ${props.position}`}>
                 <div className="hero__content">
                     <h1 className={props.uppercase ? 'uppercase' : ''}>
