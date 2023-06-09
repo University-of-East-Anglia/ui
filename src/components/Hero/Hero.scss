@@ -23,19 +23,20 @@
     h1 {
       text-shadow: -1px -1px 5px $black, 1px -1px 5px $black, -1px 1px 5px $black,
         1px 1px 5px $black;
-      font-size: 1.25rem;
-      letter-spacing: 0.2rem;
+      font-size: 2.25rem;
+      letter-spacing: 0.8rem;
       font-weight: 600;
+      line-height: 3rem;
 
       &.uppercase {
         text-transform: uppercase;
       }
-      @media (min-width: $sm) {
-        letter-spacing: 0.2rem;
-        font-size: 2.25rem;
-      }
+
       @media (min-width: $md) {
-        letter-spacing: 0.8rem;
+        font-size: 3.25rem;
+        line-height: 4rem;
+      }
+      @media (min-width: $lg) {
         font-size: 4.25rem;
         line-height: 5rem;
       }
