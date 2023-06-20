@@ -19,9 +19,9 @@ const Tabs: React.FC<Props> = ({ tabs, select_title }) => {
     const handleResize = () => {
       const screenWidth: number = window.innerWidth;
       const tabWidth = document.getElementById("tabContainer");
-      const breakpoint = tabWidth?.offsetWidth || screenWidth;
+      const breakpoint = tabWidth?.offsetWidth || 600;
       setIsSmallScreen(screenWidth <= breakpoint);
-      console.log(active);
+      console.log(screenWidth - breakpoint);
     };
 
     handleResize(); // Initial check
@@ -70,7 +70,6 @@ const Tabs: React.FC<Props> = ({ tabs, select_title }) => {
       </div>
     );
   } else {
-    console.log(active);
     return (
       <div>
         <div className="simple-select">
