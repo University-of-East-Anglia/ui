@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "./Tabs.scss";
 
 export interface Props {
   tabs: TabContent[];
+  select_title: string;
 }
 
 export interface TabContent {
@@ -10,47 +11,87 @@ export interface TabContent {
   content: string;
 }
 
-interface ComponentState {
-  active: number;
-}
+const Tabs: React.FC<Props> = ({ tabs, select_title }) => {
+  const [active, setActive] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-export class Tabs extends Component<Props, ComponentState> {
-  state: ComponentState = {
-    active: 0,
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth: number = window.innerWidth;
+      const tabWidth = document.getElementById("tabContainer");
+      const breakpoint = tabWidth?.offsetWidth || 600;
+      setIsSmallScreen(screenWidth <= breakpoint);
+      console.log(screenWidth - breakpoint);
+    };
 
-  render() {
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const tabButtons = tabs.map((panel: TabContent, index: number) => (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={index === active}
+      aria-controls={"tab-" + index}
+      key={index}
+      id={"tab" + index}
+      onClick={() => setActive(index)}
+      className={active === index ? "tab tab--active" : "tab"}
+    >
+      {panel.title}
+    </button>
+  ));
+
+  const tabPanels = tabs.map((panel: TabContent, index: number) => (
+    <div
+      key={index}
+      role="tabpanel"
+      id={"tab-" + index}
+      aria-labelledby={"tab" + index}
+      className={active === index ? "tab tab-panel--active" : "tab-panel"}
+    >
+      {panel.content}
+    </div>
+  ));
+
+  if (isSmallScreen === false) {
     return (
       <div className="tabs">
-        <div className="tablist" role="tablist">
-          {this.props.tabs.map((panel: any, index) => (
-            <button
-              type="button"
-              role="tab"
-              aria-selected={index === this.state.active ? true : false}
-              aria-controls={"tab-" + index}
-              key={index}
-              id={"tab" + index}
-              onClick={() => this.setState({ active: index })}
-              className={this.state.active === index ? "tab tab--active" : "tab"}
-            >
-              {panel.title}
-            </button>
-          ))}
+        <div id="tabContainer" className="tablist" role="tablist">
+          {tabButtons}
           <div className="tablist-base"></div>
         </div>
-        {this.props.tabs.map((panel: any, index) => (
-          <div
-            key={index}
-            role="tabpanel"
-            id={"tab-" + index}
-            aria-labelledby={"tab" + index}
-            className={this.state.active === index ? "tab tab-panel--active" : "tab-panel"}
-          >
-            {panel.content}
+        {tabPanels}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div className="simple-select">
+          <label className="select-label">
+            <span className="select-label--title">{select_title}</span>
+            <select className="select-list" onChange={(e: any) => setActive(e.target.value)}>
+              {tabs.map((option, index) => (
+                <option key={index} value={index}>
+                  {option.title}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+        {tabs.map((option, index) => (
+          <div key={index} style={{ display: index != active ? "none" : "block" }}>
+            {option.content}
           </div>
         ))}
       </div>
     );
   }
-}
+};
+
+export default Tabs;

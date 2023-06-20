@@ -4,6 +4,7 @@
   .tablist {
     margin-bottom: 35px;
     position: relative;
+    display: flex;
     .tablist-base {
       position: absolute;
       width: 100%;
@@ -20,6 +21,7 @@
       background: white;
       box-shadow: none;
       -webkit-box-shadow: none;
+      display: flex;
       &:hover {
         border-color: $blue;
       }

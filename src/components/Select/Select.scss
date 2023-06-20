@@ -22,3 +22,23 @@
     }
   }
 }
+
+.simple-select {
+  width: 100%;
+  .select-label {
+    .select-label--title {
+      display: block;
+      font-weight: bold;
+    }
+  }
+  select {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 2px solid;
+    &:focus {
+      outline: solid 2px $blue;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { Tabs, Props } from "./Tabs";
+import Tabs, { Props } from "./Tabs";
 
 const meta: Meta = {
   title: "Molecule Components/Tabs",
@@ -14,6 +14,7 @@ const Template: Story<Props> = (args) => <Tabs {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
+  select_title: "Select Title",
   tabs: [
     {
       title: "Title 1",
