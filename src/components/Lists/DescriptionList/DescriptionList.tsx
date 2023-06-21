@@ -2,7 +2,7 @@ import React from "react";
 
 export interface Props {
   listItems: ListItem[];
-  reverse: boolean;
+  reverse?: boolean;
 }
 
 export interface ListItem {

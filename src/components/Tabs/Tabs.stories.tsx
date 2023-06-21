@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import Tabs, { Props } from "./Tabs";
+import { Tabs, Props } from "./Tabs";
 
 const meta: Meta = {
   title: "Molecule Components/Tabs",
