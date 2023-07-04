@@ -7,7 +7,7 @@ import { CTA } from "../CTAs/CTA";
 export interface Props {
     variant: "default" | "shallow" | "deep";
     header?: string;
-    headerBackground?: boolean;
+    headerBackground?: true | false;
     uppercase: true | false;
     src: string;
     srcSet?: string;
@@ -26,7 +26,7 @@ export const Hero = ({ header, ...props }: Props) => {
             <Image className={props.variant} src={props.src} srcSet={props.srcSet} sizes={props.sizes} alt={props.alt} />
             <div className={`hero__header ${props.position}`}>
                 <div className="hero__content">
-                    <h1 className={props.uppercase ? 'uppercase' : ''}>
+                    <h1 className={ `${props.uppercase && 'uppercase'} ${props.headerBackground && 'background'}` }>
                         {header}
                     </h1>
                     {props.subtext && 

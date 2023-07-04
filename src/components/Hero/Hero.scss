@@ -32,6 +32,11 @@
         text-transform: uppercase;
       }
 
+      &.background {
+        padding: 1.25rem;
+        background-color: $black;
+      }
+
       @media (min-width: $md) {
         font-size: 3.25rem;
         line-height: 4rem;
@@ -49,6 +54,7 @@
     &__sublink {
       display: flex;
       justify-content: center;
+      padding: 1.25rem 0rem;
 
       a {
         max-width: 500px;
