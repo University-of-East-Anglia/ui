@@ -2,10 +2,12 @@ import React from "react";
 import "./Hero.scss";
 
 import { Image } from "../Image";
+import { CTA } from "../CTAs/CTA";
 
 export interface Props {
     variant: "default" | "shallow" | "deep";
     header?: string;
+    headerBackground?: boolean;
     uppercase: true | false;
     src: string;
     srcSet?: string;
@@ -13,6 +15,8 @@ export interface Props {
     alt: string;
     position: "middle" | "bottom";
     subtext?: string;
+    subtextLink?: string;
+    gradient?: boolean;
 }
 
 export const Hero = ({ header, ...props }: Props) => {
@@ -25,10 +29,17 @@ export const Hero = ({ header, ...props }: Props) => {
                     <h1 className={props.uppercase ? 'uppercase' : ''}>
                         {header}
                     </h1>
-                    {props.subtext && <p className="hero__header__subtext">{props.subtext}</p>}
+                    {props.subtext && 
+                        props.subtextLink ?
+                        <span className="hero__header__sublink">
+                            <CTA title={props.subtext} link={props.subtextLink} />
+                        </span>
+                         :
+                        <p className="hero__header__subtext">{props.subtext}</p>
+                    }
                 </div>
             </div>
-            <div className="hero__gradient"></div>
+            {props.gradient && <div className="hero__gradient"></div>}
         </div>
     );
 };

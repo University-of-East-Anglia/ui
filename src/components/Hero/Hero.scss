@@ -45,6 +45,15 @@
     &__subtext {
       text-align: center;
     }
+
+    &__sublink {
+      display: flex;
+      justify-content: center;
+
+      a {
+        max-width: 500px;
+      }
+    }
   }
 
   &__content {
