@@ -38,7 +38,7 @@ export const Card = ({ ...props }: Props) => {
       </div>
       <div className="card--content">
         {props.type ? <span className="card--type">{props.type}</span> : null}
-        <h3 className="card--title">{props.title}</h3>
+        {props.title && <h3 className="card--title">{props.title}</h3>}
         {props.excerpt ? <p className="card--excerpt">{props.excerpt}</p> : null}
         <a className="card--link" href={props.link} aria-label={props.title}>
           {props.anchor}

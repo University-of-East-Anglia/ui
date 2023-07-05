@@ -78,6 +78,40 @@
       }
     }
   }
+  &.clearing-card {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    .card--image {
+      img {
+        aspect-ratio: 2 / 1.2;
+        width: 100%;
+        height: auto;
+        border-radius: 7px 7px 0px 0px;
+      }
+    }
+    .card--content {
+      border-radius: 0px 0px 7px 7px;
+    }
+    a {
+      text-decoration: none;
+      .card--content {
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0px 0px 7px;
+        .card--title {
+          font-size: 16px;
+          line-height: 1.2em;
+        }
+        .card--excerpt {
+          font-size: 14px;
+        }
+        .chevron--right {
+          height: 24px;
+        }
+      }
+    }
+  }
   &.scholarships-card {
     border-radius: 7px;
     text-align: left;
