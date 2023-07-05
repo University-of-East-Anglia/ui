@@ -79,6 +79,9 @@
     }
   }
   &.clearing-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     box-shadow: none;
     -webkit-box-shadow: none;
     .card--image {
@@ -90,6 +93,9 @@
       }
     }
     .card--content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       border-radius: 0px 0px 7px 7px;
     }
     a {
