@@ -87,6 +87,9 @@
     .card--image {
       img {
         aspect-ratio: 2 / 1.2;
+        @media screen and (max-width: $lg) {
+          aspect-ratio: 2 / 0.8;
+        }
         width: 100%;
         height: auto;
         border-radius: 7px 7px 0px 0px;
