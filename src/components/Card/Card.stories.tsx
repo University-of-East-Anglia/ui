@@ -35,11 +35,15 @@ Standard.args = {
 };
 
 Clearing.args = {
-    image: "https://picsum.photos/400/300",
     link: "https://www.uea.ac.uk/uea-life/student-support",
-    type: "",
     excerpt: "We know that university life is made up of much more than studying. Find out how we will support you all through your university journey.",
     anchor: "Read more",
     title: "How can we support you?",
-    class: "clearing-card"
+    class: "clearing-card",
+    srcSet: "https://a.storyblok.com/f/185167/1440x810/2ff766c5a8/ziggarut-accomodation.jpeg/m/640x500/ 640w, https://a.storyblok.com/f/185167/1440x810/2ff766c5a8/ziggarut-accomodation.jpeg/m/1024x500/ 1024w, https://a.storyblok.com/f/185167/1440x810/2ff766c5a8/ziggarut-accomodation.jpeg/m/1280x500/ 1280w",
+    sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 100vw, 1280px",
+    alt: "Find your place",
+    image: "",
+    type: "",
+    src:"",
 };

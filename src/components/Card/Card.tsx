@@ -1,15 +1,20 @@
 import React, { HTMLAttributes, useEffect } from "react";
 // import Link from "./Link";
 import "./Card.scss";
+import { Image } from "../Image";
 
 export interface Props {
   class?: string;
-  image: string;
+  image?: string;
   type: string;
   excerpt: string;
   link: string;
   anchor: string;
   title: string;
+  src?: string;
+  srcSet?: string;
+  sizes?: string;
+  alt?: string;
 }
 
 export const Card = ({ ...props }: Props) => {
@@ -34,7 +39,8 @@ export const Card = ({ ...props }: Props) => {
   return (
     <div className={cardClass}>
       <div className="card--image">
-        <img src={props.image} alt={props.title} />
+        {props.image && <img src={props.image} alt={props.title} />}
+        {props.srcSet && !props.image && <Image src={props.src} srcSet={props.srcSet} sizes={props.sizes} alt={props.alt || props.title} />}
       </div>
       <div className="card--content">
         {props.type ? <span className="card--type">{props.type}</span> : null}
