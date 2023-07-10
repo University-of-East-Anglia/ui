@@ -16,7 +16,9 @@ export interface Props {
     position: "middle" | "bottom";
     subtext?: string;
     subtextLink?: string;
-    gradient?: boolean;
+    gradientColour?: "black" | "white";
+    bottomGradient?: boolean;
+    topGradient?: boolean;
 }
 
 export const Hero = ({ header, ...props }: Props) => {
@@ -39,7 +41,8 @@ export const Hero = ({ header, ...props }: Props) => {
                     }
                 </div>
             </div>
-            {props.gradient && <div className="hero__gradient"></div>}
+            {props.topGradient && <div className={`hero__topGradient--${props.gradientColour}`}></div>}
+            {props.bottomGradient && <div className={`hero__bottomGradient--${props.gradientColour}`}></div>}
         </div>
     );
 };

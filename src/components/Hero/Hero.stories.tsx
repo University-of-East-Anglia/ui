@@ -24,5 +24,7 @@ Default.args = {
     position: "bottom",
     subtext: "Hero Banner Subtext",
     subtextLink:"https://www.uea.ac.uk",
-    gradient: true,
+    gradientColour: "black",
+    topGradient: true,
+    bottomGradient: true,
 };
