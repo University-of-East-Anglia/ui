@@ -27,15 +27,6 @@
       font-weight: 600;
       line-height: 3rem;
 
-      &.uppercase {
-        text-transform: uppercase;
-      }
-
-      &.background {
-        padding: 1.25rem;
-        background-color: $black;
-      }
-
       @media (min-width: $md) {
         font-size: 3.25rem;
         line-height: 4rem;
@@ -43,6 +34,28 @@
       @media (min-width: $lg) {
         font-size: 4.25rem;
         line-height: 5rem;
+      }
+
+      &.font-larger {
+        font-size: 3.25rem;
+        @media (min-width: $md) {
+          font-size: 4.25rem;
+          line-height: 4rem;
+        }
+        @media (min-width: $lg) {
+          font-size: 5.25rem;
+          line-height: 5rem;
+        }
+      }
+
+      &.uppercase {
+        text-transform: uppercase;
+      }
+
+      &.background {
+        display: inline-block;
+        padding: 1.25rem;
+        background-color: $black;
       }
     }
 
@@ -63,6 +76,7 @@
 
   &__content {
     max-width: $xl;
+    padding: 25px;
   }
 
   img {
@@ -71,17 +85,25 @@
     object-fit: cover;
     opacity: 0.8;
     height: 50vh;
+    min-height: 640px;
 
     &.shallow {
-      max-height: 300px;
+      min-height: 350px;
+      max-height: 350px;
     }
 
     &.default {
+      min-height: 480px;
       max-height: 500px;
     }
 
     &.deep {
+      min-height: 640px;
       max-height: 700px;
+
+      @media screen and (max-width: $md) {
+        min-height: 480px;
+      }
     }
   }
 
@@ -91,7 +113,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, $white 1%, rgba(251, 251, 251, 0) 60%);
+      background: linear-gradient(180deg, $white 1%, rgba(251, 251, 251, 0) 25%);
     }
 
     &--black {
@@ -99,7 +121,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, $black 1%, rgba(0, 0, 0, 0) 60%);
+      background: linear-gradient(180deg, $black 1%, rgba(0, 0, 0, 0) 25%);
     }
   }
 

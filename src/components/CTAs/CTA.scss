@@ -18,14 +18,23 @@
     line-height: 24px;
     &-pink {
       background: $pink;
+      &:hover {
+        background: $gray;
+        border: 2px solid $pink;
+        color: $white;
+        text-decoration: underline $white;
+        text-decoration-thickness: 2px;
+      }
     }
     &-reverse {
       background: $gray;
       border: 2px solid $pink;
       color: white;
       &:hover {
-        color: white;
-        text-decoration: underline white;
+        background: $pink;
+        border: 2px solid $gray;
+        color: $black;
+        text-decoration: underline $black;
         text-decoration-thickness: 2px;
       }
     }
