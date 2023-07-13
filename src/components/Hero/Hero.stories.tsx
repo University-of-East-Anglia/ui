@@ -16,6 +16,7 @@ export const Default = Template.bind({});
 Default.args = {
     variant: "default",
     header: "Hero Banner Title",
+    headerSize: "default",
     headerBackground: false,
     uppercase: false,
     src: "https://images.pexels.com/photos/6147369/pexels-photo-6147369.jpeg",
