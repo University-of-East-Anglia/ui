@@ -24,7 +24,6 @@
       text-shadow: -1px -1px 5px $black, 1px -1px 5px $black, -1px 1px 5px $black,
         1px 1px 5px $black;
       font-size: 2.25rem;
-      font-weight: 600;
       line-height: 3rem;
 
       @media (min-width: $md) {
@@ -54,7 +53,7 @@
 
       &.background {
         display: inline-block;
-        padding: 1.25rem;
+        padding: 2rem;
         background-color: $black;
       }
     }
@@ -83,7 +82,7 @@
     grid-area: 1/1;
     width: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    //opacity: 0.8;
     height: 50vh;
     min-height: 640px;
 
