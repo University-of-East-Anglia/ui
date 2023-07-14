@@ -15,6 +15,7 @@ export interface Props {
     sizes?: string;
     alt: string;
     position: "middle" | "bottom";
+    textColour?: "white" | "black";
     subtext?: string;
     subtextLink?: string;
     gradientColour?: "black" | "white";
@@ -29,7 +30,7 @@ export const Hero = ({ header, ...props }: Props) => {
             <Image className={props.variant} src={props.src} srcSet={props.srcSet} sizes={props.sizes} alt={props.alt} />
             <div className={`hero__header ${props.position}`}>
                 <div className="hero__content">
-                    <h1 className={`${props.headerSize === "larger" && 'font-larger'} ${props.uppercase && 'uppercase'} ${props.headerBackground && 'background'}`}>
+                    <h1 className={`font-${props.textColour} font-${props.headerSize} ${props.uppercase && 'uppercase'} ${props.headerBackground && 'background'}`}>
                         {header}
                     </h1>
                     {props.subtext && 
@@ -38,7 +39,7 @@ export const Hero = ({ header, ...props }: Props) => {
                             <CTA title={props.subtext} link={props.subtextLink} />
                         </span>
                          :
-                        <p className="hero__header__subtext">{props.subtext}</p>
+                        <p className={`hero__header__subtext font-${props.textColour}`}>{props.subtext}</p>
                     }
                 </div>
             </div>

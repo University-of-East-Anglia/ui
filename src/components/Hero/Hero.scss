@@ -47,6 +47,17 @@
         }
       }
 
+      &.font-white {
+        text-shadow: -1px -1px 5px $black, 1px -1px 5px $black, -1px 1px 5px $black,
+          1px 1px 5px $black;
+        color: $white;
+      }
+
+      &.font-black {
+        text-shadow: none;
+        color: $black;
+      }
+
       &.uppercase {
         text-transform: uppercase;
       }
@@ -60,6 +71,17 @@
 
     &__subtext {
       text-align: center;
+
+      &.font-white {
+        text-shadow: -1px -1px 5px $black, 1px -1px 5px $black, -1px 1px 5px $black,
+          1px 1px 5px $black;
+        color: $white;
+      }
+
+      &.font-black {
+        text-shadow: none;
+        color: $black;
+      }
     }
 
     &__sublink {
