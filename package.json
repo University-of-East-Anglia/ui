@@ -1,6 +1,6 @@
 {
   "name": "@ueaweb/ui",
-  "version": "3.3.16",
+  "version": "3.3.17",
   "private": false,
   "description": "UEA UI Component Library",
   "dependencies": {
@@ -25,7 +25,7 @@
     "object-assign": "^4.1.1",
     "react": "^17.0.2",
     "react-instantsearch-hooks": "^6.32.0",
-    "react-instantsearch-hooks-web": "^6.32.0",
+    "react-instantsearch-hooks-web": "^6.47.3",
     "react-select": "^5.4.0",
     "rollup-plugin-sass": "^1.2.13",
     "rollup-plugin-scss": "^3.0.0",
