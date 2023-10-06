@@ -1,13 +1,13 @@
 @import "../shared_styles/variables.scss";
 
 @mixin pageId {
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 5px;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 .pagination {
@@ -16,16 +16,28 @@
   margin: 30px 0;
   & > div {
     @include pageId;
+    background: $pink;
+    text-decoration: underline;
+    border: solid 2px $pink;
+    font-weight: 600;
+    text-underline-offset: 0.25em;
   }
   a {
     @include pageId;
-    background: $pink;
-    color: $gray;
-    border: solid 2px $gray;
-    text-decoration: none;
+    background: $black;
+    color: $white;
+    border: solid 2px $black;
+    text-decoration: underline;
     &:hover {
-      background: $gray;
-      color: white;
+      background: $pink;
+      border-color: $pink;
+      color: $black;
+    }
+    &:focus {
+      border-color: $pink;
+    }
+    svg {
+      height: 22px;
     }
   }
 }
