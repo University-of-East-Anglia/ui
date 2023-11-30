@@ -123,8 +123,9 @@
             background: $gray;
             list-style: none;
             .menu-item-title {
-              text-transform: capitalize;
+              text-transform: none;
               letter-spacing: 0;
+              font-weight: normal;
             }
             &.oc-menu-group--tier1 {
               .menu-item-title {
