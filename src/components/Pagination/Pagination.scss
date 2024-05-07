@@ -38,6 +38,9 @@
     }
     svg {
       height: 22px;
+      &:nth-child(2) {
+        margin-left: -15px;
+      }
     }
   }
 }
