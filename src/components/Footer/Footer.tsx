@@ -13,6 +13,8 @@ export interface Props {
 }
 interface ComponentState {}
 
+declare const CookieControl: any;
+
 export class Footer extends Component<Props, ComponentState> {
   state: ComponentState = {};
 
@@ -31,7 +33,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
-               <span className="sr-only">Go to our Facebook page</span>
+              <span className="sr-only">Go to our Facebook page</span>
               <FacebookSVG />
             </a>
             <a
@@ -115,6 +117,18 @@ export class Footer extends Component<Props, ComponentState> {
               rel="noreferrer nofollow"
             >
               Cookie Policy
+            </a>
+            |
+            <a
+              className="policy-link"
+              href="#"
+              onClick={(e) => {
+                e?.preventDefault();
+                CookieControl.open();
+              }}
+              rel="noreferrer nofollow"
+            >
+              Manage Cookie Preferences
             </a>
             |
             <a
