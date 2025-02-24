@@ -116,7 +116,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="noreferrer nofollow"
             >
-              Cookie Policy
+              Cookie/Pixel Policy
             </a>
             |
             <a
