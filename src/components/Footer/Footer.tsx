@@ -51,7 +51,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
-              <span className="sr-only">Go to our Youtube page</span>
+              <span className="sr-only">Go to our YouTube page</span>
               <YouTubeSVG />
             </a>
             <a
@@ -78,7 +78,7 @@ export class Footer extends Component<Props, ComponentState> {
               target="_blank"
               rel="nofollow noreferrer"
             >
-              <span className="sr-only">Go to our Linkedin page</span>
+              <span className="sr-only">Go to our LinkedIn page</span>
               <LinkedInSVG />
             </a>
           </div>
